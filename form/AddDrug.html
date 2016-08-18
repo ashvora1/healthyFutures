@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+	<body>
+		<div data-role="page" data-theme="emis" id="addDrug">
+			<div class="patientSummaryInfo pageHeader">
+			</div>
+			<div class="contentWrapper">
+				<div data-theme="emis" data-role="content">
+					<label class="page-label">Add drug</label>
+					<a id="drugListBtn" class="standaloneButton button" data-role="none" href=""></a>
+					<div class="contentPanel" id="drugsContent">
+						<div class="header">
+							<div class="e-blocks">
+								Drug details
+							</div>
+						</div>
+						<div class="content grid">
+							<div class="e-blocks">
+								<div class="grid-2 e-block-a">
+									<div class="e-label">Name</div>
+								</div>
+								<div class="grid-2 e-block-b">
+									<div id="drugOptionsContainer">
+										<!-- <input id="selectDrugName" type="text" autocomplete="off" /> -->
+										<textarea id="selectDrugName"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="e-blocks">
+								<div class="grid-2 e-block-a">
+									<div class="e-label">Dosage</div>
+								</div>
+								<div class="grid-2 e-block-b">
+									<div class="e-input" id="dosage-wrapper">
+										<!-- <input id="dosage-input" type="text" placeholder="Choose dosage" autocomplete="off" /> -->
+										<textarea id="dosage-input" placeholder="Choose dosage"></textarea>
+										<ul id="dosage-list" class="ui-body-c ui-corner-all ui-shadow-inset">
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="e-blocks">
+								<div class="grid-3 e-block-a">
+									<div class="e-label">Quantity</div>
+								</div>
+								<div class="grid-3 e-block-b"><input id="quantityInput" type="number" data-accept-float="true" pattern="^[0-9]{0,6}(\\.[0-9]{0,3})?$" /></div>
+								<div class="grid-3 e-block-c">
+									<div class="e-label" id="drugUnit">[unit]</div>
+								</div>
+							</div>
+							<div class="e-blocks">
+								<div class="grid-3 e-block-a">
+									<div class="e-label">Duration</div>
+								</div>
+								<div class="grid-3 e-block-b"><input id="durationInput" type="number" pattern="^([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9][0-9]|[1-9][0-9][0-9][0-9][0-9])?$" /></div>
+								<div class="grid-3 e-block-c">
+									<div class="e-label">Days</div>
+								</div>
+							</div>
+							<div class="e-blocks" id="rxTypeBlock">
+								<div class="grid-4 e-block-a">
+									<div class="e-label">Rx type</div>
+								</div>
+								<div class="grid-4 e-block-b">
+									<div class="e-input" id="rxtype-wrapper">
+										<select name="rxType" id="rxType" data-role="none">
+											<option value="Acute">Acute</option>
+											<option value="Repeat">Repeat</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid-4 e-block-c hidden">
+									<div class="e-label label-right">Authorised issues</div>
+								</div>
+								<div class="grid-4 e-block-d hidden"><input id="authIssuesInput" type="number" pattern="^([0-9]|[1-9][0-9])?$" /></div>
+							</div>
+							<div class="e-blocks hidden" id="reviewDateBlock">
+								<div class="grid-3 e-block-a">
+									<div class="e-label">Review date</div>
+								</div>
+								<div class="grid-3 e-block-b">
+									<div class="e-input" id="reviewDate-wrapper">
+										<div id="review-date-on" class="ui-btn ui-mini ui-corner-left ui-radio-off ui-btn-up-undefined">On</div>
+										<div id="review-date-off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-on ui-btn-active ui-btn-up-undefined">Off</div>
+									</div>
+								</div>
+								<div class="grid-3 e-block-c">
+									<div class="e-input" id="reviewDateContainer">
+										<input id="reviewDate-calendar" type="text" data-theme="emis" data-role="datebox"
+											data-options='{"mode": "calbox", "useModal":true, "afterToday": true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' />
+									</div>
+								</div>
+							</div>
+							<div class="e-blocks">
+								<div class="grid-3 e-block-a">
+									<div class="e-label">Private</div>
+								</div>
+								<div class="grid-3 e-block-b">
+									<div class="e-input" id="private-wrapper">
+										<div id="private-on" class="ui-btn ui-mini ui-corner-left c ui-btn-up-undefined ui-radio-off">On</div>
+										<div id="private-off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-on ui-btn-up-undefined ui-btn-active">Off</div>
+									</div>
+								</div>
+								<div class="grid-3 e-block-c"></div>
+							</div>
+						</div>
+						<!-- -->
+						<div class="contentPanel" id="drugsContent">
+							<div class="header">
+								<div class="e-blocks">
+									Issuing details
+								</div>
+							</div>
+							<div class="content grid">
+								<div class="e-blocks">
+									<div class="grid-2 e-block-a">
+										<div class="e-label">Issue later</div>
+									</div>
+									<div class="grid-2 e-block-b">
+										<div class="e-input" id="issueLater-wrapper">
+											<div id="issueLater-on" class="ui-btn ui-mini ui-corner-left ui-btn-up-undefined ui-radio-off">On</div>
+											<div id="issueLater-off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-on ui-btn-up-undefined ui-btn-active">Off</div>
+										</div>
+									</div>
+								</div>
+								<div class="e-blocks notHiddenIssue" id="methodBlock">
+									<div class="grid-2 e-block-a">
+										<div class="e-label">Issuing method</div>
+									</div>
+									<div class="grid-2 e-block-b issuingBlock">
+										<div class="e-input" id="issuing-wrapper">
+											<select name="issuingMethod" id="issuingMethod" data-role="none">
+												<option value="h">Handwritten</option>
+												<option value="s">Hospital</option>
+												<option value="p">Stored NHS Printed Script</option>
+												<option value="r">Record for Notes</option>
+												<option value="o">Out of Hours</option>
+												<option value="c">Over the counter</option>
+											</select>
+											<!-- double select because of iPad2 (maybe iPad 3 too, I didn't check it) -->
+											<select name="issuingMethodDisabled" id="issuingMethodDisabled" data-role="none">
+												<option value="h">Handwritten</option>
+												<option value="s">Hospital</option>
+												<option value="p">Stored NHS Printed Script</option>
+												<option value="r">Record for Notes</option>
+												<option value="o">Out of Hours</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="e-blocks notHiddenIssue" id="dateBlock">
+									<div class="grid-2 e-block-a">
+										<div class="e-label">Add issue date</div>
+									</div>
+									<div class="grid-2 e-block-b">
+										<div class="e-input" id="issueDateContainer">
+											<input id="issueDate-calendar" type="text" data-theme="emis" data-role="datebox"
+												data-options='{"mode": "calbox", "useModal":true, "afterToday": true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useClearButton": true, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a id="addDrugButton" class="button green" data-role="none" href="">Add drug</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

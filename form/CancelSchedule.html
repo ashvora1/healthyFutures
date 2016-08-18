@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Schedules</title>
+</head>
+
+<body>
+	<div data-role="dialog" data-dialog-role="top-dialog" id="cancelSchedule" data-overlay-theme="emis" data-theme="emis" data-close-btn="none">
+		<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+			<h1 data-container="header-title">
+				Cancel schedule
+			</h1>
+			<a class="standaloneButton ui-btn ui-btn-right" id="cancel-schedule-close" href="#">
+				Close
+			</a>
+		</div>
+		<div data-role="content">
+			<div id="cancelScheduleContent">
+				<div class="contentPanel">
+					<div class="content grid">
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Reason for cancelling</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<input id="cancel-schedule-reason"></input>
+							</div>
+						</div>
+						<div id="cancel-schedule-linked-switch-wrapper" class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Cancel linked appointments</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div class="e-input">
+									<div data-cancel="on" class="ui-btn ui-mini ui-corner-left ui-radio-off">On</div><!-- inline block, don't remove this comment
+									--><div data-cancel="off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-on ui-btn-active">Off</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cancel-schedule-linked-appointments-wrapper">
+				</div>
+				<div class="contentPanel">
+					<div class="content grid">
+						<div>
+							<a href="" id="cancel-schedule-submit" data-role="none" class="button green">Cancel schedule</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

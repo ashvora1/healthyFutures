@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+	<div data-role="page" data-theme="emis" id="appointments" data-title="Appointment Sessions">
+		<div class="appointmentsHeader pageHeader">
+			<div class="syncInfo">
+				<div class="syncBtnField">
+					<a class="syncBtn standaloneButton standaloneButton-dark" href="#" data-role="none">
+						<div class="sprite sync"></div>
+						<div class="text">Sync all data</div>
+					</a>
+				</div>
+
+			</div>
+			<div class="appointmentsFilter">
+				<input id="inputFilter" type="text" placeholder="Filter list by keyword" />
+			</div>
+		</div>
+		<div class="contentWrapper">
+			<div data-role="content" class="with-over-content">
+				<div id="failedToSyncList">
+					<div class="topthing">
+						There are patient details on this device that have failed to sync
+					</div>
+					<div data-role="collapsible" data-collapsed-icon="emis-arrow-down" data-expanded-icon="emis-arrow-up" data-iconpos="right">
+						<h4></h4>
+						<div>
+							<div class="undercoverSpace">
+							</div>
+							<div class="contentPanel">
+								<div class="content grid">
+									<table>
+										<thead>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="appointmentContent"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

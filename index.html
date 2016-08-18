@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<base href="" target="_self">
+		<meta charset="utf-8" />
+		<title>EMIS Mobile</title>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"  />
+		<!-- this style is here to keep viewport settings in one place -->
+		<style>
+			@-ms-viewport {
+				width: device-width;
+				height: device-height;
+			}
+		</style>
+
+		<!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+		<meta name="apple-itunes-app" content="app-id=857797774">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+
+<!--
+<script src="http://jsconsole.com/remote.js?946E6A59-4043-4517-A1D3-138ADEDE44E7"></script>
+<script src="http://192.168.1.90:8011/target/target-script-min.js#igor"></script>
+-->
+
+
+		<script src="authenticator/emis.mobile.hotpToolkit.js"></script>
+		<script src="authenticator/emis.mobile.totp.js"></script>
+		<script src="core/emis.mobile.namespace.js"></script>
+		<script src="core/emis.mobile.NativeCalls.js"></script>
+		<script src="utils/emis.mobile.Maps.js"></script>
+		<script src="utils/emis.mobile.Console.js"></script>
+		<script src="core/emis.mobile.init.js"></script>
+		<script src="lib/jquery-2.0.3.js"></script>
+		<script src="lib/jquery.ba-throttle-debounce.min.js"></script>
+		<script src="lib/IndexedDBShim.min.js"></script>
+		<script src="lib/jquery-ui-1.10.3.custom.js"></script>
+
+
+
+		<script src="webenv/online.js"></script>
+
+		<link rel="stylesheet" href="lib/jqm/jquery.mobile-1.4.0.css" />
+		<!-- calendar control start -->
+		<link rel="stylesheet" type="text/css" href="lib/jqm-datebox/jqm-datebox.css" />
+		<!-- calendar control end -->
+		<!--
+		<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+		-->
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="emis.css" />
+
+		<link rel="apple-touch-icon" href="images/EMIS-appicon.png"/>
+		<link rel="apple-touch-icon" sizes="72x72" href="images/EMIS-appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="images/EMIS-appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="images/EMIS-appicon-144.png" />
+	</head>
+	<body class="bodyClass">
+		<div id="drawer">
+			<ul>
+				<li id="drawer-appointments" class="drawer-default"><a href="#">Appointments</a></li>
+				<li id="drawer-caseloads" class="drawer-default"><a href="#">Caseloads</a></li>
+				<li id="drawer-patient" class="drawer-patient"><div>PATIENT, Name</div></li>
+				<li id="drawer-patient-record" class="drawer-default"><a href="#">Patient record</a></li>
+				<li id="drawer-new-appointment" class="drawer-default">
+					<a>
+						<div>Add new appointment</div>
+						<div class="drawer-star">&nbsp;</div>
+					</a>
+				<li id="drawer-new-drug" class="drawer-default">
+					<a>
+						<div>Add drug</div>
+						<div class="drawer-star">&nbsp;</div>
+					</a>
+				</li>
+				<li id="drawer-tasks" class="drawer-default">
+					<a>
+						<div>Tasks</div>
+						<div class="drawer-star">&nbsp;</div>
+					</a>
+				</li>
+				<li id="drawer-contact" class="drawer-default">
+					<a>
+						<div>Contact</div>
+						<div class="drawer-star">&nbsp;</div>
+					</a>
+				</li>
+				<li class="drawer-default drawer-last-before-info"></li>
+				<li class="drawer-logged-info">
+					<div id="drawer-logged-info">
+						<div>Logged in as <span id="drawer-user">Dr. Emis Test</span></div>
+						<div id="drawer-last-sync">Last synced at <span class="date"></span></div>
+
+						<div id="drawer-date"></div>
+						<div id="app-version">Unknown</div>
+						<div id="drawer-logout"><a class="standaloneButton standaloneButton-dark" href="#">Logout</a></div>
+						<div id="drawer-emis-logo">
+						<div class="sprite emis-logo-grey"></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div data-role="page" style="display:none;" data-theme="emis" id="page1">
+			<div data-role="content" >
+				<div class="e-blocks" id="e-logo">
+					<div class="sprite emis-logo"></div>
+				</div>
+				<div class="e-blocks sprite login-bg" id="loginContentNew" >
+					<div id="loading">
+						<div id="loginIndicatorWrapper">
+							<img src="images/login-indicator.gif" />
+						</div>
+						<div id="progressBarOuter">
+							<div id="progressBarInner"></div>
+						</div>
+					</div>
+					<div id="loaded"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- common headers and footers -->
+
+		<div id="commonComponents">
+
+			<div data-theme="emis" data-role="none" class="ui-header ui-header-fixed own-header pageHeader" id="headerAppointments">
+				<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true">
+					Appointments
+				</h3>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+				<div data-role="controlgroup">
+					<a id="MapBtn" href="#map" data-role="none" class="standaloneButton">Map view</a>
+					<a id="appointmentsBtn" href="#appointments" data-role="none" class="standaloneButton">List view</a>
+				</div>
+			</div>
+			<div data-theme="emis" data-role="none" class="ui-header ui-header-fixed own-header pageHeader" id="headerCaseloads">
+				<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true">
+					Caseloads
+				</h3>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+			<div data-theme="emis" data-role="none" class="ui-header ui-header-fixed own-header  pageHeader" id="headerTasks">
+				<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true">
+					Tasks
+				</h3>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+
+			<div data-theme="emis" data-role="none" id="headerBookAppointments" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+					</div>
+					<div class="standaloneButton" id="showSchedulesList">
+						<span class="icon">&nbsp;</span>
+						<span class="text">Schedules</span>
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="bookAppointmentsHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+
+
+			<div data-theme="emis" data-role="none" id="headerPatient" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+					</div>
+					<div class="standaloneButton" id="addContactButton">
+						<span class="icon">&nbsp;</span>
+						Add contact
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="patientHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+
+				<div class="commonComponents" id="changeContactDiv">
+
+				</div>
+
+			</div>
+
+			<div data-theme="emis" data-role="none" id="headerPatientSummary" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="patientHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+				<div class="commonComponents" id="changeContactDiv">
+				</div>
+			</div>
+
+			<div data-theme="emis" data-role="none" id="headerTemplates" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+					</div>
+					<div class="standaloneButton" id="addContact">
+						<b>+</b> Add template
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="patientHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+
+			<div data-theme="emis" data-role="none" id="headerMedications" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+					</div>
+					<div class="standaloneButton" id="addDrugBtn">
+
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="patientHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+
+			<div data-theme="emis" data-role="none" id="headerAddDrug" class="ui-header ui-header-fixed own-header pageHeader">
+				<div data-role="none">
+					<div class="standaloneButton alertsButtonContainer">
+						<span class="alertButton icon">&nbsp;</span>
+						<div class="alertsBubble">0</div>
+					</div>
+					<div class="alertsContainer">
+					</div>
+					<div class="standaloneButton" id="listAllergies" class="ui-disabled">
+						<!-- <span class="icon">&nbsp;</span> -->
+						<img src="images/allergies.png" alt="a"/>
+						<!-- <span class="text">No known allergies</span> -->
+						<span class="text"></span>
+					</div>
+				</div>
+				<div class="heading-wrapper">
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="patientHeaderTitle">
+						Page name
+					</h3>
+				</div>
+				<a class="drawer-menu-button standaloneButton" href="#" data-role="none">
+					<div class="drawer-menu-button-lines">
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+						<div class="drawer-menu-one-line">&ndash;</div>
+					</div>
+					Menu
+				</a>
+			</div>
+
+		</div>
+
+		<div id="block-div">&nbsp;</div>
+
+		<script src="lib/gibberish-aes.min.js"></script>
+		<script src="lib/cryptoJS_3.1.2/aes.js"></script>
+		<script src="lib/cryptoJS_3.1.2/sha256.js"></script>
+		<script src="lib/cryptoJS_3.1.2/hmac-sha512.js"></script>
+
+		<script src="core/emis.mobile.Encryptor.js"></script>
+		<script src="core/emis.mobile.Sanitizer.js"></script>
+
+		<script src="lib/jqm/jquery.mobile-1.4.0.js"></script>
+
+		<!-- scripts for date picker start -->
+		<script src="lib/jqm-datebox/jqm-datebox.core.js"></script>
+		<script src="lib/jqm-datebox/jqm-datebox.mode.calbox.js"></script>
+		<script src="lib/jqm-datebox/jqm-datebox.mode.datebox.js"></script>
+		<script src="lib/jqm-datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+		<!-- scripts for date picker end -->
+
+		<script src="core/emis.mobile.Constants.js"></script>
+		<script src="authenticator/emis.mobile.hotpToolkit.js"></script>
+		<script src="authenticator/emis.mobile.totp.js"></script>
+		<script src="webService/emis.mobile.WebService.js"></script>
+		<script src="webService/emis.mobile.GetMedicationReferenceAPI.js"></script>
+		<script src="webService/emis.mobile.PostMedicationAPI.js"></script>
+		<script src="webService/emis.mobile.PatientListAPI.js"></script>
+		<script src="webService/emis.mobile.PatientAPI.js"></script>
+		<script src="webService/emis.mobile.EncounterAPI.js"></script>
+		<script src="webService/emis.mobile.TaskAPI.js"></script>
+		<script src="webService/emis.mobile.UserSessionAPI.js"></script>
+		<script src="webService/emis.mobile.LogAPI.js"></script>
+		<script src="webService/emis.mobile.ConsentAPI.js"></script>
+		<script src="webService/emis.mobile.RoutineSyncDataAPI.js"></script>
+		<script src="webService/emis.mobile.TemplatesAPI.js"></script>
+		<script src="webService/emis.mobile.SearchAppointmentsAPI.js"></script>
+		<script src="webService/emis.mobile.BookAppointmentAPI.js"></script>
+		<script src="webService/emis.mobile.ReserveAppointmentAPI.js"></script>
+		<script src="webService/emis.mobile.GetAttachmentAPI.js"></script>
+		<script src="webService/emis.mobile.VerifyAuthenticationCodeAPI.js"></script>
+		<script src="webService/emis.mobile.CancelScheduleAPI.js"></script>
+		<script src="webService/emis.mobile.CreateScheduleAPI.js"></script>
+		<script src="webService/emis.mobile.EditScheduleAPI.js"></script>
+
+		<script src="models/emis.mobile.DrugsModel.js"></script>
+		<script src="models/emis.mobile.RoutineSyncDataModel.js"></script>
+		<script src="models/emis.mobile.PatientDataModel.js"></script>
+		<script src="models/emis.mobile.TaskModel.js"></script>
+		<script src="models/emis.mobile.AppointmentsModel.js"></script>
+		<script src="models/emis.mobile.UserSessionModel.js"></script>
+		<script src="models/emis.mobile.LoginModel.js"></script>
+		<script src="models/emis.mobile.LogModel.js"></script>
+		<script src="models/emis.mobile.ErrorModel.js"></script>
+		<script src="models/emis.mobile.EncountersModel.js"></script>
+		<script src="models/emis.mobile.ConsentModel.js"></script>
+		<script src="models/emis.mobile.ConsultationPropertiesModel.js"></script>
+		<script src="models/emis.mobile.TemplateModel.js"></script>
+		<script src="models/emis.mobile.EventsetModel.js"></script>
+		<script src="models/emis.mobile.ScheduleModel.js"></script>
+		<script src="utils/emis.mobile.DocumentZoom.js"></script>
+		<script src="utils/emis.mobile.Utilities.js"></script>
+		<script src="sync/emis.mobile.Synchronizer.js"></script>
+		<script src="sync/emis.mobile.SyncSafteyCheck.js"></script>
+		<script src="nonSyncWSManager/emis.mobile.NonSyncWSManager.js"></script>
+
+		<script src="storage/emis.mobile.AndroidStorage.js"></script>
+		<script src="storage/emis.mobile.IOSStorage.js"></script>
+		<script src="storage/emis.mobile.WindowsStorage.js"></script>
+		<script src="storage/emis.mobile.Storage.js"></script>
+		<script src="core/emis.mobile.IDBStorage.js"></script>
+
+		<script src="core/emis.mobile.DataProvider.js"></script>
+		<script src="core/emis.mobile.DataWipe.js"></script>
+		<script src="core/emis.mobile.Controller.js"></script>
+		<script src="form/emis.mobile.form.LoginForm.js"></script>
+		<script src="form/emis.mobile.form.SyncAccessToken.js"></script>
+		<script src="webenv/emis.mobile.UI.js"></script>
+		<script src="form/emis.mobile.form.PatientProblemsList.js"></script>
+		<script src="form/emis.mobile.form.Immunisations.js"></script>
+		<script src="form/emis.mobile.form.Values.js"></script>
+		<script src="form/emis.mobile.form.ValuesHistory.js"></script>
+		<script src="form/emis.mobile.form.ValuesMultiHistory.js"></script>
+		<script src="form/emis.mobile.form.Allergies.js"></script>
+		<script src="form/emis.mobile.form.PatientSummary.js"></script>
+		<script src="form/emis.mobile.form.PatientConsultations.js"></script>
+		<script src="form/emis.mobile.form.Diary.js"></script>
+		<script src="form/emis.mobile.form.Allergies.js"></script>
+		<script src="form/emis.mobile.form.ImmunisationsHistory.js"></script>
+		<script src="form/emis.mobile.form.Referrals.js"></script>
+		<script src="form/emis.mobile.form.Medications.js"></script>
+		<script src="form/emis.mobile.form.MedicationDetails.js"></script>
+		<script src="form/emis.mobile.form.PatientDetailsOffline.js"></script>
+		<script src="form/emis.mobile.form.PatientMap.js"></script>
+		<script src="form/emis.mobile.form.TemplateList.js"></script>
+		<script src="form/emis.mobile.form.TemplateParser.js"></script>
+		<script src="form/emis.mobile.form.SelectTemplate.js"></script>
+		<script src="form/emis.mobile.form.BookAppointments.js"></script>
+		<script src="form/emis.mobile.form.BookAppointmentsDetails.js"></script>
+		<script src="form/emis.mobile.form.AddDrug.js"></script>
+		<script src="form/emis.mobile.ListViewCodes.js"></script>
+		<script src="form/emis.mobile.form.AppointmentsList.js"></script>
+		<script src="form/emis.mobile.form.CaseloadsList.js"></script>
+		<script src="form/emis.mobile.form.PatientProblemDetails.js"></script>
+		<script src="form/emis.mobile.form.PatientDocuments.js"></script>
+		<script src="form/emis.mobile.form.DocumentDetails.js"></script>
+		<script src="form/emis.mobile.form.OTKverification.js"></script>
+		<script src="form/emis.mobile.form.SchedulesList.js"></script>
+		<script src="form/emis.mobile.form.CancelSchedule.js"></script>
+		<script src="form/emis.mobile.form.EditSchedule.js"></script>
+		<script src="form/emis.mobile.form.EditScheduleTemplate.js"></script>
+		<script src="form/emis.mobile.form.TravelDetails.js"></script>
+		<script src="form/emis.mobile.form.Loading.js"></script>
+		<script src="form/emis.mobile.form.SharingViewPermission.js"></script>
+		<script type="text/javascript" src="lib/google-maps/infobubble.js"></script>
+		<script src="form/emis.mobile.form.MapView.js"></script>
+		<script src="lib/flot/excanvas.min.js"></script>
+		<script src="lib/flot/jquery.flot.js"></script>
+		<script src="lib/flot/jquery.flot.resize.js"></script>
+		<script src="lib/vktemplate.js"></script>
+
+		<script src="form/emis.mobile.form.EditTask.js"></script>
+		<script src="form/emis.mobile.form.DrugList.js"></script>
+		<script src="form/emis.mobile.form.TaskList.js"></script>
+		<script src="form/emis.mobile.form.TaskAllUsers.js"></script>
+		<script src="form/emis.mobile.form.Synchronisation.js"></script>
+		<script src="core/emis.mobile.IncidentLogger.js"></script>
+		<script src="core/emis.mobile.Main.js"></script>
+
+	</body>
+</html>

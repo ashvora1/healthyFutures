@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Schedules</title>
+</head>
+
+<body>
+	<div data-role="dialog" id="editSchedule" data-overlay-theme="emis" data-theme="emis" data-close-btn="none">
+		<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+			<h1 data-container="header-title">
+				title
+			</h1>
+			<a class="standaloneButton ui-btn ui-btn-right" id="edit-schedule-close" href="#">
+				Cancel
+			</a>
+		</div>
+		<div class="e-blocks patient-area">
+			<div class="grid-2 e-block-a">Patient name</div><!--
+			--><div class="grid-2 e-block-b patient-name">&nbsp;</div>
+		</div>
+		<div data-role="content">
+			<div id="editScheduleContent">
+				<div class="contentPanel">
+					<div class="content grid">
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Service</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div>
+									<select data-role="none" class="full-width" id="edit-schedule-service"></select>
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks" id="edit-schedule-care-episode-wrapper">
+							<div class="grid-2 e-block-a">
+								<span>Linked care episode</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div>
+									<select data-role="none" class="full-width"></select>
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Dependency</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div class="e-input" id="edit-schedule-dependency-wrapper">
+									<div data-dependency="Low" class="ui-btn ui-mini ui-corner-left ui-radio-off">Low</div><!-- inline block, don't remove this comment
+									--><div data-dependency="Medium" class="ui-btn ui-mini ui-radio-off">Medium</div><!-- inline block, don't remove this comment
+									--><div data-dependency="High" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">High</div>
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Schedule template</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div id="edit-schedule-select-template-wrapper">
+									<select data-role="none" class="full-width"></select>
+								</div><!-- inline block, don't remove this comment
+								--><div class="template-wrapper"><a href="" id="edit-schedule-edit-template" data-role="none" class="button">Edit</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentPanel">
+					<div class="content grid">
+						<div class="e-blocks">
+							<div class="grid-4 e-block-a">
+								<span>Date</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-4 e-block-b">
+								<div class="e-input" id="edit-schedule-start-date">
+									<input type="text" data-theme="emis" data-role="datebox" data-options='{"mode": "calbox", "useModal":true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useClearButton": true, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' readonly="readonly" class="ui-corner-all ui-icon-datebox">
+								</div>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-4 e-block-c bold center-text">
+								to
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-4 e-block-d">
+								<div class="e-input" id="edit-schedule-end-date">
+									<input type="text" data-theme="emis" data-role="datebox" data-options='{"mode": "calbox", "useModal":true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useClearButton": true, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' readonly="readonly" class="ui-corner-all ui-icon-datebox">
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks" id="edit-schedule-visit-duration-wrapper">
+							<div class="grid-2 e-block-a">
+								<span>Predicted visit duration</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-small-time-block">
+									<input type="number" min="1" max="99" pattern="^[0-9]{0,2}$">
+								</div><span class="bold">mins</span>
+							</div>
+						</div>
+						<div class="e-blocks" id="edit-schedule-travel-time-wrapper">
+							<div class="grid-2 e-block-a">
+								<span>Predicted travel time</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-small-time-block">
+									<input type="number" min="1" max="99" pattern="^[0-9]{0,2}$">
+								</div><span class="bold">mins</span>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Time band</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div class="half-width">
+									<select data-role="none" class="full-width" id="edit-schedule-time-band">
+										<option value="None">None</option>
+										<option value="Morning">Morning</option>
+										<option value="Afternoon">Afternoon</option>
+										<option value="Evening">Evening</option>
+										<option value="NightTime">Night time</option>
+										<option value="Anytime">Any time</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Slot type</span>
+								<span class="star">*</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<div>
+									<select data-role="none" class="full-width" id="edit-schedule-slot-type"></select>
+								</div>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Location</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<select data-role="none" class="full-width" id="edit-schedule-location"></select>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Reason</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<textarea id="edit-schedule-reason" data-role="none" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"></textarea>
+							</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Notes</span>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b">
+								<textarea id="edit-schedule-notes" data-role="none" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentPanel">
+					<div class="content grid">
+						<div>
+							<a href="" id="edit-schedule-save" data-role="none" class="button green">Save schedule</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

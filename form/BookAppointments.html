@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+	<body>
+		<div data-role="page" data-theme="emis" id="bookAppointments">
+			<div class="patientSummaryInfo pageHeader"></div>
+			<div class="contentWrapper">
+				<div id="bookAppointmentsHeaderPart"></div>
+				<div data-theme="emis" data-role="content" class="with-over-content">
+
+					<div class="over-content book-appointments no-color">
+						<div class="contentPanel" id="searchCriteria">
+							<div class="header">
+								Search criteria
+
+							</div>
+							<div class="content grid">
+								<div class="e-blocks">
+									<div class="grid-4 e-block-a">
+										<span>Search from</span>
+									</div>
+									<div class="grid-4 e-block-b">
+										<div class="e-input" id="searchFromContainer">
+											<input id="add-new-app-date-from" type="text" data-theme="emis" data-role="datebox"
+											data-options='{"mode": "calbox", "useModal":true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%a %d-%b-%Y"}' />
+										</div>
+									</div>
+									<div class="grid-4 e-block-c">
+										to
+									</div>
+									<div class="grid-4 e-block-d">
+										<div class="e-input" id="searchToContainer">
+											<input id="add-new-app-date-to" type="text" data-theme="emis" data-role="datebox"
+											data-options='{"mode": "calbox", "useModal":true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%a %d-%b-%Y"}' />
+										</div>
+									</div>
+								</div>
+								<div class="e-blocks ">
+									<div class="grid-2 e-block-a">
+										<span>Days included</span>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDayMonday" data-role="none" class="button criteria day activated">Mon</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDayTuesday" data-role="none" class="button criteria day activated">Tues</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDayWednesday" data-role="none" class="button criteria day activated">Wed</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDayThursday" data-role="none" class="button criteria day activated">Thurs</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDayFriday" data-role="none" class="button criteria day activated">Fri</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDaySaturday" data-role="none" class="button criteria day">Sat</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppDaySunday" data-role="none" class="button criteria day">Sun</a>
+									</div>
+								</div>
+								<div class="e-blocks ">
+									<div class="grid-5 e-block-a">
+										<span>Time of day</span>
+									</div>
+									<div class="grid-5 e-block-b">
+										<select data-role="none" id="searchCriteriaTimeOfDay">
+											<option value="After">After</option>
+											<option value="AM Only">AM Only</option>
+											<option value="Any" selected>Any</option>
+											<option value="Before">Before</option>
+											<option value="Between">Between</option>
+											<option value="PM Only">PM Only</option>
+										</select>
+									</div>
+									<div class="grid-5 e-block-c hidden" id="fromTimeContainer">
+										<input id="fromTime" type="text" data-theme="emis"
+											data-role="datebox" data-options='{"mode": "timebox", "useModal":true, "centerHoriz": true, "centerVert": true, "repButton":false, "useAnimation":false, "useFocus": true, "overrideTimeFormat":24, "overrideTimeOutput": "%H:%M"}'>
+									</div>
+									<div class="grid-5 e-block-d hidden" id="andContainer">
+										<span>and </span>
+									</div>
+									<div class="grid-5 e-block-e hidden" id="toTimeContainer">
+										<input id="toTime" type="text" data-theme="emis"
+											data-role="datebox" data-options='{"mode": "timebox", "useModal":true, "useModal":true, "centerHoriz": true, "centerVert": true, "repButton":false, "useAnimation":false, "useFocus": true, "overrideTimeFormat":24, "overrideTimeOutput": "%H:%M"}'>
+									</div>
+								</div>
+								<div class="e-blocks ">
+									<div class="grid-2 e-block-a">
+										<span>Slot type</span>
+									</div>
+									<div class="grid-2 e-block-b">
+										<select data-role="none" id="searchCriteriaSlotTypes">
+										</select>
+									</div>
+								</div>
+
+								<div class="e-blocks ">
+									<div class="grid-4 e-block-a">
+										<span>Session holder</span>
+									</div>
+									<div class="grid-4 e-block-b">
+										<select data-role="none" id="searchCriteriaSessionHolders"></select>
+									</div>
+									<div class="grid-4 e-block-c">
+										<span>filter</span>
+									</div>
+									<div class="grid-4 e-block-d">
+										<select data-role="none" id="searchCriteriaSessionHolderFilters"></select>
+									</div>
+								</div>
+
+								<div class="e-blocks ">
+									<div class="grid-2 e-block-a">
+										<span>Gender</span>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppGenderMale" data-role="none" class="button criteria gender activated">Male</a>
+									</div>
+									<div class="tight">
+										<a href="" id="bookAppGenderFemale" data-role="none" class="button criteria gender activated">Female</a>
+									</div>
+								</div>
+
+								<div class="e-blocks ">
+									<div class="grid-2 e-block-a">
+										<span>Session category</span>
+									</div>
+									<div class="grid-2 e-block-b">
+										<select data-role="none" id="searchCriteriaSessionCategories"></select>
+									</div>
+								</div>
+
+								<div class="e-blocks ">
+									<div class="grid-2 e-block-a">
+										<span>Location</span>
+									</div>
+									<div class="grid-2 e-block-b">
+										<select data-role="none" id="searchCriteriaLocations"></select>
+									</div>
+								</div>
+							</div>
+						<div id="searchSlotWrapper">
+							<a href="" id="searchSlotBtn" data-role="none" class="button green">Search</a>
+						</div>
+						</div>
+					</div>
+
+					<div class="over-content" id="searchResultsOverContent">
+						<div class="over-header">
+							Search results
+						</div>
+						<div class="contentPanel" id="searchResultsContentPanel">
+						</div>
+						<div class="limited-result">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

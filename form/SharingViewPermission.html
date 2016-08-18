@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title></title>
+</head>
+
+<body>
+	<div data-role="dialog" id="sharingViewPermission" data-overlay-theme="emis" data-theme="emis" data-close-btn="none">
+		<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+			<h1 data-container="header-title">
+				Data Sharing - Permission to view
+			</h1>
+			<a class="standaloneButton ui-btn ui-btn-right" id="sharingViewPermissionCloseBtn" href="#">
+				Cancel
+			</a>
+		</div>
+		<div data-role="content">
+			<div id="sharingViewPermissionContent">
+				<div class="contentPanel">
+					<div class="content grid">
+						<div class="e-blocks">
+							<div class="question">Do you have permission to view the patient's shared record?</div>
+						</div>
+						<div class="e-blocks">
+							<div class="grid-2 e-block-a">
+								<span>Consent Reason</span>
+							</div>
+							<div class="grid-2 e-block-b">
+								<select data-role="none" class="full-width" id="sharingViewPermissionReason">
+									<option value="Given">
+										Patient has given consent
+									</option>
+									<option value="Emergency">
+										Emergency
+									</option>
+									<option value="IncapacitatedIllnessOrInjury">
+										Incapacitated illness or injury
+									</option>
+									<option value="IncapacitatedMentalHealthOrLearningDifficulties">
+										Incapacitated mental health or learning difficulties
+									</option>
+									<option value="ChildWithNoAccompanyingParentGuardian">
+										Child with no accompanying parent guardian
+									</option>
+									<option value="Other">
+										Other - reason (text) to be entered
+									</option>
+								</select>
+							</div>
+						</div>
+						<div class="e-blocks" id="sharingViewPermissionReasonDetails" style="display:none;">
+							<div class="grid-2 e-block-a">
+								<span>Reason</span><span class="requiredField">*</span>
+							</div>
+							<div class="grid-2 e-block-b">
+								<div class="e-input full-width" id="editScheduleStartDatePicker">
+									<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
+										<input name="sharingViewPermissionDetails" id="sharingViewPermissionReasonDetailsText" type="text" maxlength=1024>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentPanel">
+					<div class="content grid">
+						<div>
+							<a href="" id="ConsentAgreeBtn" data-role="none" class="button green full-width">Save consent</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+</html>

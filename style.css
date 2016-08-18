@@ -1,0 +1,6823 @@
+/*
+Paginator styles add by Laurie Keith 05/06/2015s
+*/
+.paginator ul {
+	list-style: none;
+	display: inline-block;
+}
+
+.paginate {
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+  -background-color:#efefef;
+  margin:16px 0 0 0;
+  padding:16px;
+}
+
+.paginate.pag2 {}
+
+.paginate.pag2 li { font-weight: bold; }
+
+.paginate.pag2 li a {
+  display: block;
+  float: left;
+  color: #585858;
+  text-decoration: none;
+  padding: 6px 11px;
+  margin-right: 6px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eee));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #eee);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #eee);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #eee);
+  background-image: -o-linear-gradient(top, #f7f7f7, #eee);
+  background-image: linear-gradient(top, #f7f7f7, #eee);
+  -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0, .55);
+  -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0, .55);
+  box-shadow: 2px 2px 4px -1px rgba(0,0,0, .55);
+}
+.paginate.pag2 li a:hover {
+  color: #3280dc;
+}
+.paginate.pag2 li a:active {
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: 1px 1px 3px -1px rgba(0,0,0, .55);
+  -moz-box-shadow: 1px 1px 3px -1px rgba(0,0,0, .55);
+  box-shadow: 1px 1px 3px -1px rgba(0,0,0, .55);
+}
+
+.paginate.pag2 li.single, .paginate.pag2 li.current {
+  display: block;
+  float: left;
+  padding: 6px 11px;
+  padding-top: 8px;
+  margin-right: 6px;
+  border-radius: 3px;
+  color: #676767;
+}
+
+/* Generic icon styles */
+
+/* 26x26 pixels */
+
+.sprite { background: url('images/sprite.png') no-repeat top left;  }
+
+.sprite.emis-logo { background-position: 0px 0px; width: 214px; height: 80px; }
+.sprite.emis-logo-grey { background-position: 0px -90px; width: 99px; height: 37px; display: inline-block; }
+.sprite.complete-icon { background-position: 0px -137px; padding-left: 20px; }
+.sprite.not-complete-icon { background-position: 0px -160px; padding-left:20px; }
+.sprite.drawer-star { background-position: 0px -183px; width: 20px; height: 9px; margin-left:10px;	 display: inline-block; }
+.sprite.edit { background-position: 0px -202px; width: 29px; height: 29px;  }
+.sprite.edit_inert { background-position: 0px -241px; width: 29px; height: 29px;  }
+.sprite.login-bg { background-position: 0px -280px; width: 462px; height: 231px;  }
+.sprite.sync { background-position: 0px -521px; width: 25px; height: 25px; display:inline-block; }
+
+
+:not(div.e-input) {
+	text-shadow: none;
+}
+
+.ui-btn-icon-left .ui-btn-inner .ui-icon.ui-iconsize-26,
+.ui-btn-icon-right .ui-btn-inner .ui-icon.ui-iconsize-26 {
+	margin-top: -13px;
+}
+
+.ui-btn-icon-notext .ui-icon { display: block; z-index: 0;}
+
+.ui-btn-icon-top .ui-btn-inner .ui-icon.ui-iconsize-26, .ui-btn-icon-bottom .ui-btn-inner .ui-icon.ui-iconsize-26 { position: absolute; left: 50%;  margin-left: -13px; }
+.ui-header .ui-btn-icon-left .ui-icon.ui-iconsize-26,
+.ui-footer .ui-btn-icon-left .ui-icon.ui-iconsize-26,
+.ui-mini.ui-btn-icon-left .ui-icon.ui-iconsize-26,
+.ui-mini .ui-btn-icon-left .ui-icon.ui-iconsize-26 { left: 3px; margin-top: -12px; }
+
+.ui-header .ui-btn-icon-right .ui-icon.ui-iconsize-26,
+.ui-footer .ui-btn-icon-right .ui-icon.ui-iconsize-26,
+.ui-mini.ui-btn-icon-right .ui-icon.ui-iconsize-26,
+.ui-mini .ui-btn-icon-right .ui-icon.ui-iconsize-26 { right: 3px; margin-top: -12px; }
+
+.ui-header .ui-btn-icon-top .ui-icon.ui-iconsize-26,
+.ui-footer .ui-btn-icon-top .ui-icon.ui-iconsize-26,
+.ui-mini.ui-btn-icon-top .ui-icon.ui-iconsize-26,
+.ui-mini .ui-btn-icon-top .ui-icon.ui-iconsize-26 { top: 3px; }
+
+.ui-header .ui-btn-icon-bottom .ui-icon.ui-iconsize-26,
+.ui-footer .ui-btn-icon-bottom .ui-icon.ui-iconsize-26,
+.ui-mini.ui-btn-icon-bottom .ui-icon.ui-iconsize-26,
+.ui-mini .ui-btn-icon-bottom .ui-icon.ui-iconsize-26 { bottom: 3px; }
+
+
+
+
+.ui-icon-ios-pack-color-left-arrow {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-right-arrow {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-up-arrow {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-back {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-forward {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-down-arrow {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-plus {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-minus {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-check {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-delete {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-gear {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-refresh {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-grid {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-star {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-info {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-home {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-search {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+.ui-icon-ios-pack-color-alert {
+	width: 26px;
+	height: 26px;
+	background-color: transparent !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+}
+
+
+
+
+
+.ui-icon-ios-pack-color-left-arrow {
+	background: url('images/ios-pack-color.png') -260px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-right-arrow {
+	background: url('images/ios-pack-color.png') -364px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-up-arrow {
+	background: url('images/ios-pack-color.png') -442px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-back {
+	background: url('images/ios-pack-color.png') -26px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-forward {
+	background: url('images/ios-pack-color.png') -130px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-down-arrow {
+	background: url('images/ios-pack-color.png') -104px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-plus {
+	background: url('images/ios-pack-color.png') -312px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-minus {
+	background: url('images/ios-pack-color.png') -286px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-check {
+	background: url('images/ios-pack-color.png') -52px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-delete {
+	background: url('images/ios-pack-color.png') -78px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-gear {
+	background: url('images/ios-pack-color.png') -156px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-refresh {
+	background: url('images/ios-pack-color.png') -338px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-grid {
+	background: url('images/ios-pack-color.png') -182px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-star {
+	background: url('images/ios-pack-color.png') -416px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-info {
+	background: url('images/ios-pack-color.png') -234px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-home {
+	background: url('images/ios-pack-color.png') -208px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-search {
+	background: url('images/ios-pack-color.png') -390px 50% no-repeat transparent !important;
+}
+
+.ui-icon-ios-pack-color-alert {
+	background: url('images/ios-pack-color.png') -0px 50% no-repeat transparent !important;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+			only screen and (min--moz-device-pixel-ratio: 1.5),
+			only screen and (min-resolution: 240dpi) {
+
+	.ui-icon-ios-pack-color-left-arrow,.ui-icon-ios-pack-color-right-arrow,.ui-icon-ios-pack-color-up-arrow,.ui-icon-ios-pack-color-back,.ui-icon-ios-pack-color-forward,.ui-icon-ios-pack-color-down-arrow,.ui-icon-ios-pack-color-plus,.ui-icon-ios-pack-color-minus,.ui-icon-ios-pack-color-check,.ui-icon-ios-pack-color-delete,.ui-icon-ios-pack-color-gear,.ui-icon-ios-pack-color-refresh,.ui-icon-ios-pack-color-grid,.ui-icon-ios-pack-color-star,.ui-icon-ios-pack-color-info,.ui-icon-ios-pack-color-home,.ui-icon-ios-pack-color-search,.ui-icon-ios-pack-color-alert {
+		background-image: url('images/ios-pack-color-2x.png');
+		-moz-background-size: 468px 26px;
+		-o-background-size: 468px 26px;
+		-webkit-background-size: 468px 26px;
+		background-size: 468px 26px;
+	}
+
+}
+
+
+
+.ui-dialog .ui-header .ui-btn-icon-notext {
+	display:none;
+}
+
+.ui-datebox-container .ui-bar-a .ui-btn-icon-notext {
+	display: inline-block;
+}
+.ui-input-datebox{
+	background-color: #FFFFFF;
+	height: 32px;
+	min-height: 32px;
+	border: 1px solid #AAAAAA;
+	width: 40%;
+}
+
+html body .ui-page .ui-datebox-container .ui-datebox-griddate-disable,
+html body .ui-page .ui-datebox-container .ui-datebox-griddate-disable:hover {
+	color:#888;
+	cursor:default;
+	border-color:transparent;
+	background-color: transparent;
+}
+
+.ui-datebox-gridheader {
+	margin-left:5px ;
+}
+
+.ui-datebox-container .ui-grid-a {
+	padding:1px 5px;
+}
+
+
+.ui-datebox-dboxin {
+	padding:1px ;
+}
+
+#task-type-wrapper{
+	text-overflow: ellipsis;
+	width: 170px;
+	vertical-align: middle;
+}
+
+@media (orientation: portrait) {
+	#task-type-wrapper{
+		text-overflow: ellipsis;
+		width: 150px;
+	}
+}
+
+.ui-dialog .ui-datebox-container {
+	border: 5px solid #111 !important;
+}
+
+.ui-header .ui-bar-a .ui-btn-icon-notext {
+	display: inline-block;
+}
+
+/* fix for narrow dialog title and line cutting */
+.ui-dialog .ui-header .ui-title{
+	margin-left:10%;
+	margin-right:15%;
+}
+
+/* special for 'add drugs sync' */
+#drugTitle{
+	margin-right:5%;
+}
+
+.ui-dialog .ui-header h1.ui-title{
+	white-space:normal;
+	/*margin-bottom:0.4em;*/
+}
+
+
+/**/
+
+
+.normal_text {
+	font-weight: normal !important;
+}
+
+/**
+ * 	common style for label at vertical list  of details
+ */
+.emDetailsLabel{
+	text-align:right;
+	vertical-align:top;
+	padding-top:2px;
+	padding-right:2em;
+	padding-bottom:2px;
+	width:40%;
+	display:inline-block;
+}
+
+.emDetailsValue{
+	text-align:left;
+	width:40%;
+	display:inline-block;
+}
+
+
+/* ==================
+	COMMON COMPONENTS
+*/
+/**
+ * 	hiding common component used in footers and headers
+ */
+div#commonComponents {
+	display:none;
+}
+.commonComponents {
+	display:none;
+}
+
+.whiteBackground {
+	background: white;
+}
+
+/* =====================================================================
+ * Code below is responsible for making dialogs with transparent background.
+ * works with function in UI.js (search for TransparentDialog in project)
+ */
+
+.ui-dialog-background {
+	display: block !important;
+	pointer-events:none;
+}
+
+.ui-dialog {
+	min-height: 100% !important;
+	background: rgba(0,0,0,0.6) !important;
+	z-index:80;
+	margin: 0;
+}
+
+/* used for dialogs on top of other dialogs */
+.ui-dialog.no-background {
+	background: none !important;
+}
+.ui-dialog.top-dialog {
+	z-index:81;
+}
+.ui-mobile .backround-page-for-multiple-dialogs {
+	display: block !important;
+}
+
+.ui-dialog .ui-dialog-contain {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*
+ * end of making dialogs with transparent background
+ * ====================================================================
+ */
+
+
+#listViewCodes textarea:focus, input:focus {
+	-webkit-user-modify: read-write-plaintext-only;
+	outline: none;
+}
+/*#listInListViewCodes,*/
+#contentListViewCodes {
+	max-height: 400px;
+	/* -webkit-transform is here because of some bug on Android on Samsung
+	 * that was causing not properly displaying list on scroll
+	 */
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+#contentListViewCodes a {
+	width: auto;
+	display: block;
+}
+
+#contentListViewCodes .e-blocks{
+	text-align: left;
+}
+
+/* make button and text in the middle in select template dialog */
+#contentSelectTemplateCodes .e-blocks span, #contentTaskAllUsers .e-blocks span{
+	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
+}
+
+
+/* Styling: common for all tabs */
+/*
+.ui-mobile .ui-page-active{
+	background-color: white;
+}
+*/
+
+/* workaround for #62367 bug */
+/*
+#syncAccessToken, #task, #listViewCodes, #patientvalueshistory, #patientimmunisationshistory,
+#patientvaluesmultihistory, #patientDetails, #patientmedicationdetails, #patientproblemdetails {
+	padding-top: 0px;
+}
+
+#syncAccessToken.ui-dialog, #task.ui-dialog, #listViewCodes.ui-dialog,
+#patientvalueshistory.ui-dialog, #patientimmunisationshistory.ui-dialog, #syncLoading.ui-dialog,
+#patientvaluesmultihistory.ui-dialog, #patientDetails.ui-dialog, #patientmedicationdetails.ui-dialog, #patientproblemdetails.ui-dialog {
+	margin-top: 0px;
+}
+*/
+
+#isTrustedLoading > div, #loadingDialog > div {
+	text-align: center;
+	padding: 0px;
+}
+
+#syncLoading .contentPanel {
+	padding:10px ;
+	overflow:visible ;
+}
+
+#syncLoading .single-sync .contentPanel {
+	background-color: #cee5f2;
+}
+
+#syncLoading .multi-sync {
+	padding: 0;
+}
+
+#syncLoading .single-sync {
+	text-align: center;
+}
+
+#syncLoading .single-sync .top-text {
+	color: black;
+}
+
+#syncLoading #progressInfo .e-blocks {
+	min-height: 0;
+	font-weight: bold;
+	padding: 2px 5px;
+	border-top: solid 1px #f3f8fc;
+}
+
+#syncLoading .grid-5.e-block-a{
+	width: 40%;
+}
+#syncLoading .grid-5.e-block-b{
+	width: 5%;
+}
+#syncLoading .grid-5.e-block-c{
+	width: 30%;
+}
+#syncLoading .grid-5.e-block-d{
+	width: 15%;
+}
+#syncLoading .grid-5.e-block-e{
+	width: 10%;
+}
+
+#syncLoading #progressInfo .e-blocks.completed {
+	border-bottom: solid 1px #94c9ea;
+}
+
+#syncLoading #progressInfo .e-blocks:first-of-type {
+	border-top: 0px;
+}
+
+#syncLoading #progressInfo .e-blocks:last-of-type {
+	border-bottom: 0px;
+}
+
+#syncLoading #progressInfo {
+	border-radius: 5px;
+}
+
+#syncLoading #progressInfo .e-blocks > div {
+	padding:6px ;
+}
+
+#syncLoading #progressInfo .state {
+	width:26px ;
+	height:26px ;
+	text-align: center;
+	color: white;
+}
+
+#syncLoading #progressInfo .state.number {
+	background: url(./images/Ico_Multiples.png) no-repeat center ;
+}
+
+#syncLoading #progressInfo .state.number .data {
+	padding-top: 7px;
+	padding-left: 4px;
+}
+
+#syncLoading #progressInfo .completed {
+	background-color:#cee5f3 ;
+	color: #002F51;
+}
+
+#syncLoading #progressInfo .failed .alertsButtonContainer {
+	display: none;
+	float:none ;
+	top:0 ;
+	margin:0;
+	width:28px ;
+	left:0 ;
+	padding:4px ;
+	background: url(./images/But_Alert.png) no-repeat center ;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+}
+
+#syncLoading #progressInfo .failed .alertsButtonContainer.windows {
+	height: 26px;
+	width: 41px;
+	left: -6px;
+}
+
+#syncLoading #progressInfo .failed .alertsButtonContainer .alertsBubble {
+	padding: 2px 0 2px 5px;
+}
+
+#syncLoading #progressInfo .completed .state {
+	background-position: 7px -130px;
+}
+
+#syncLoading #progressInfo .completed .done,
+#syncLoading #progressInfo .progress,
+#syncLoading #progressInfo .completed .progress,
+#syncLoading #progressInfo .completed .all {
+	visibility:hidden ;
+}
+
+#syncLoading #progressInfo .loading .progress {
+	visibility:visible;
+}
+
+#syncLoading #progressInfo .item .done,
+#syncLoading #progressInfo .item .all {
+	color: #002F51;
+}
+
+#syncLoading #progressInfo .item .done {
+	text-align: right;
+}
+
+#syncLoading #progressInfo .item .all {
+	text-align: left;
+}
+
+#syncLoading #progressInfo .item .progress {
+	display:inline-block ;
+	width: 100%;
+}
+
+#syncLoading #progressInfo .failed {
+	position:relative;
+}
+
+#syncLoading #progressInfo .failed .alertsContainer {
+	top: auto;
+	left: auto;
+	right:-145px;
+	width: 280px;
+	min-width: 280px;
+	float: none;
+	margin-top:7px;
+	z-index:10 ;
+}
+
+#syncLoading #progressInfo .failed .alertsContainer .arrow-up {
+	left:auto ;
+	right:164px ;
+}
+
+body.portrait #syncLoading #progressInfo .failed .alertsContainer .arrow-up {
+	right:19px ;
+}
+
+body.portrait #syncLoading #progressInfo .failed .alertsContainer {
+	right:0px ;
+}
+
+#syncLoading #progressInfo .failed .alertsContainer .text {
+	display:inline-block;
+	width:200px ;
+}
+
+.ui-progressbar {
+	background: #cee5f3 ;
+	border: 1px solid #94c9ea;
+	height: 15px;
+	vertical-align:middle ;
+}
+
+.ui-progressbar-value {
+	background: #016bab;
+	height: 15px;
+	/*-webkit-transition: width 1s ;
+	-moz-transition: width 1s ;
+	-ms-transition: width 1s ;
+	-o-transition: width 1s ;
+	transition: width 1s ;*/
+}
+
+#progressInfo .ui-progressbar {
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#progressInfo .ui-progressbar-value {
+	border-radius: 0;
+}
+
+#syncLoading .startSync {
+	width:100% ;
+	box-sizing: border-box;
+	margin-top:10px;
+}
+
+#verifyOTKContent,
+#patientWarningsContent,
+#verifyOneTimeKeyContent,
+#verifyOTKContent,
+#patientWarningsContent,
+#verifyOneTimeKeyContent,
+#dynamic-popup div[data-role="content"] {
+	/*margin-top: 50%;*/
+	border-bottom: 1px solid #091f2d;
+	border-radius:5px;
+	/**/
+	background-color: #cfe5f3;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cce6f7), to(#cfe5f3));
+	background: -webkit-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -moz-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -ms-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -o-linear-gradient(top, #cce6f7, #cfe5f3);
+	/**/
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#textinputAccessToken{
+	border-color: #a4a4a2;
+	color: #a0a09e;
+}
+
+#syncAccessTokenContent .ui-field-contain {
+	text-align:center ;
+}
+
+#syncAccessTokenContent .e-blocks > div,
+#verifyOTKContent .e-blocks > div,
+#verifyOneTimeKeyContent .e-blocks > div,
+#dynamic-popup .e-blocks > div {
+	padding: 0px;
+}
+
+div#bookAppointmentsDetailsContent div#verifyOneTimeKeyContent {
+	padding-left: 15px;
+	padding-right: 30px;
+	padding-top: 10px;
+}
+
+div#bookAppointmentsDetailsContent div.e-blocks {
+	border-top: 0;
+}
+
+#syncAccessTokenContent .e-blocks .grid-2.e-block-a,
+#syncAccessTokenContent .e-blocks .grid-2.e-block-b,
+#verifyOTKContent .e-blocks .grid-2.e-block-a,
+#verifyOTKContent .e-blocks .grid-2.e-block-b,
+#verifyOneTimeKeyContent .e-blocks .grid-2.e-block-a,
+#verifyOneTimeKeyContent .e-blocks .grid-2.e-block-b,
+#dynamic-popup .e-blocks > div {
+	width: 48%;
+}
+
+#syncAccessTokenContent .e-blocks .grid-2 a,
+#verifyOTKContent .e-blocks .grid-2 a,
+#verifyOneTimeKeyContent .e-blocks .grid-2 a,
+#dynamic-popup .e-blocks a {
+	display:inline-block;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#syncAccessTokenContent .e-blocks .grid-2 span,
+#verifyOTK .e-blocks .grid-2 span,
+#verifyOneTimeKeyContent .e-blocks .grid-2 span {
+	float:left;
+}
+
+#verifyOneTimeKeyContent #confirmOneTimeKey,
+#verifyOneTimeKeyContent #cancelOneTimeKey {
+	width: 100%;
+}
+
+#verifyOneTimeKeyContent .contentPanel .e-blocks .grid-2.e-block-a,
+#verifyOneTimeKeyContent .contentPanel .e-blocks .grid-2.e-block-b {
+	width: 50%;
+}
+
+
+#dynamic-popup div[data-role="content"] .failedInfo {
+	text-align:left ;
+}
+
+#bookAppointmentsPatientHeader .e-blocks .grid-4.e-block-a {
+	width: 20%;
+}
+#bookAppointmentsPatientHeader .e-blocks .grid-4.e-block-b {
+	width: 35%;
+}
+#bookAppointmentsPatientHeader .e-blocks .grid-4.e-block-c {
+	width: 15%;
+}
+#bookAppointmentsPatientHeader .e-blocks .grid-4.e-block-d {
+	width: 30%;
+}
+
+#bookAppointmentsDetailsContent .e-blocks .grid-2.e-block-a {
+	width: 20%;
+}
+#bookAppointmentsDetailsContent .e-blocks .grid-2.e-block-b {
+	width: 80%;
+}
+
+#bookAppointmentsDetailsContent .e-blocks .grid-4.e-block-a {
+	width: 20%;
+}
+#bookAppointmentsDetailsContent .e-blocks .grid-4.e-block-b {
+	width: 30%;
+}
+#bookAppointmentsDetailsContent .e-blocks .grid-4.e-block-c {
+	width: 20%;
+}
+#bookAppointmentsDetailsContent .e-blocks .grid-4.e-block-d {
+	width: 30%;
+}
+
+#bookAppointmentsDetailsContent div.content.scroll {
+	max-height: 100px;
+	overflow-y: scroll;
+}
+
+#bookAppointmentsDetailsContent .contentPanel div.content {
+	border-radius:5px;
+}
+
+#bookAppointmentsDetailsContent .additional-info {
+	margin: 10px 0;
+}
+
+#bookAppointmentsDetails .ui-dialog-contain {
+	max-width: 800px;
+	margin: 2% auto 0 auto;
+}
+#bookAppointmentsDetails .ui-dialog-contain .ui-content {
+	max-height: 700px;
+	overflow: hidden;
+}
+#bookAppointmentsDetails div.ui-header {
+	margin: 0;
+}
+
+#smsReminderWrapper {
+/* -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; */
+	display: inline-block;
+	width: 140px;
+}
+
+#doBookAppointment {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#bookDetailsNotes {
+	height: 120px;
+}
+
+#bookAppointmentsPatientHeader > .e-blocks {
+	color: #002F51;
+	background-color: #cee5f3;
+	border-bottom: 0px;
+	border-top: 0px;
+}
+
+#syncAccessTokenContent #confirmAccessToken span,
+#syncAccessTokenContent #cancelAccessToken span,
+#verifyOTKContent #confirmOTK span,
+#verifyOTKContent #cancelOTK span,
+#verifyOneTimeKeyContent #confirmOneTimeKey span,
+#verifyOneTimeKeyContent #cancelOneTimeKey span {
+	border: 0 none;
+	border-radius: 0;
+	box-shadow: none;
+	color:#fff;
+	text-shadow: 0 -2px 1px rgba(0,0,0,0.2);
+}
+#syncAccessTokenContent #confirmAccessToken .ui-icon,
+#verifyOTKContent #confirmOTK .ui-icon,
+#verifyOneTimeKeyContent #confirmOneTimeKey .ui-icon {
+	background-position: -252px 0;
+	background-color: transparent;
+}
+#syncAccessTokenContent #cancelAccessToken .ui-icon,
+#verifyOTKContent #cancelOTK .ui-icon,
+#verifyOneTimeKeyContent #cancelOneTimeKey .ui-icon {
+	background-position: -72px 0;
+	background-color: transparent;
+}
+.bodyClass .sync-dialog .ui-content,
+.bodyClass #loadingDialog .ui-content {
+	border-bottom: 1px solid #091f2d;
+	border-radius:5px;
+	/**/
+	background-color: #cfe5f3;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cce6f7), to(#cfe5f3));
+	background: -webkit-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -moz-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -ms-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -o-linear-gradient(top, #cce6f7, #cfe5f3);
+	/**/
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#dynamic-popup div[data-role="content"],
+.bodyClass .sync-dialog .ui-content {
+	background:white ;
+	border-radius:0 0 5px 5px ;
+}
+
+.bodyClass #syncLoading .ui-content > h2,
+.bodyClass #isTrustedLoading .ui-content > h2,
+.bodyClass #loadingDialog .ui-content > h2 {
+	font-size: 1.17em;
+}
+.bodyClass #isTrustedLoading #progressInfo,
+.bodyClass #loadingDialog #progressInfoAttachments {
+	color:#6A6F72;
+}
+
+.ui-li .ui-btn-inner a.ui-link-inherit,
+.ui-listview-inset .ui-li-divider{
+	padding:7px 11px;
+	font-size:14px;
+}
+
+#listWrapper .ui-li .ui-btn-inner a.ui-link-inherit,
+#listWrapper .ui-listview-inset .ui-li-divider{
+	padding:.7em 15px;
+	font-size:16px;
+}
+
+.ui-li-static div div{
+	font-size:14px;
+}
+
+
+/* styling for patient summery */
+
+.patientSummaryInfo {
+	background-image: linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -o-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -moz-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -webkit-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -ms-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #315062),
+		color-stop(1, #082536)
+	);
+	width: 100%;
+/*	margin-bottom: 20px;*/
+	vertical-align: middle;
+	line-height: 40px;
+	text-shadow:none;
+	position: fixed;
+	top: 44px;
+	left: 0px;
+	margin-top: -2px;
+}
+
+.patientSummaryInfo .patient-info{
+/*	display:table;*/
+	margin:0;
+	padding:0 0 0 50px;
+/*	border-right:23px solid #0180CF;*/
+	background:url(images/patient-details-icon.png) 10px 10px no-repeat;
+	border-bottom: 1px solid #082a3e;
+	width:100%;
+	/* fix the width overflow due to all the padding abd border */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.patientSummaryInfo .patient-info .patient-info-el{
+	display: inline-block;
+/*	min-width:30%;*/
+	margin-right:15px;
+}
+
+.patientSummaryInfo .patient-info .patient-info-el.info-button{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	float:right;
+	cursor: pointer;
+}
+.patientSummaryInfo .patient-info .patient-info-el.info-button img{
+	float: right;
+}
+
+.patientSummaryInfo .patient-info .patient-info-el .info-name{
+	color: #a9beca;;
+	font-weight: normal;
+	display: inline-block;
+}
+
+
+.patientSummaryInfo .patient-info .patient-info-el .info-data{
+	color: #fff;
+	font-weight: normal;
+	padding-left: 5px;
+	display: inline-block;
+}
+
+.patientDetailsIcon{
+	display: inline-block;
+	position: absolute;
+	right: 14px;
+	top: 4px;
+	margin:0;
+	background-image:url('images/patientdetailsinfo.png');
+	width: 47px;
+	height: 32px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* styling for value history popup*/
+.valuesdialog .ui-dialog-contain {
+	max-width: none;
+	width:80%;
+/*  margin-top: 30px;*/
+	max-height: 520px;
+}
+
+.requiredField{
+	color: #f00;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/* not valid field style */
+.notValid,
+.requiredFieldEmpty,
+.requiredFieldEmpty .left,
+.requiredFieldEmpty .right {
+	-moz-box-shadow: inset 0px 0px 3px #FF0000 /*{global-active-background-color}*/, 0px 0px 9px #FF0000 /*{global-active-background-color}*/ !important;
+	-webkit-box-shadow: inset 0px 0px 3px #FF0000 /*{global-active-background-color}*/, 0px 0px 9px #FF0000 /*{global-active-background-color}*/ !important;
+	box-shadow: inset 0px 0px 3px #FF0000 /*{global-active-background-color}*/, 0px 0px 9px #FF0000 /*{global-active-background-color}*/ !important;
+}
+
+/**
+ * 	commons css fixes
+ */
+
+/*
+body, div[data-role="page"], div[data-role="content"] {
+	height: 100%;
+	min-height: 100%;
+}
+*/
+
+/* ^^ end of CSS fixes*/
+
+
+#taskDescription, #editTaskDescription {
+	height: 125px;
+	width: 100%;
+}
+
+.edittaskdialog .ui-dialog-contain {
+	max-width: none;
+	width:80%;
+	max-height: 520px;
+}
+
+
+/***********************************************************************/
+/********************** MAPS *******************************************/
+/* background */
+.marker-background {
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(112,112,112)),color-stop(0.51, rgb(94,94,94)),color-stop(0.52, rgb(57,57,57)));
+	background: -moz-linear-gradient(center top,rgb(112,112,112) 0%,rgb(94,94,94) 51%,rgb(57,57,57) 52%);
+}
+
+.marker-text {
+/*	text-shadow: 0 -1px 0 #000;*/
+	color: #000000;
+	font-family: Helvetica Neue, Helvetica, arial;
+	font-size: 18px;
+	line-height: 25px;
+	padding: 4px 45px 4px 15px;
+	font-weight: bold;
+	background: url(images/arrow.png) 95% 50% no-repeat;
+}
+
+.marker-text-noarrow {
+/*	text-shadow: 0 -1px 0 #000;*/
+	color: #000000;
+	font-family: Helvetica Neue, Helvetica, arial;
+	font-size: 18px;
+	line-height: 25px;
+	padding: 4px 45px 4px 15px;
+	font-weight: bold;
+}
+
+.marker-text a {
+	color: black;
+	text-decoration: none;
+}
+
+/* disabling possiblity to enter street view from infoWindow */
+.gm-style .gm-iw .gm-photos {
+	display: none;
+}
+/********************** MAPS *******************************************/
+/***********************************************************************/
+
+/***********************************************************************/
+/******************* Consultation properties ***************************/
+
+
+/* pseudo column vertical lineup*/
+.e-label.firstCol
+{
+	width:250px;
+	margin-right:20px;
+}
+
+body #consPropDuration,
+body #consPropTime,
+body .e-input.consPropInputTime{
+	width:90px;
+}
+
+body #consPropTime,
+body .e-input.consPropInputTime{
+	width:90px;
+	background-image: url(images/icon-time.png) !important;
+}
+
+.consPropInputTime span.ui-icon{
+	background-image: url(images/icon-time.png);
+	background-color: transparent;
+	background-size: 18px 16px;
+	border-radius: 0;
+}
+
+#consPropMinsView{
+	display: inline-block;
+	font-style: italic;
+	color: #02375F;
+}
+
+#consPropMinsEdit{
+	display: inline-block;
+	font-style: italic;
+	color: #02375F;
+}
+
+div #consPropContentButtons{
+	margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+}
+
+.consPropBasicInfoRight img {
+	display:inline-block;
+}
+
+.consPropBasicInfoRight {
+	float: right;
+}
+
+/******************* Consultation properties ***************************/
+/***********************************************************************/
+
+/***********************************************************************/
+/******************* Login *********************************************/
+
+#page1 .e-blocks{
+	border-bottom: none;
+}
+.loginfield {
+	width: 320px !important;
+	margin: 5px auto;
+	border: 1px solid #1BAAE4;
+}
+.loginfield::-webkit-input-placeholder { color: #404141; }
+.loginfield::-moz-placeholder { color: #404141; }
+
+#loginContentNew {
+	padding: 15px;
+	margin: 0px auto;
+}
+
+#loginContent > form{
+	position:relative;
+}
+
+/**
+ * 	quick login gadzet
+ */
+#quickLogin{
+	background-image: url('images/unlock.png');
+	background-color: transparent;
+	background-position: 1px 2px;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	width: 1em;
+	height: 1em;
+	/*
+	-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+					border-radius: 10px;
+	*/
+}
+
+
+.loginButton {
+	background-image: linear-gradient(top, #0D7BC0, #024D78);
+	background-image: -o-linear-gradient(top, #0D7BC0, #024D78);
+	background-image: -moz-linear-gradient(top, #0D7BC0, #024D78);
+	background-image: -webkit-linear-gradient(top, #0D7BC0, #024D78);
+	background-image: -ms-linear-gradient(top, #0D7BC0, #024D78);
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		#0D7BC0,
+		#024D78
+	);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 7px 10px 7px 10px;
+	text-shadow: 1px -1px 1px #666666;
+	text-align: center;
+	filter: dropshadow(color=#666666, offx=1, offy=-1);
+	color: white;
+	font-weight: normal;
+	font-size: 12pt;
+	text-decoration: none;
+	width: 300px;
+	height: 20px;
+	vertical-align: middle;
+
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3),
+					0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 rgba(0, 0, 0, 0.3),
+				-1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.loginButton:active {
+	background-color: #004a75;
+	background-image: none;
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+
+	/*hover link fix*/
+	color: white;
+	font-weight: normal;
+}
+
+#e-logo {
+	margin-top:40px;
+	margin-left: 40px;
+	margin-bottom: 30px;
+}
+
+
+#loading {
+	margin-top: 12%;
+	display: none;
+}
+
+#progressBarOuter {
+	border: 1px solid #3581BC;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	width:300px;
+	height: 13px;
+	line-height:2em;
+}
+
+#progressBarInner {
+	height: 100%;
+	box-sizing: border-box;
+	border: 2px solid #3581BC;
+	margin-top: 2px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	width:50%;
+	background-color:white;
+	line-height:2em;
+	vertical-align:middle;
+	margin:0px auto;
+	overflow:hidden;
+}
+
+#loginIndicatorWrapper {
+	width: 300px;
+	text-align: center;
+}
+
+/***********************************************************************/
+/******************* Template parser ***********************************/
+#contentTemplate a.ui-disabled,
+#contentTemplate select.ui-disabled,
+#contentTemplate input.ui-disabled,
+#contentTemplate textarea.ui-disabled {
+	opacity: 0.5;
+	background-color: rgb(158, 158, 158);
+}
+
+#contentTemplate .ui-field-contain a {
+	padding: 5px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#contentTemplate .ui-checkbox {
+	display: inline-block;
+}
+
+#selectTemplateList{
+	width: 70%;
+	margin: 5px auto;
+}
+
+#selectTemplateButton{
+	line-height: 25px;
+}
+
+#contentTemplate div.componentDiv {
+	width: 100%;
+	min-width: 320px;
+	margin-bottom: 2px;
+}
+
+#contentTemplate div.templatesMulti {
+/*	width: 70%;
+	min-width: 320px;*/
+	margin-bottom: 10px;
+}
+
+#contentTemplate div.componentLeft {
+	width: 18%;
+	word-wrap:break-word;
+	padding-right: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#contentTemplate div.componentMiddle {
+	width: 40%;
+}
+
+#contentTemplate div.componentRight {
+	width: 42%;
+	font-size: 11pt;
+	padding-left: 0px;
+	position: relative;
+}
+
+#contentTemplate div.componentRight div.lastValues {
+	margin-left: 15px;
+	vertical-align: middle;
+	width: 80%;
+}
+
+#contentTemplate div.componentRight a.graphButton {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#contentTemplate div.componentLeft,
+#contentTemplate div.componentMiddle,
+#contentTemplate div.componentRight,
+#contentTemplate div.bloodPressureSeparator {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#contentTemplate div.componentRight label{
+	font-weight: bold;
+}
+
+#contentTemplate div.componentDiv:before, #contentTemplate div.componentMiddle:before{
+/*	content: '';*/
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#contentTemplate div.componentMiddle input {
+	display: inline-block;
+}
+
+#contentTemplate div.bloodPressureDiv div:first-of-type {
+	/*bloodPressureInput1*/
+	width: 80px;
+	float: left;
+}
+#contentTemplate div.bloodPressureDiv div:last-of-type {
+	/*bloodPressureInput2*/
+	width: 80px;
+	float: right;
+}
+
+#contentTemplate .componentLeft textarea {
+	width: 100%;
+}
+
+#contentTemplate div.width80 {
+	width: 80%;
+}
+
+#contentTemplate div.bloodPressureDiv {
+	text-align: center;
+	width: 65%;
+	float: left;
+}
+
+#contentTemplate div.componentMiddle div.bloodPressureSeparator {
+	display: inline-block;
+	line-height: 3em;
+}
+
+#contentTemplate div.templatesMultiSingle {
+	/*width: 100%;*/
+}
+
+#contentTemplate .templatesMultiAdditonal {
+	margin-left: 30px;
+	font-style: italic;
+}
+
+#contentTemplate a[data-role="button"] {
+	padding: 0;
+	font-size: inherit;
+}
+
+#contentTemplate a label {
+	font-weight: bold;
+}
+
+#contentTemplate a.templateBtnSelect {
+	display: inline-block;
+/*	padding-left: 20px;
+	padding-right: 20px;*/
+	width: 60%;
+	border-radius: 5px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#contentTemplate a.templateBtnSelect .selectArrow{
+	float: right;
+	height: 25px;
+	width: 20px;
+	/*background-color: #767676;*/
+	background: #767676 url('images/select-arrow.jpg') no-repeat center;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#contentTemplate .templateSeparator {
+	/*margin-bottom: -15px;*/
+}
+
+#contentTemplate label {
+	color: #454545;
+}
+
+#contentTemplate div.ui-input-text {
+	display: inline-block;
+	width: 100%;
+	margin: 7px 0;
+}
+
+#contentTemplate .number-input-wrapper div.ui-input-text {
+	width: 65px;
+}
+
+#contentTemplate .dateClass div.ui-input-text{
+	width: 55%;
+	margin: 0;
+}
+
+#contentTemplate label.componentLabel, #contentTemplate .bloodPressureSeparator {
+	color: #454545;
+	font-weight: bold;
+}
+
+#contentTemplate h3 {
+	color: #134069;
+	margin-bottom: 0px;
+}
+
+#contentTemplate h4 {
+	color: #1088D1;
+}
+
+#contentTemplate .componentMiddle textarea {
+	font-size: 17px;
+	height: 60px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#contentTemplate .componentMiddle label.bloodPressureUnits {
+	font-size: 17px;
+	float: left;
+	margin-top: 20px;
+}
+
+#contentTemplate .templatesLastValueDate {
+	font-weight: normal;
+}
+
+#contentTemplate .labelLeftSide {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#contentTemplate .labelRightSide {
+	margin-left: 10px;
+	font-style: italic;
+	vertical-align: middle;
+	display: inline;
+}
+
+#contentTemplate .selectInTemplate {
+	line-height: 25px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#contentTemplate .templateCheckbox{
+	font-weight: 900;
+}
+
+#contentTemplate .templateCheckbox input{
+	width: auto;
+	margin-right: 10px;
+}
+
+#contentTemplate .smallNavbar{
+	max-width: 30%;
+}
+
+#contentTemplate .navbarLeft{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	line-height: 35px;
+}
+
+#contentTemplate .navbarRight{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	line-height: 35px;
+}
+
+#contentTemplate .e-blocks.yesno a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #2F3E46;
+}
+
+
+#contentTemplate .e-blocks.yesno{
+	display:table-row	;
+}
+
+#contentTemplate .e-blocks.yesno > div{
+	display:table-cell;
+}
+
+#contentTemplate .e-blocks.yesno div.e-active{
+	border: 1px solid #006BAB /*{global-active-border}*/;
+	background: #0180CF /*{global-active-background-color}*/;
+	font-weight: bold;
+	color: white;
+}
+
+#contentTemplate .e-blocks.yesno div.e-active a{
+	color: white;
+}
+
+#contentTemplate .e-blocks.yesno div{
+	color: #2F3E46;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCCCCC;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( white /*{c-bup-background-start}*/), to( #F1F1F1 /*{c-bup-background-end}*/));
+	background-image: -webkit-linear-gradient( white /*{c-bup-background-start}*/, #F1F1F1 /*{c-bup-background-end}*/);
+	background-image: -moz-linear-gradient( white /*{c-bup-background-start}*/, #F1F1F1 /*{c-bup-background-end}*/);
+	background-image: -ms-linear-gradient( white /*{c-bup-background-start}*/, #F1F1F1 /*{c-bup-background-end}*/);
+	background-image: -o-linear-gradient( white /*{c-bup-background-start}*/, #F1F1F1 /*{c-bup-background-end}*/);
+	background-image: linear-gradient( white /*{c-bup-background-start}*/, #F1F1F1 /*{c-bup-background-end}*/);
+}
+
+#contentTemplate .e-blocks.yesno div.left{
+	-webkit-border-radius: 10px 0px 0px 10px;
+	-moz-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+	border-right-style: none;
+}
+
+#contentTemplate .e-blocks.yesno div.right{
+	-webkit-border-radius: 0px 10px 0px 0px;
+	-moz-border-radius: 0px 10px 10px 0px;
+	border-radius: 0px 10px 10px 0px;
+}
+
+#contentTemplate div.inline-block{
+	display: inline-block;
+}
+
+/******************* Template parser ***********************************/
+/***********************************************************************/
+#contentTemplate{
+	padding-bottom:0px;
+}
+#completeButtonTemplate {
+	display:block !important;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#completeButtonTemplateDiv {
+	padding: 15px;
+	background-color: #ffffff;
+}
+
+/*
+
+input.ui-input-text{
+	padding: .25em;
+}
+*/
+
+/***********************************************************************/
+/******************* Alerts ********************************************/
+#popup_ok {
+	height: 38px;
+	width: 150px;
+}
+
+#popup_cancel {
+	height: 38px;
+	width: 150px;
+}
+
+#popup_container {
+	min-width: 400px !important;
+	max-width: 400px !important;
+	max-height: 400px !important;
+	overflow: auto;
+
+	/* sorry for those !important */
+	position:relative !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	left: 0px !important;
+}
+/******************* Alerts ********************************************/
+/***********************************************************************/
+
+.syncLoginField {
+	padding-top: 5px !important;
+}
+
+span#quickAccessToken,
+span#quickAccessToken2,
+span#quickOTK{
+	background-image: url('images/unlock.png');
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	width:24px ;
+	height:24px ;
+	line-height:24px ;
+	display:inline-block ;
+}
+
+/* general styling */
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ui-datebox-container .ui-bar-a {
+	margin-top: 0;
+}
+
+
+.bodyClass {
+	height: auto !important;
+	-ms-content-zooming: none;
+}
+
+textarea {
+	resize: none;
+}
+
+/***********************************************************************/
+/******************* Values history dialog *****************************/
+
+#valuesHistoryMain div.contentPanel {
+	padding: 0;
+}
+
+#valuesHistoryMain {
+	/* it's working without this on iPad 3, Nexus 7 and Samsng Galaxy Tab 2
+	 * but it was causing bug #68352
+	/*-webkit-overflow-scrolling: touch;*/
+}
+/*
+#valuesHistoryMain #valuesHistoryInner {
+	-webkit-transition: margin-top 0.7s cubic-bezier(0.33,0.66,0.66,1);
+		-moz-transition: margin-top 0.7s cubic-bezier(0.33,0.66,0.66,1);
+		-ms-transition: margin-top 0.7s cubic-bezier(0.33,0.66,0.66,1);
+		-o-transition: margin-top 0.7s cubic-bezier(0.33,0.66,0.66,1);
+			transition: margin-top 0.7s cubic-bezier(0.33,0.66,0.66,1);
+}
+*/
+#patientValueHistoryContent {
+	overflow-y: auto;
+	position: relative;
+}
+#valuesHistoryMain #valuesHistoryInner .graph-fix {
+	width:100%;
+	float:none;
+	display:block;
+	padding:15px;
+}
+
+#valuesHistoryMain #valuesHistoryInner .graph-fix-transform {
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.floatingHeader {
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+}
+
+/************ Common styles ****************************************/
+
+/************ Standard Content Panel *******************************/
+
+div[data-role="page"] .contentPanel {
+	padding: 20px 0px 0px 0px;
+}
+
+/*.contentPanelFeature {
+}*/
+
+.contentPanel > div
+/*, .contentPanelFeature > div  */
+{
+	padding: 10px;
+	font-size: 14px;
+}
+
+.contentPanel div.header,
+.contentPanel th{
+	color: #FFFFFF;
+	background-image: linear-gradient(bottom, rgb(164,164,164) 32%, rgb(141,141,141) 67%);
+	background-image: -o-linear-gradient(bottom, rgb(164,164,164) 32%, rgb(141,141,141) 67%);
+	background-image: -moz-linear-gradient(bottom, rgb(164,164,164) 32%, rgb(141,141,141) 67%);
+	background-image: -webkit-linear-gradient(bottom, rgb(164,164,164) 32%, rgb(141,141,141) 67%);
+	background-image: -ms-linear-gradient(bottom, rgb(164,164,164) 32%, rgb(141,141,141) 67%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.32, rgb(164,164,164)),
+		color-stop(0.67, rgb(141,141,141))
+	);
+
+	border-bottom: 1px solid #7f7f7f;
+	border-radius: 5px 5px 0px 0px;
+	font-weight: bold;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentPanel div.header.withButtonInside{
+	padding: 5px;
+}
+
+.contentPanel div.header.withButtonInside .button.grey{
+	font-weight: bold;
+}
+
+.contentPanel th {
+	border-bottom: 0px;
+}
+
+.contentPanel div.header.no-data {
+	border-radius: 5px 5px 5px 5px;
+}
+
+.contentPanel div.header.table {
+	padding: 0px;
+	display: table;
+	width: 100%;
+}
+
+.contentPanel div.header .no-data,
+.contentPanel div.header.no-data .e-blocks {
+	display: none;
+}
+
+.contentPanel div.header.no-data .no-data,
+.contentPanel div.header.no-data.no-data-show .e-blocks {
+	display: block;
+}
+
+/********* Table styling ******************************************/
+
+.contentPanel table {
+	width: 100%;
+	font-size: 14px;
+	color:#454545;
+	border-spacing: 0px;
+}
+
+
+.contentPanel td,
+.contentPanel th {
+	padding: 10px;
+	border-radius: 0px;
+	text-align: left;
+}
+
+.contentPanel td {
+	border-bottom:1px solid #C3C3C3;
+	border-top: 1px solid #FDFDFD;
+}
+
+.contentPanel th:first-of-type {
+	border-radius: 5px 0px 0px 0px;
+}
+.contentPanel th:last-of-type {
+	border-radius: 0px 5px 0px 0px;
+}
+
+.contentPanel tr:last-of-type {
+	border-radius: 0px 0px 5px 5px;
+}
+.contentPanel tr:last-of-type > td{
+	border-bottom:0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+.contentPanel tr:first-of-type > td {
+	border-top: 0px;
+}
+.contentPanel td:first-of-type {
+	border-top: 1px solid #DEDEDE;
+}
+
+.contentPanel tr:last-of-type > td:first-of-type {
+	border-radius: 0px 0px 0px 5px;
+}
+.contentPanel tr:last-of-type > td:last-of-type {
+	border-radius: 0px 0px 5px 0px;
+}
+
+.contentPanel tr {
+	outline-bottom: 1px solid white;
+}
+
+.contentPanel div.header.no-data th:first-of-type{
+	border-radius: 5px 0px 0px 5px;
+}
+
+.contentPanel div.header.no-data th:last-of-type{
+	border-radius: 0px 5px 5px 0px;
+}
+/********* End of table styling ***********************************/
+
+.contentPanel div.content,
+.contentPanel li.content
+{
+	color: #000000;
+	border-radius: 0px 0px 5px 5px;
+	background-color: #EFEFEF;
+	border-bottom: 1px solid #B5B5B5;
+	border-top: 1px solid #fbfbfb;
+}
+
+.contentPanel div.content.grid,
+.contentPanel div.header.grid,
+.contentPanel li.content.grid
+{
+	padding:0px 0px 0px 0px;
+}
+
+/* flowing elements */
+.contentPanel div.content div.element {
+	padding: 10px 10px 10px 0px;
+	display: inline-block;
+}
+.contentPanel div.content span.dateInfo {
+	color: #7a7a7a;
+}
+/* header of subsection */
+.headerText {
+	color: #454545;
+	font-weight: bold;
+}
+
+.textBold {
+	font-weight: bold;
+}
+
+.headerTextPatientDetails {
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.patientDetailsText {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* color of separator */
+.content-separator {
+	color: #454545;
+	padding-left:5px;
+	padding-right:5px;
+	/*styling bullet*/
+	font-size: xx-large;
+	vertical-align: middle;
+	overflow: hidden;
+	line-height: 14px;
+	display: none;
+}
+
+/*
+.content .headerText+.element .content-separator{
+	display:none;
+}
+*/
+
+/****************** Input styling ****************************************/
+.e-input{
+	display: inline-block;
+}
+
+.e-input select {
+	min-height: 32px;
+	font-size: 14px;
+}
+
+.e-label {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.e-data {
+	display: inline-block;
+	/*color: #7A7A7A;*/ /*grey*/
+}
+
+
+/****************** Blocks *************************************************/
+.e-blocks {
+	display: block;
+	width: 100%;
+	border-bottom:1px solid #D1D1D1;
+	border-top: 1px solid #FCFCFC;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.content .e-blocks {
+	min-height: 55px;
+}
+
+.e-blocks input:not([data-role="datebox"]),
+.e-blocks div.ui-input-text {
+	margin: 0;
+}
+
+.header .e-blocks {
+	border-top: 0px;
+}
+
+.e-blocks:first-of-type {
+	border-top: 0px;
+}
+
+.e-blocks:last-of-type{
+	border-bottom: 0px;
+}
+
+.e-blocks > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 10px;
+	/*word-break: break-all;*/
+}
+
+.e-blocks.short > div {
+	padding:0px 0px 0px 0px;
+}
+
+.e-blocks.tight > div {
+	padding:10px 0px 10px 0px;
+}
+
+.e-blocks.tight > div:first-of-type {
+	padding:10px 0px 10px 10px;
+}
+
+.e-blocks.tight > div:last-of-type {
+	padding:10px 10px 10px 0px;
+}
+
+.e-blocks > a {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	display: block;
+	padding: 10px;
+}
+
+
+
+.e-blocks.table{
+	display:table-row;
+}
+
+.e-blocks.table > div{
+	display:table-cell;
+}
+
+.with-over-content {
+	padding: 0px;
+}
+
+.over-content {
+
+	background-image: linear-gradient(top, #E4E4E4, #FFFFFF);
+	background-image: -o-linear-gradient(top, #E4E4E4, #FFFFFF);
+	background-image: -moz-linear-gradient(top, #E4E4E4, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #E4E4E4, #FFFFFF);
+	background-image: -ms-linear-gradient(top, #E4E4E4, #FFFFFF);
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(#E4E4E4),
+	color-stop(#FFFFFF)
+	);
+	padding: 15px;
+}
+
+.over-content.book-appointments {
+	padding-left: 15px;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+.over-content.no-color,
+.over-content.book-appointments.no-color {
+	background-image: none;
+}
+
+.over-content .over-header, .over-content .limited-result{
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.over-content .limited-result {
+	padding-top: 10px;
+	text-align: center;
+}
+
+
+/************* Button ***********************************************************/
+
+.contactTravelInfo a.button,
+.contentPanel a.button,
+#completeButtonTemplate {
+	background-image: linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -o-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -moz-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -webkit-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -ms-linear-gradient(bottom, #004a75, #0079c1);
+
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	#004a75,
+	#0079c1
+	);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 7px 10px 7px 10px;
+	text-shadow: 1px -1px 1px #666666;
+	text-align: center;
+	/*filter: dropshadow(color=#666666, offx=1, offy=-1);*/
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	text-decoration: none;
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 rgba(0, 0, 0, 0.3),
+				-1px 0 rgba(0, 0, 0, 0.3);
+
+	/*-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;*/
+}
+
+.contactTravelInfo a.button:active,
+.contentPanel a.button:active,
+.contentPanel a.button.activated
+{
+	background-color: #004a75;
+	background-image: none;
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+
+	/*hover link fix*/
+	color: white;
+	font-weight: normal;
+}
+
+.contentPanel a.button.criteria.day.activated,
+.contentPanel a.button.criteria.gender.activated {
+	background-image: linear-gradient(bottom, rgb(0, 122, 195), rgb(0, 144, 203));
+	background-image: -o-linear-gradient(bottom, rgb(0, 122, 195), rgb(0, 144, 203));
+	background-image: -moz-linear-gradient(bottom, rgb(0, 122, 195), rgb(0, 144, 203));
+	background-image: -webkit-linear-gradient(bottom, rgb(0, 122, 195), rgb(0, 144, 203));
+	background-image: -ms-linear-gradient(bottom, rgb(0, 122, 195), rgb(0, 144, 203));
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	rgb(0, 122, 195), rgb(0, 144, 203)
+	);
+
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+
+	/*hover link fix*/
+	color: white;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.contentPanel a.button.red:active, a.button.red:active {
+	background-color: #6B0C0C;
+	background-image: none;
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+}
+
+
+.contentPanel a.button.red, a.button.red {
+	background-image: linear-gradient(bottom, #6b0c0c, #b11414);
+	background-image: -o-linear-gradient(bottom, #6b0c0c, #b11414);
+	background-image: -moz-linear-gradient(bottom, #6b0c0c, #b11414);
+	background-image: -webkit-linear-gradient(bottom, #6b0c0c, #b11414);
+	background-image: -ms-linear-gradient(bottom, #6b0c0c, #b11414);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	#6b0c0c,
+	#b11414
+	);
+
+}
+.contentPanel .button.grey {
+	background-image: linear-gradient(bottom, #606060, #969696);
+	background-image: -o-linear-gradient(bottom, #606060, #969696);
+	background-image: -moz-linear-gradient(bottom, #606060, #969696);
+	background-image: -webkit-linear-gradient(bottom, #606060, #969696);
+	background-image: -ms-linear-gradient(bottom, #606060, #969696);
+	background-image: -webkit-gradient( linear, left bottom, left top, #606060, #969696 );
+}
+
+.contentPanel .button.criteria.day,
+.contentPanel .button.criteria.gender {
+	background-image: linear-gradient(bottom, rgb(208, 208, 208), rgb(254, 254, 254));
+	background-image: -o-linear-gradient(bottom, rgb(208, 208, 208), rgb(254, 254, 254));
+	background-image: -moz-linear-gradient(bottom, rgb(208, 208, 208), rgb(254, 254, 254));
+	background-image: -webkit-linear-gradient(bottom, rgb(208, 208, 208), rgb(254, 254, 254));
+	background-image: -ms-linear-gradient(bottom, rgb(208, 208, 208), rgb(254, 254, 254));
+	background-image: -webkit-gradient(linear, left bottom, left top, rgb(208, 208, 208), rgb(254, 254, 254));
+	color: black;
+	text-shadow: none;
+	font-weight: normal;
+}
+
+.contentPanel a.button.grey:active
+{
+	background-color: rgb(254, 254, 254);
+	background-image: none;
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+
+	/*hover link fix*/
+	color: white;
+	/*font-weight: normal;*/
+}
+
+
+.contentPanel a.button.green, #completeButtonTemplate {
+	background-image: linear-gradient(bottom, #025c14, #009619);
+	background-image: -o-linear-gradient(bottom, #025c14, #009619);
+	background-image: -moz-linear-gradient(bottom, #025c14, #009619);
+	background-image: -webkit-linear-gradient(bottom, #025c14, #009619);
+	background-image: -ms-linear-gradient(bottom, #025c14,  #009619);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		#025c14,
+		#009619
+	);
+}
+
+.contentPanel a.button.green:active, #completeButtonTemplate:active {
+	background-color: #025c14;
+	background-image: none;
+	box-shadow:	0 -1px 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+				-1px 0 1px rgba(0, 0, 0, 0.3),
+
+				0 -1px 2px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset,
+				-1px 0 1px rgba(0, 0, 0, 0.3) inset;
+}
+
+.standaloneButton.templateChange {
+	float: right;
+}
+
+
+/* common standalone button without contentPanel */
+.ui-mobile div.standaloneButton,
+.ui-mobile a.standaloneButton {
+	background-image: linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -o-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -moz-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -webkit-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -ms-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -webkit-gradient(linear,left bottom,left top,#004a75,#0079c1);
+
+	border-top: 1px solid rgba(0, 0, 0, 1);
+	border-left: 1px solid rgba(0, 0, 0, 1);
+	border-right: 1px solid rgba(0, 0, 0, 1);
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	display: inline-block;
+	padding: 5px 8px 5px 8px;
+	text-shadow: 1px -1px 1px #666666;
+	filter: dropshadow(color=#666666, offx=1, offy=-1);
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+
+	margin-top: -2px;
+	top: 7px;
+	text-decoration: none;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+	box-shadow: -1px 0 1px rgba(0, 0, 0, 0.3),
+				1px 0 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(255, 255, 255, 0.3);
+
+}
+
+.ui-mobile .standaloneButton:active,
+.ui-mobile div.standaloneButton:active,
+.alertsButtonContainer.pressed,
+#changeContact.pressed{
+	background-image: linear-gradient(bottom, #0079c1, #004a75);
+	background-image: -o-linear-gradient(bottom, #0079c1, #004a75);
+	background-image: -moz-linear-gradient(bottom, #0079c1, #004a75);
+	background-image: -webkit-linear-gradient(bottom, #0079c1, #004a75);
+	background-image: -ms-linear-gradient(bottom, #0079c1, #004a75);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		#0079c1,
+		#004a75
+	);
+
+	color: white;
+	font-weight: normal;
+	outline: none;
+}
+
+/*a.standaloneButton:active
+{
+	background-color: #004a75;
+	background-image: none;*/
+	/*hover link fix*/
+	/*color: white;
+	font-weight: normal;
+}*/
+
+a.standaloneButton.drawer-menu-button-active{
+	background-image: linear-gradient(bottom, #00283f, #016bab);
+	background-image: -o-linear-gradient(bottom, #00283f, #016bab);
+	background-image: -moz-linear-gradient(bottom, #00283f, #016bab);
+	background-image: -webkit-linear-gradient(bottom, #00283f, #016bab);
+	background-image: -ms-linear-gradient(bottom, #00283f, #016bab);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		#00283f,
+		#016bab
+	);
+	vertical-align:middle;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	box-shadow: -1px 0 1px rgba(0, 0, 0, 0.3),
+				1px 0 1px rgba(0, 0, 0, 0.3),
+				0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+a.standaloneButton.standaloneButton-dark {
+	background-image: linear-gradient(bottom, #325163, #5c8198);
+	background-image: -o-linear-gradient(bottom, #325163, #5c8198);
+	background-image: -moz-linear-gradient(bottom, #325163, #5c8198);
+	background-image: -webkit-linear-gradient(bottom, #325163, #5c8198);
+	background-image: -ms-linear-gradient(bottom, #325163, #5c8198);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		#325163,
+		#5c8198
+	);
+	vertical-align:middle;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a.standaloneButton.standaloneButton-dark:active {
+	background-color: #325163;
+	background-image: none;
+}
+
+div[data-role="dialog"] a.standaloneButton {
+/*	margin-top: 2px;*/
+	top: 0.7em;
+}
+
+.info-main {
+}
+
+.info-sub {
+	color: #7a7a7a;
+	display: block;
+}
+
+/************/
+
+/**
+ * patient record select
+ */
+
+#selectPatientContactDiv,
+#selectPatientRecordDiv {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	z-index: 1;
+	position: absolute;
+	left: 25px;
+	top: 125px;
+	right: 15px;
+	width: 200px;
+
+	/*background-image: linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(0,0,0)),
+		color-stop(1, rgb(127,127,127))
+	);*/
+}
+
+#addContactDiv, #changeContactDiv {
+	display: none;
+	padding: 1px;
+	z-index: 100;
+
+	position: fixed;
+	top: 41px;
+	right: 15px;
+	/*height: 240px;*/
+
+	min-width: 200px;
+	background-color: #315062;
+}
+
+#changeTemplateDiv {
+	display: none;
+	padding: 1px;
+	z-index: 1;
+	right: 15px;
+	top: 120px;
+	position: absolute;
+	min-width: 200px;
+	background-color: #315062;
+}
+
+.ui-mobile div[data-theme="emis"] label.page-label,
+label#selectPatientRecordBtn,
+label#tasksLabel,
+label#contactLabel {
+	vertical-align:middle;
+	padding-right:5px;
+	max-width: 200px;
+	font-size: 18px;
+	color: #203f51;
+	cursor: pointer;
+}
+
+label#contactLabel,
+label#selectPatientRecordBtn {
+	padding-right: 16px;
+	background: url(images/Arrow_down_teal.png) right center no-repeat ;
+}
+
+/*
+ * menu item "button"
+ */
+#selectPatientContactDiv a.menuItem,
+#selectPatientRecordDiv a.menuItem,
+#addContactDiv a.templateItem,
+#changeContactDiv a.templateItem,
+#changeTemplateDiv a.templateItem {
+	display: block;
+	padding: 0px 10px 0px 10px;
+	border-bottom: solid black 1px;
+	/*	vertical text center*/
+	padding-top: 0.8em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-size: 14px;
+	text-decoration: none;
+	height:40px;
+	vertical-align:middle;
+}
+
+#addContactDiv a.templateItem,
+#changeContactDiv a.templateItem,
+#changeTemplateDiv a.templateItem {
+	background-image: linear-gradient(bottom, #27404e 26%, #315062 63%);
+	background-image: -o-linear-gradient(bottom, #27404e 26%, #31506 63%);
+	background-image: -moz-linear-gradient(bottom, #27404e 26%, #315062 63%);
+	background-image: -webkit-linear-gradient(bottom, #27404e 26%, #315062 63%);
+	background-image: -ms-linear-gradient(bottom, #27404e 26%, #315062 63%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		#27404e,
+		#315062
+	);
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	text-shadow: black 0px -1px 1px;
+	filter: dropshadow(color=#000000, offx=-1, offy=1);
+	color: white;
+
+	border-top: solid #5A7381 1px;
+	border-bottom: solid #203F51 1px;
+}
+
+#selectPatientContactDiv a.menuItem,
+#selectPatientRecordDiv a.menuItem {
+	border-top: solid #5a7381 1px;
+	border-bottom: solid #203f51 1px;
+	text-shadow: 0px -1px 1px black;
+	background-color: #325163;
+	color: white;
+}
+
+#selectPatientContactDiv a.menuItem:last-of-type,
+#selectPatientRecordDiv a.menuItem:last-of-type {
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+
+#selectPatientContactDiv a.menuItem:first-of-type,
+#selectPatientRecordDiv a.menuItem:first-of-type {
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+
+#selectPatientContactDiv a.menuItem:first-of-type:last-of-type,
+#selectPatientRecordDiv a.menuItem:first-of-type:last-of-type {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px ;
+	border-radius: 6px ;
+}
+
+#contactTopControls {
+	overflow: hidden;
+}
+
+label#contactLabel {
+	float:left ;
+	max-width: none ;
+}
+
+.contactTravelInfo {
+	float:right ;
+	color:white;
+	background-color: #0079c1 ;
+	border:1px solid #aaa ;
+	border-radius: 3px ;
+	-webkit-border-radius: 3px ;
+	-moz-border-radius: 3px ;
+	padding:3px ;
+	font-size:14px ;
+}
+
+.appointment-details .contactTravelInfo {
+	float:none ;
+	display: inline-block;
+	background-color: transparent;
+	color: black;
+	border: none;
+}
+
+
+.contactTravelInfo .heading {
+	font-weight: bold;
+}
+
+.appointment-details .contactTravelInfo .heading {
+	display:block;
+	padding-left:0 ;
+}
+
+.contactTravelInfo .heading,
+.contactTravelInfo .units {
+	padding:3px 2rem 3px 0.5rem ;
+}
+
+.contactTravelInfo .units.mins {
+	padding-right: 1rem ;
+}
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4) {
+	.contactTravelInfo .heading,
+	.contactTravelInfo .units {
+		padding-left: 0.3rem;
+		padding-right: 1rem;
+	}
+}
+
+/*#selectPatientRecordDiv a.menuItem:active,
+#selectPatientRecordDiv a.menuItem.pressed {
+	background-color: gray;
+}*/
+
+#selectPatientContactDiv a.menuItem.pressed,
+#selectPatientRecordDiv a.menuItem.pressed {
+	background-color: #082536;
+}
+
+/*#selectPatientRecordDiv a.menuItem.pressed .tick {
+	display: inline-block;
+}*/
+
+#selectPatientContactDiv .tick,
+#selectPatientRecordDiv .tick {
+	display: none;
+	float: right;
+	font-size: 16px;
+}
+
+#selectPatientContactDiv .arrow-up,
+#selectPatientRecordDiv .arrow-up {
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+	top: -10px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 11px solid #082536;
+}
+
+/* ================================= */
+
+/************ End of Common styles *********************************/
+/*******************************************************************/
+
+
+/*******************************************************************/
+/************ Drawer ***********************************************/
+.drawer-menu-button {
+	position: absolute;
+/*	top: 6px */
+	margin-top: 0px !important;
+	left: 10px;
+}
+
+.drawer-menu-button-lines {
+	display: inline-block;
+	padding-bottom: 0;
+	font-size: 16px;
+	vertical-align: middle;
+	margin-top: -3px;
+	margin-right: 3px;
+}
+
+.mobile-ios .drawer-menu-button-lines {
+	margin-top: -6px;
+}
+
+.drawer-menu-one-line {
+	line-height: 25%;
+}
+
+#drawer {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 200px;
+	color: white;
+	background: url('images/drawer-default.png');
+	background-size: 100%;
+}
+
+#drawer ul {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+}
+
+#drawer ul li {
+	border-top: solid #5a7381 1px;
+	border-bottom: solid #203f51 1px;
+	text-shadow: 0px -1px 1px black;
+	list-style-type: none;
+	margin: 0px 0;
+	line-height: 40px;
+	padding-left: 10px;
+	cursor: pointer;
+	position: relative;
+	z-index:10;
+	background: url('images/drawer-default.png');
+	background-size: 100%;
+}
+
+#drawer ul li a:link,
+#drawer ul li a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+#drawer #drawer-logout {
+	text-align: center;
+	margin: 10px 0;
+}
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4) {
+	#drawer #drawer-logout {
+		margin: 5px 0 !important;
+	}
+	#drawer #drawer-logged-info {
+		line-height: 150% !important;
+	}
+	#drawer #drawer-emis-logo {
+		margin-bottom: 10px !important;
+	}
+}
+
+#drawer #drawer-logout a {
+	width: 100%;
+	padding: 0;
+	font-size: 14px;
+}
+
+#drawer .drawer-patient {
+	/* background: url('images/drawer-patient.png'); */
+	background-image: linear-gradient(bottom, rgb(128,162,182) 30%, rgb(164,189,205) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(128,162,182) 30%, rgb(164,189,205) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(128,162,182) 30%, rgb(164,189,205) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(128,162,182) 30%, rgb(164,189,205) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(128,162,182) 30%, rgb(164,189,205) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(128,162,182)),
+		color-stop(1, rgb(164,189,205))
+	);
+	background-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: normal;
+	color: #203f51 !important;
+	cursor: default;
+	font-size: 8pt;
+	word-wrap: break-word;
+	word-break: break-all;
+	min-height: 40px;
+	max-height: 40px;
+	line-height: normal;
+}
+
+#drawer .drawer-patient > div {
+	display: table-cell;
+	vertical-align: middle;
+	height: 40px;
+}
+
+#drawer .drawer-patient > a {
+	color: #203f51 !important;
+}
+
+#drawer .drawer-active,
+#drawer li.drawer-default:active,
+#drawer li.drawer-default > a:active {
+	background: url('images/drawer-active.png');
+	background-size: 100%;
+}
+
+#drawer .drawer-default > div {
+	display: inline-block;
+}
+
+#drawer > ul{
+	height:100%;
+	position:relative;
+	min-height:390px;
+}
+
+#drawer ul li.drawer-logged-info{
+	position:absolute;
+	bottom:0px;
+	border-top: none;
+	border-bottom: none;
+	width:100%;
+	z-index:9;
+}
+
+#drawer #drawer-logged-info {
+	position: absolute;
+	bottom: 0px;
+	font-size: 11px;
+	line-height: 1.7em;
+	left: 0px;
+	width: 180px;
+	padding: 0 10px;
+}
+
+#drawer-tasks a,
+#drawer-new-drug a,
+#drawer-contact a,
+#drawer-new-appointment a{
+	position: relative;
+	padding-right: 22px;
+	display: inline-block;
+}
+
+#drawer-tasks div,
+#drawer-contact div,
+#drawer-new-drug div,
+#drawer-new-appointment div {
+	display: inline-block;
+}
+
+.drawer-default .drawer-star {
+	background: transparent url('images/update-indicator.png') left center no-repeat;
+	background-size: contain;
+	width:16px;
+	height: 36px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#drawer #drawer-emis-logo {
+	height: 37px;
+	margin-bottom: 20px;
+	left: 0px;
+	text-align: center;
+}
+
+/*******************************************************************/
+
+/************ Feature Bar ******************************************/
+/*******************************************************************/
+
+.contentPanel.feature div.header{
+	color: #FFFFFF;
+background-image: linear-gradient(bottom, #5caee2 26%, #2a8fc9 63%);
+background-image: -o-linear-gradient(bottom, #5caee2 26%, #2a8fc9 63%);
+background-image: -moz-linear-gradient(bottom, #5caee2 26%, #2a8fc9 63%);
+background-image: -webkit-linear-gradient(bottom, #5caee2 26%, #2a8fc9 63%);
+background-image: -ms-linear-gradient(bottom, #5caee2 26%, #2a8fc9 63%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.26, #5caee2),
+	color-stop(0.63, #2a8fc9)
+);
+	border-bottom: 1px solid #f3f8fc;
+}
+
+.contentPanel.feature div.content {
+	color: #002F51;
+	background-color: #cee5f3;
+	border-bottom: 1px solid #99a7af;
+	border-top: 0px;
+}
+
+.contentPanel.feature .e-blocks {
+	border-top: solid 1px #f3f8fc;
+	border-bottom: solid 1px #94c9ea;
+}
+
+.contentPanel.feature .e-blocks:first-of-type {
+	border-top: 0px;
+}
+
+.contentPanel.feature .e-blocks:last-of-type {
+	border-bottom: 0px;
+}
+
+/*******************************************************************/
+/************ Appointments list ************************************/
+
+#appointments .name-block {
+	box-sizing: border-box;
+	vertical-align: middle;
+	word-break: break-word;
+}
+#appointments .name-block > div {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+#appointments .name-block .inner-block-c.sync-present {
+	display: inline-block;
+}
+
+#appointments .name-block .inner-block-a {
+	max-width: 15%;
+}
+#appointments .name-block .inner-block-b {
+	padding-left: 10px;
+	max-width: 85%;
+}
+#appointments .name-block .inner-block-b.no-map {
+	padding-left: 0px;
+	max-width: 100%;
+}
+#appointments .name-block .inner-block-b.sync-present {
+	max-width: 70%;
+	padding-right: 10px;
+}
+#appointments .name-block .inner-block-b.no-map.sync-present {
+	max-width: 85%;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+#appointments .name-block .inner-block-c {
+	max-width: 15%;
+	display: none;
+}
+
+#appointments #failedToSyncList .name-block .inner-block-b {
+	padding-left: 10px;
+	max-width: 50%;
+	padding-right: 10px;
+}
+#appointments #failedToSyncList .name-block .inner-block-b.no-map {
+	padding-left: 0px;
+	max-width: 85%;
+}
+#appointments #failedToSyncList .name-block .inner-block-b.no-map.sync-present {
+	max-width: 65%;
+}
+#appointments #failedToSyncList .name-block .inner-block-c.sync-present {
+	max-width: 35%;
+}
+
+
+/* TODO replace styles when doing caseloads as it is in appointments (3 inner blocks inside .name-block). */
+#caseloads .star-wrap{
+	display: inline;
+	padding-right: 25px ;
+	word-break: break-all;
+}
+
+#appointments div.patientStar,
+#caseloads div.patientStar{
+	width: 16px;
+	height: 16px;
+	display: none;
+	vertical-align: middle;
+}
+
+#appointments div.patientStar.patientStarAdded,
+#caseloads div.patientStar.patientStarAdded{
+	display: inline-block;
+}
+
+#appointments div.patientStarAdded,
+#caseloads div.patientStarAdded{
+	background: transparent url('images/appointment-update-indicator.png') 0 0 no-repeat;
+	background-size: contain;
+}
+
+#appointments div.patientStar.sync.no-star {
+	background: none;
+	width: auto;
+	height: auto;
+}
+
+#appointments div.patientStar.sync.no-star .sprite.sync{
+	background-size: 347px 410px;
+	background-position: 0px -390px;
+	height: 20px;
+	width: 20px;
+}
+
+#appointments div.patientStar.sync.no-star .sync-button {
+	padding: 1px 3px 0px 5px;
+}
+
+#appointments .patientDetailsInfo,
+#caseloads .patientDetailsInfo {
+	padding:2px 4px ;
+	cursor: pointer;
+}
+
+/* To make the star sit properly in tablets. Also ref line #2089 */
+/**/
+/* ipad 3 and above */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+/* Nexus 7 */
+screen and (-webkit-min-device-pixel-ratio: 1.3),
+/* iPad2 */
+screen and (max-device-width: 1024px),
+screen and (max-device-width: 768px),
+/* Samsung Galaxy */
+screen and (max-device-width: 1280px),
+screen and (max-device-width: 800px){
+	.drawer-default .drawer-star {
+		height: 37px;
+	}
+
+	#appointments div.patientStarAdded,
+	#caseloads div.patientStarAdded{
+		top: 0px;
+	}
+}
+
+#appointmentContent th.grid-2.e-block-a,
+#caseloadsContent th.grid-2.e-block-a {
+	width: 75%;
+}
+#appointmentContent th.grid-2.e-block-b,
+#caseloadsContent th.grid-2.e-block-b {
+	width: 25%;
+}
+
+#appointmentContent td.grid-5.e-block-a,
+#caseloadsContent td.grid-5.e-block-a {
+	background-color: #D1D1D1;
+	font-weight: bold;
+	border-right: 1px solid #C3C3C3;
+	background-color: #D1D1D1;
+}
+
+#appointmentContent td.grid-5.e-block-a {
+	width: 10%;
+}
+
+#caseloadsContent td.grid-5.e-block-a {
+	width: 5%;
+	text-align: center;
+}
+
+#appointmentContent td.grid-5.e-block-a.open,
+#caseloadsContent td.grid-5.e-block-a.open {
+	border-bottom: none;
+}
+
+#appointmentContent .appointment-details td.grid-5.e-block-a,
+#caseloadsContent .caseloads-details td.grid-5.e-block-a {
+	border-right: none;
+	border-top: none;
+	background-color: transparent;
+}
+
+#appointmentContent td.grid-5.e-block-a.open,
+#caseloadsContent td.grid-5.e-block-a.open {
+	border-bottom: none;
+}
+
+#appointmentContent td.grid-5.e-block-b,
+#caseloadsContent td.grid-5.e-block-b {
+	width: 40%;
+	font-weight: bold;
+}
+#appointmentContent td.grid-5.e-block-c {
+	width: 15%;
+}
+#caseloadsContent td.grid-5.e-block-c {
+	width: 20%;
+}
+#appointmentContent td.grid-5.e-block-d,
+#caseloadsContent td.grid-5.e-block-d {
+	width: 20%;
+}
+#appointmentContent td.grid-5.e-block-e,
+#caseloadsContent td.grid-5.e-block-e {
+	width: 15%;
+}
+
+#appointmentContent .time-wrapper,
+#caseloadsContent .time-wrapper {
+	text-align: center;
+}
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 13px solid black;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+}
+#appointmentContent .arrow-down {
+	margin-left: 5px;
+}
+
+
+/* common with map view */
+/* display needed button on each screen */
+
+
+#appointmentsBtn {
+	margin-right: 50px;
+	border-right: none;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	right: 35px !important;
+}
+
+#MapBtn {
+	margin-right: 0px;
+	border-left: none;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+#MapBtn,
+#appointmentsBtn {
+	background-image: linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -o-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -moz-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -webkit-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -ms-linear-gradient(bottom, #004a75, #0079c1);
+	background-image: -webkit-gradient(linear,left bottom,left top,#004a75,#0079c1);
+	z-index: 0;
+
+	box-shadow: none;
+	width:70px;
+}
+
+#map #MapBtn,
+#appointments #appointmentsBtn {
+	background-color: #004a75;
+	background-image: none;
+	box-shadow:	none;
+	color: white;
+	font-weight: normal;
+}
+
+.ui-mobile .appointmentsHeader {
+	background-image: linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -o-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -moz-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -webkit-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -ms-linear-gradient(bottom, #315062 0%, #082536 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, #315062),
+	color-stop(1, #082536)
+	);
+	display: table;
+	width: 100%;
+	text-shadow: none;
+	position: fixed;
+	top: 44px;
+	margin-top: -1px;
+	left: 0px;
+	color: white;/* TODO check that */
+	height: 40px;
+}
+
+.ui-mobile .syncInfo {
+	height: 35px;
+	display: inline-block;
+	width: 70%;
+}
+
+.ui-mobile .appointmentsFilter {
+	text-align: right;
+	margin-top: 5px;
+	position: absolute;
+	width: 30%;
+	display: inline-block;
+}
+
+.ui-mobile .syncBtnField {
+	vertical-align: middle;
+	display: table-cell;
+	height: 40px;
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+.patientSummaryInfo .syncBtnField {
+	padding-left: 0 ;
+}
+
+.ui-mobile .syncBtnField a {
+	margin: -5.5px 0 0 0 ;
+	padding: 0;
+	height: 30px;
+	padding-top: 1px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.ui-mobile .patient-info .syncBtnField a {
+	width: 46px;
+}
+
+.ui-mobile .syncBtnField div.sync {
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.ui-mobile .patient-info .syncBtnField div.sync {
+	vertical-align: baseline;
+	margin-left: 0px;
+}
+
+.ui-mobile .syncBtnField div.text {
+	display: inline-block;
+	padding: 0 10px 0 5px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.ui-mobile .syncTextField {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.ui-mobile .syncDateField {
+	text-align: center;
+	vertical-align: middle;
+	width: 200px;
+	display: table-cell;
+}
+
+.ui-mobile #map .syncInfo {
+	width: 40%;
+}
+
+.ui-mobile #map .appointmentsFilter {
+	width: 60%;
+}
+
+.ui-mobile #mapSessionSelect {
+	max-width: 100%;
+	height: 25px;
+	margin-right: 15px;
+}
+
+.ui-mobile .appointmentsFilter .ui-input-text {
+	display: inline-block;
+	float:right;
+	font-size: 12pt;
+	line-height: 1.4;
+	background-image: none;
+	height:1.5em ;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white ;
+	color:black ;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-right:15px ;
+}
+
+.appointmentsFilter .ui-input-text input,
+div.inputFilterWrapper div.ui-input-text input {
+	min-height: 1.5em;
+	padding: 0;
+}
+
+div.inputFilterWrapper{
+	background-color: #CEE5F3;
+	height: 40px;
+	border-bottom: 1px solid #D1D1D1;
+	text-align: center;
+}
+
+div.inputFilterWrapper div.ui-input-text {
+	width: 80%;
+	display: inline-block;
+	font-size: 12pt;
+	line-height: 1.4;
+	background-image: none;
+	padding: .4em;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: .5em 0;
+}
+
+.selecttemplatedialog .ui-dialog-contain, #taskallusers .ui-dialog-contain {
+/*	max-width: none;
+	width:80%;*/
+	max-height: 520px;
+}
+
+#taskallusers #contentTaskAllusersCodes .content {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+.selecttemplatedialog .e-blocks, #taskallusers .e-blocks {
+	padding: 10px;
+}
+
+.selecttemplatedialog .e-blocks > a, #taskallusers .e-blocks > a {
+	float:right;
+}
+
+
+.noData {
+	padding: 10px;
+	display: block;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.DoB-format2 {
+	display: none;
+}
+
+#failedToSyncList .ui-corner-all {
+	-webkit-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+#failedToSyncList .grid-4 {
+	vertical-align: middle;
+}
+
+#failedToSyncList .grid-4.e-block-a {
+	font-weight: bold;
+	width: 45%;
+}
+
+#failedToSyncList .grid-4.e-block-b {
+	width: 15%;
+}
+
+#failedToSyncList .grid-4.e-block-c {
+	width: 15%;
+}
+
+#failedToSyncList .grid-4.e-block-d {
+	width: 25%;
+}
+
+body.portrait #failedToSyncList .grid-4.e-block-d {
+	text-align: center;
+}
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4){
+	body.portrait #failedToSyncList .grid-4.e-block-a {
+		width: 50%;
+	}
+
+	body.portrait #failedToSyncList .grid-4.e-block-b {
+		width: 10%;
+	}
+
+	body.portrait #failedToSyncList .grid-4.e-block-c {
+		width: 10%;
+	}
+
+	body.portrait #failedToSyncList .grid-4.e-block-d {
+		width: 30%;
+	}
+
+	body.portrait #failedToSyncList .view-record {
+		float: right;
+	}
+
+	body.portrait #failedToSyncList .delete-record {
+		clear: both;
+		float: right;
+		margin-top: 10px;
+	}
+}
+
+#failedToSyncList .view-record {
+	float: left;
+}
+
+#failedToSyncList .delete-record {
+	float: right;
+}
+
+#failedToSyncList .ui-collapsible-heading-toggle {
+	color: rgb(0,62,97);
+	text-align: center;
+	font-weight: bold;
+	border: none;
+	border-bottom: solid #95AAB6 1px;
+	font-size: 14px;
+	height: 14px;
+	margin-top: 3px;
+	box-shadow: none;
+	outline: none;
+	background: none;
+}
+
+#failedToSyncList .ui-collapsible {
+	margin: 0px;
+}
+
+#failedToSyncList .topthing {
+	position: absolute;
+	float:left;
+	color: rgb(0,62,97);
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+	cursor: pointer;
+}
+
+#failedToSyncList .undercoverSpace {
+	height: 34px;
+	margin-left: -16px;
+	margin-top: -5px;
+	margin-right: -16px;
+	margin-bottom: 6px;
+}
+
+#failedToSyncList {
+	margin-top: 3px;
+	background-color: rgb(204, 229, 244);
+	display: none;
+}
+
+#failedToSyncList .contentPanel {
+	padding: 0;
+}
+
+#failedToSyncList .content.grid {
+	border-top: none;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #ebf5fa;
+}
+
+#failedToSyncList .ui-collapsible-content {
+	border: none;
+	margin-top: 0px;
+	padding-top: 3px;
+	padding-bottom: 0px;
+}
+
+#failedToSyncList .ui-icon-emis-arrow-up:after {
+	background: url(./images/small_arrow_up.png) no-repeat center;
+	background-size: 18px 18px;
+	right: 15px;
+}
+
+#failedToSyncList .ui-icon-emis-arrow-down:after {
+	background: url(./images/small_arrow_down.png) no-repeat center;
+	background-size: 18px 18px;
+	right: 15px;
+}
+
+#failedToSyncList table, #failedToSyncList tbody {
+	width:100%;
+	box-shadow: 0 3px 2px -2px gray;
+}
+
+#failedToSyncList tr:last-of-type td {
+	border-bottom: 0px;
+}
+
+#failedToSyncList td {
+	border-bottom: 1px solid #C3C3C3;
+	border-top: 1px solid #FDFDFD;
+	padding: 10px;
+	border-radius: 0px;
+	text-align: left;
+}
+
+#failedToSyncList tr:first-of-type > td {
+	border-top: none;
+}
+
+#failedToSyncList .alertsWrapper {
+	display: inline-block;
+	position: relative;
+}
+
+#failedToSyncList .alertsButtonContainer {
+	float: none;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 28px;
+	vertical-align: middle;
+	margin-left: 5px;
+	background: url(./images/But_Alert.png) no-repeat center;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+}
+
+#failedToSyncList .alertsContainer {
+	display: none;
+	top: auto;
+	left: auto;
+	right: -100px;
+	width: 220px;
+	min-width: 220px;
+	float: none;
+	margin-top:7px;
+	z-index:1;
+}
+
+#failedToSyncList .alertsContainer .arrow-up {
+	left: auto;
+	right: 106px;
+}
+
+#failedToSyncList .alertsContainer .text {
+	display: inline-block;
+	word-break: normal;
+}
+
+/************ End of Appointments list *****************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/************ Map View *********************************************/
+
+
+#map .ui-content{
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	overflow: hidden;
+}
+
+#mapView{
+	border: 1px solid black;
+	background: white;
+}
+
+#map {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#map, #mapView, #map .contentWrapper, #map div[data-role="content"] {
+	height: 100%;
+}
+
+/**
+ * 	android fix
+ */
+.gmnoprint,
+.controls,
+div#mapView > div >div.gmnoprint >div.gmnoprint,
+div#mapView > div >div.gmnoprint >div.gmnoprint div
+{
+		-webkit-transform: translate3d(0,0,0);
+}
+
+/************ Map View *********************************************/
+/*******************************************************************/
+
+
+/*******************************************************************/
+/************ Patient summary **************************************/
+
+#summaryContent div.content.feature .e-blocks > div{
+	vertical-align:top;
+}
+
+#summaryContent div.content.feature .e-blocks .grid-3.e-block-a {
+	width: 33%;
+}
+
+#summaryContent div.content.feature .e-blocks .grid-3.e-block-b {
+	width: 33%;
+}
+
+#summaryContent div.content.feature .e-blocks .grid-3.e-block-c {
+	width: 33%;
+}
+
+#summaryContent div.content.feature .headerText {
+	font-weight: bold;
+	color: #002F51;
+}
+
+#summaryContent .e-blocks .grid-3.e-block-a {
+	width: 25%;
+}
+#summaryContent .e-blocks .grid-3.e-block-b {
+	width: 30%;
+}
+#summaryContent .e-blocks .grid-3.e-block-c {
+	width: 45%;
+}
+
+#summaryContent .e-blocks .grid-2.e-block-a {
+	width: 25%;
+}
+#summaryContent .e-blocks .grid-2.e-block-b {
+	width: 75%;
+}
+
+/************ Patient summary **************************************/
+/*******************************************************************/
+
+
+/*******************************************************************/
+/************ Patient details and patient map **************************************/
+
+/* styling for patient summary popup */
+
+#patientDetailsGrid {
+	height: 100%;
+	color: #002F51;
+	background-color: #cee5f3;
+	border-bottom: 1px solid #99a7af;
+	border-top: 0px;
+}
+
+#patientDetailsOfflineGrid {
+	color: #002F51;
+	background-color: #cee5f3;
+	border-bottom: 1px solid #99a7af;
+	border-top: 0px;
+	padding: 0px !important;
+}
+
+.patientDetailsInfoItem {
+	padding: 10px;
+}
+
+#patientDetails {
+	height: 100%;
+}
+
+#patientDetails div.ui-dialog-contain {
+	max-width:none;
+	width:80%;
+	margin: 2% auto 0 auto;
+	height: 80%;
+	position: relative;
+}
+
+#patientDetailsOffline div.ui-dialog-contain {
+	max-width:none;
+	margin: 2% auto 0 auto;
+	position: relative;
+}
+
+#patientDetails div.ui-header {
+	margin: 0;
+}
+
+#patientDetails div.ui-header {
+	margin: 0;
+}
+
+.patientDetailsInfoDetailsDiv {
+	width: 30% !important;
+	height: 100% !important;
+	background-color: #cee5f3;
+}
+
+.patientDetailsInfoMapDiv {
+	width: 70% !important;
+	height: 100% !important;
+	background-color: rgb(229, 227, 223);
+}
+
+#patientDetails .summary-wrap{
+	padding: 0px;
+	width:100%;
+	height: 100%;
+}
+
+#patientDetails .summary-title{
+	text-align:center;
+	color: #0180CE;
+	font-weight: bold;
+	padding:30px 50px;
+	position:relative;
+}
+
+#patientDetails .summary-title p{
+	padding:0;
+	margin:0;
+}
+
+#patientDetails .summary-title .close{
+	position:absolute;
+	top:20px;
+	right:25px;
+	margin:0px;
+}
+
+#patientDetails .summary-content{
+	padding:0;
+}
+
+#patientDetails .summary-table-wrap{
+	overflow:auto;
+	height:100%;
+	padding: 0;
+	color: #002F51;
+	border-bottom: 1px solid #99a7af;
+	border-top: 0px;
+}
+
+.summary-table-wrap table{
+	width: 100%;
+	background-color: white;
+}
+
+#mapV.summary-table-wrap{
+	display:none;
+}
+
+/************ Patient map **************************************/
+/*******************************************************************/
+
+
+/*******************************************************************/
+/************ Medication *******************************************/
+#medicationContent .e-blocks .grid-4.e-block-a {
+	width: 50%;
+	white-space:normal;
+}
+
+#medicationContent .e-blocks .grid-4.e-block-b {
+	width: 20%;
+}
+
+#medicationContent .e-blocks .grid-4.e-block-c {
+	width: 15%;
+}
+
+#medicationContent .e-blocks .grid-4.e-block-d {
+	width: 15%;
+}
+
+#medicationContent .button {
+	padding: 5px 10px 5px 10px;
+}
+
+/************ Medication Details **************************************/
+/*******************************************************************/
+#patientmedicationdetails div.contentPanel div.content {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#patientmedicationdetails .e-blocks .grid-2.e-block-a {
+	text-align: right;
+	width: 40%;
+}
+#patientmedicationdetails .e-blocks .grid-2.e-block-b {
+	text-align: left;
+	width: 60%;
+}
+#patientmedicationdetails .ui-dialog-contain{
+	max-width: 60%;
+}
+/*******************************************************************/
+
+/************ Consultations ****************************************/
+/*******************************************************************/
+#consultationsContent .e-blocks .grid-3.e-block-a {
+	width: 25%;
+}
+#consultationsContent .e-blocks .grid-3.e-block-b {
+	width: 30%;
+}
+#consultationsContent .e-blocks .grid-3.e-block-c {
+	width: 45%;
+}
+
+#consultationsContent .e-blocks .grid-2.e-block-a {
+	width: 25%;
+}
+#consultationsContent .e-blocks .grid-2.e-block-b {
+	width: 75%;
+}
+#consultationsContent .contentPanel hr{
+	height: 15px;
+	border: 0;
+	background: #B5B5B5;
+	margin: 0;
+}
+
+/************ Problems *********************************************/
+/*******************************************************************/
+
+#problemsContent .e-blocks .grid-5.e-block-a {
+	width: 30%;
+}
+#problemsContent .e-blocks .grid-5.e-block-b {
+	width: 25%;
+}
+#problemsContent .e-blocks .grid-5.e-block-c {
+	width: 15%;
+}
+#problemsContent .e-blocks .grid-5.e-block-c.abn {
+	color: red;
+}
+#problemsContent .e-blocks .grid-5.e-block-d {
+	width: 15%;
+}
+#problemsContent .e-blocks .grid-5.e-block-e {
+	width: 15%;
+}
+
+#problemsContent .button {
+padding: 5px 10px 5px 10px;
+}
+
+/************ Problem Details **************************************/
+/*******************************************************************/
+#patientproblemdetails div.contentPanel div.content {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#patientproblemdetails .e-blocks .grid-2.e-block-a {
+	text-align: right;
+	width: 40%;
+}
+#patientproblemdetails .e-blocks .grid-2.e-block-b {
+	text-align: left;
+	width: 60%;
+}
+
+#patientproblemdetails .e-blocks .one-encounter {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#patientproblemdetails .ui-dialog-contain{
+	max-width: 60%;
+}
+
+/************ Values ***********************************************/
+/*******************************************************************/
+
+/* is added only for iPads in JS
+#valuesContent .content {
+	-webkit-overflow-scrolling: touch;
+} */
+
+#valuesContent .e-blocks .grid-7.e-block-a {
+	width: 22%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-b {
+	width: 5%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-c {
+	width: 22%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-d {
+	width: 9%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-d.abn {
+	color: red;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-e {
+	width: 15%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-f {
+	width: 13%;
+}
+
+#valuesContent .e-blocks .grid-7.e-block-g {
+	width: 14%;
+}
+
+#valuesContent .button {
+padding: 5px 10px 5px 10px;
+}
+/************ Values History / Multihistory ************************/
+/*******************************************************************/
+#patientvalueshistory .e-blocks .grid-6.e-block-a,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-a {
+	width: 35%;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-b,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-b {
+	width: 5%;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-c,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-c {
+	width: 23%;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-d,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-d {
+	width: 7%;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-d.abn,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-d.abn {
+	color: red;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-e,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-e {
+	width: 15%;
+}
+#patientvalueshistory .e-blocks .grid-6.e-block-f,
+#patientvaluesmultihistory .e-blocks .grid-6.e-block-f {
+	width: 15%;
+}
+
+body.portrait #patientvalueshistory .e-blocks .grid-6.e-block-a,
+body.portrait #patientvaluesmultihistory .e-blocks .grid-6.e-block-a {
+	width: 30%;
+}
+body.portrait #patientvalueshistory .e-blocks .grid-6.e-block-c,
+body.portrait #patientvaluesmultihistory .e-blocks .grid-6.e-block-c {
+	width: 15%;
+}
+body.portrait #patientvalueshistory .e-blocks .grid-6.e-block-d,
+body.portrait #patientvaluesmultihistory .e-blocks .grid-6.e-block-d {
+	width: 12%;
+}
+body.portrait #patientvalueshistory .e-blocks .grid-6.e-block-e,
+body.portrait #patientvaluesmultihistory .e-blocks .grid-6.e-block-e {
+	width: 23%;
+}
+
+/*******************************************************************/
+/************ Immunisations History ********************************/
+#patientimmunisationshistory > div.ui-dialog-contain {
+	max-width: 60%;
+}
+
+#immunisationsHistoryContent .e-blocks .grid-3.e-block-a {
+	width: 25%;
+}
+#immunisationsHistoryContent .e-blocks .grid-3.e-block-b {
+	width: 30%;
+}
+#immunisationsHistoryContent .e-blocks .grid-3.e-block-c {
+	width: 45%;
+}
+
+/************ Diary ************************************************/
+/*******************************************************************/
+
+#diaryContent .e-blocks .grid-3.e-block-a {
+	width: 15%;
+}
+#diaryContent .e-blocks .grid-3.e-block-b {
+	width: 23%;
+}
+#diaryContent .e-blocks .grid-3.e-block-c {
+	width: 62%;
+}
+
+.in-past{
+	color:red;
+}
+
+/************ Allergies ********************************************/
+/*******************************************************************/
+
+#allergiesContent .e-blocks .grid-3.e-block-a {
+	width: 15%;
+}
+#allergiesContent .e-blocks .grid-3.e-block-b {
+	width: 25%;
+}
+#allergiesContent .e-blocks .grid-3.e-block-c {
+	width: 60%;
+}
+
+/************ Immunisations ****************************************/
+/*******************************************************************/
+
+#immunisationsContent .e-blocks .grid-4.e-block-a {
+	width: 15%;
+	white-space:normal;
+}
+
+#immunisationsContent .e-blocks .grid-4.e-block-b {
+	width: 23%;
+}
+
+#immunisationsContent .e-blocks .grid-4.e-block-c {
+	width: 47%;
+}
+
+#immunisationsContent .e-blocks .grid-4.e-block-d {
+	width: 15%;
+}
+
+#immunisationsContent .button {
+	padding: 5px 10px 5px 10px;
+}
+
+/*******************************************************************/
+/************ Referrals ********************************************/
+
+#referralsContent .referrals-wrap{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+#referralsContent .e-blocks .grid-4.e-block-a {
+	width: 25%;
+	white-space:normal;
+}
+
+#referralsContent .e-blocks .grid-4.e-block-b {
+	width: 20%;
+}
+
+#referralsContent .e-blocks .grid-4.e-block-c {
+	width: 40%;
+}
+
+#referralsContent .e-blocks .grid-4.e-block-d {
+	width: 15%;
+}
+
+
+/************ End of Referrals *************************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/************ Book Appointments ************************************/
+#bookAppointments .ui-input-datebox, #edit-task-content .ui-input-datebox
+{
+	width: 170px;
+}
+
+#bookAppointments #toTimeContainer .ui-input-text,
+#bookAppointments #fromTimeContainer .ui-input-text {
+	width: 90px;
+}
+
+#bookAppointments #toTimeContainer .ui-input-text #toTime,
+#bookAppointments #fromTimeContainer .ui-input-text #fromTime {
+	background-image: url('images/icon-time.png') !important;
+	background-size: 18px 16px;
+	background-repeat: no-repeat !important;
+	background-position: 92% 8px !important;
+}
+
+#bookAppointments select, #bookAppointmentsDetails select
+{
+	min-height: 32px;
+	width: 200px;
+}
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4){
+	#bookAppointments select,
+	#bookAppointmentsDetails select {
+		width: 170px !important;
+	}
+
+	#bookAppointments #toTimeContainer .ui-input-datebox a,
+	#bookAppointments #fromTimeContainer .ui-input-datebox a {
+		right: -15px !important;
+	}
+
+	#bookAppointments #toTimeContainer .ui-input-datebox,
+	#bookAppointments #fromTimeContainer .ui-input-datebox {
+		width: 70px !important;
+	}
+}
+
+#bookDetailsReasonBlock .ui-input-text, #bookDetailsReasonList, #bookAppointmentsDetails select#bookDetailsSlotType {
+	width: 220px;
+}
+
+#bookDetailsReasonList li, #dosage-list li, .drugOptionDiv {
+	padding: 5px 0 5px 5px;
+	font-size: 16px;
+	border-bottom: 1px solid #D1D1D1;
+	border-top: 1px solid #FCFCFC;
+	font-size: 11pt;
+}
+
+#bookDetailsReasonList li:first-of-type, #dosage-list li:first-of-type, .drugOptionDiv:first-of-type {
+	border-top: 0;
+}
+
+#bookDetailsReasonList li:last-of-type, #dosage-list li:last-of-type, .drugOptionDiv:last-of-type {
+	border-bottom: 0;
+}
+
+#bookDetailsReasonList, #dosage-list {
+	margin-top: 0px;
+	padding: 0;
+	max-height: 190px;
+	position: absolute;
+	overflow-y: scroll;
+	list-style-type: none;
+	display: none;
+	z-index: 99999;
+}
+
+#bookAppointments .button.criteria.day{
+	min-width: 50px;
+}
+
+#bookAppointments .button.criteria.gender{
+	min-width: 50px;
+}
+
+#bookAppointments .e-blocks > div.tight {
+	padding:10px 0px 10px 0px;
+	height: 50px;
+}
+
+#bookAppointments .e-blocks > div.tight:nth-child(2) {
+	padding:10px 0px 10px 10px;
+}
+
+#searchCriteria .e-block-a{
+	width: 20%;
+}
+
+#bookAppointments .e-blocks .grid-7.e-block-a {
+	width: 5%;
+	text-align: center;
+}
+#bookAppointments .e-blocks .grid-7.e-block-b {
+	width: 20%;
+}
+#bookAppointments .e-blocks .grid-7.e-block-c {
+	width: 10%;
+}
+body.portrait #bookAppointments .e-blocks .grid-7.e-block-c {
+	width: 11%;
+}
+#bookAppointments .e-blocks .grid-7.e-block-d {
+	width: 10%;
+}
+body.portrait #bookAppointments .e-blocks .grid-7.e-block-d {
+	width: 15%;
+}
+#bookAppointments .e-blocks .grid-7.e-block-e {
+	width: 20%;
+}
+body.portrait #bookAppointments .e-blocks .grid-7.e-block-e {
+	width: 15%;
+}
+#bookAppointments .e-blocks .grid-7.e-block-f {
+	width: 20%;
+}
+#bookAppointments .e-blocks .grid-7.e-block-g {
+	width: 15%;
+	text-align: right;
+}
+body.portrait #bookAppointments .e-blocks .grid-7.e-block-g {
+	width: 14%;
+}
+
+#nextApptDate {
+	float: right;
+	margin-right: 15px;
+}
+
+.urgent {
+	background-image: url(../images/apptUrgent.png);
+	background-repeat: no-repeat;
+	background-position: 20px 10px;
+}
+
+#searchSlotBtn {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#searchSlotWrapper {
+	width: 100%;
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#bookAppointments #fromTimeContainer .ui-icon-grid {
+	background-color: transparent;
+	background-image: url("images/icon-time.png");
+	background-size: 18px 16px;
+	border-radius: 0 0 0 0;
+}
+#bookAppointments #toTimeContainer .ui-icon-grid {
+	background-color: transparent;
+	background-image: url("images/icon-time.png");
+	background-size: 18px 16px;
+	border-radius: 0 0 0 0;
+}
+
+/************ End of Book Appointments *****************************/
+/*******************************************************************/
+
+/*******************************************************************/
+/************ Tasks *************************************************/
+
+/* Add task */
+#taskListListview .e-blocks .grid-2.e-block-a, #edittaskview .e-blocks .grid-2.e-block-a {
+	width: 10%;
+}
+#taskListListview .e-blocks .grid-2.e-block-b, #edittaskview .e-blocks .grid-2.e-block-b {
+	width: 90%;
+}
+
+body.portrait #taskListListview .e-blocks .grid-2.e-block-a,
+body.portrait #edittaskview .e-blocks .grid-2.e-block-a {
+	width: 16%;
+}
+body.portrait #taskListListview .e-blocks .grid-2.e-block-b,
+body.portrait #edittaskview .e-blocks .grid-2.e-block-b {
+	width: 84%;
+}
+
+#taskListListview .edit-task-cancel-wrapper {
+	padding-right: 0px;
+}
+
+#taskListListview #edit-task-cancel-button {
+	width: 100%;
+}
+
+.ui-radio-on {
+	font-weight: bold;
+	color: white;
+}
+
+.ui-radio-off {
+	font-weight: normal;
+	color: #002F51;
+	background-color: white ;
+}
+
+#taskListListview #task-urgency-wrapper, #edittask-urgency-wrapper, #smsReminderWrapper, #reviewDate-wrapper, #private-wrapper, #issueLater-wrapper, .toggle-wrapper {
+	display: inline-block;
+	width: 140px;
+	vertical-align: middle;
+}
+
+#taskListListview #task-urgency-wrapper > div, #edittask-urgency-wrapper > div, #smsReminderWrapper > div, #reviewDate-wrapper > div, #private-wrapper > div, #issueLater-wrapper > div, .toggle-wrapper > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	width: 50%;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#taskListListview #task-add-not-urgent, #edittaskview #task-edit-not-urgent, #smsReminderWrapper #dontSendSMS, #reviewDate-wrapper #review-date-off, #private-wrapper #private-off, #issueLater-wrapper #issueLater-off, .toggle-second {
+	margin-left: -5px;
+}
+
+#taskListListview #add-task-menu {
+	float: right;
+	margin-top: -7px;
+}
+
+#taskListListview select, #edittaskview select {
+	min-height: 32px;
+	width: 100%;
+}
+	#taskListListview option.oftenUsed, #edittaskview option.oftenUsed {
+		background-color: #D1D1D1;
+	}
+
+#taskListListview .e-blocks.no-border {
+	border-bottom: none;
+}
+
+#taskListListview .e-blocks.no-border .grid-2.e-block-b {
+	padding-bottom: 0px;
+}
+
+#taskListListview .e-blocks.last-block, #edittaskview .e-blocks.last-block {
+	border: none;
+}
+
+#taskListListview .e-blocks.last-block > div, #edittaskview .e-blocks.last-block > div {
+	padding-top: 0px;
+}
+
+#taskListListview .e-blocks.before-last-block, #edittaskview .e-blocks.before-last-block {
+	border-bottom: none;
+}
+
+#taskListListview .e-blocks a.button.green, #edittaskview .e-blocks a.button.green {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/* Tasks list */
+#taskListContent .e-blocks .grid-4.e-block-a {
+	width: 35%;
+}
+#taskListContent .e-blocks .grid-4.e-block-b {
+	width: 25%;
+}
+#taskListContent .e-blocks .grid-4.e-block-c {
+	width: 14%;
+	text-align: center;
+}
+#taskListContent .e-blocks .grid-4.e-block-d {
+	width: 25%;
+	text-align: right;
+}
+
+#taskListContent .e-blocks .task-edit {
+	margin-right: 10px;
+}
+
+#taskListContent .e-blocks .inside-e-block {
+	width: 100%;
+}
+#taskListContent .e-blocks .inside-e-block div {
+	display: inline-block;
+}
+
+#taskListContent .inside-e-block .grid-2.e-block-a {
+	vertical-align: top;
+	width: 140px;
+}
+
+#taskListContent .inside-e-block .grid-2.e-block-b {
+	width: 79%;
+}
+
+#taskListContent .task-due-date > span {
+	margin-right: 10px;
+}
+
+#taskListContent .task-type,
+#taskListContent .task-recipient > span,
+#taskListContent .task-details > span,
+#taskListContent .task-due-date > span,
+#taskListContent .task-urgency {
+	font-weight: bold;
+}
+
+#taskListContent .task-urgency {
+	color: #FF0000;
+}
+
+#taskListContent .task-details-description {
+	width: 100%;
+	word-wrap: break-word;
+}
+
+/*******************************************************************/
+/************ Templates List ***************************************/
+
+#careEpisodeArea .ui-checkbox {
+	display: inline-block;
+	margin-bottom: 14px;
+	margin-top: 0px;
+}
+
+.right-header-button {
+	float: right;
+	margin-top: -5px !important;
+	margin-right: -7px;
+	margin-bottom: -10px;
+}
+
+#careEpisodeArea .e-blocks.no-bottom-border {
+	border-bottom: none;
+}
+
+#careEpisodeArea .e-blocks.no-top-border {
+	border-top: none;
+}
+
+#careEpisodeArea .grid-2.e-block-a {
+	width:15%;
+}
+#careEpisodeArea .grid-2.e-block-b {
+	width:85%;
+}
+
+#careEpisodeArea .grid-3.e-block-a {
+	width:15%;
+}
+#careEpisodeArea .grid-3.e-block-b {
+	width:65%;
+}
+#careEpisodeArea .grid-3.e-block-c {
+	width:20%;
+}
+
+#careEpisodeArea .smaller {
+	min-width:30%;
+}
+
+#templatesAddedArea .e-blocks .grid-3:nth-child(1) {
+	width:45%;
+}
+
+#templatesAddedArea .e-blocks .grid-3:nth-child(2) {
+	width:35%;
+}
+#templatesAddedArea .e-blocks .grid-3:nth-child(3) {
+	width:19%;
+}
+
+#consPropEditMode .e-blocks > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+#consPropEditMode .larger {
+	min-width:50%;
+}
+
+#consPropEditMode .smaller {
+	min-width:30%;
+}
+
+#consPropEditMode .e-blocks .grid-2.e-block-a {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 19%;
+}
+
+#consPropEditMode .e-blocks .grid-2.e-block-b {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 80%;
+}
+#consPropEditMode .e-blocks .grid-2.e-block-a > a, #consPropEditMode .e-blocks .grid-2.e-block-b > a {
+	display: block;
+	width: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#consPropCancel {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+}
+
+#consPropSave {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+
+#templateList .contentPanel .content #consPropEditMode .last-block {
+	border-bottom: 0px;
+}
+
+#templateListContent .header {
+	padding: 0;
+}
+
+#templateListContent .e-blocks .grid-5.e-block-a {
+	width: 35%;
+	white-space:normal;
+}
+
+#templateListContent .e-blocks .grid-5.e-block-b {
+	width: 35%;
+}
+
+#templateListContent .e-blocks .grid-5.e-block-c {
+	width: 12%;
+}
+
+#templateListContent .e-blocks .grid-5.e-block-d {
+	width: 18%;
+}
+
+#templateListContent .button {
+	padding: 5px 10px 5px 10px;
+}
+
+#consPropEdition{
+	top: -7px;
+	position: relative;
+}
+
+#consPropEditMode .blocks,
+#consPropViewMode .blocks {
+	border-bottom: solid 1px #94c9ea;
+	border-top: solid 1px #f3f8fc;
+}
+
+
+#add-task-content #add-task-due-date-wrapper,
+#edit-task-content #edit-task-due-date-wrapper{
+	width: 145px;
+}
+
+#add-task-content .ui-input-datebox,
+#edit-task-content .ui-input-datebox,
+#consPropEditMode .ui-input-datebox{
+	width: 100%;
+	margin-left:-6px; /* to accomodate extra padding from wrapper */
+}
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4){
+	#consPropDate {
+		max-width: 140px;
+	}
+
+	#consPropTime {
+		max-width: 80px;
+	}
+
+	#consPropDuration {
+		max-width: 50px;
+	}
+
+	#consPropEditMode .no-horizontal-padding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*,
+#consPropEditMode #consPropDateWrapper*/
+
+.ui-datebox-controls {
+	padding:0 5px;
+}
+
+.ui-datebox-controls .ui-btn-emis {
+	padding-top:0.4em;
+	padding-bottom:0.4em;
+	font-size:14px ;
+	font-weight: normal;
+}
+
+.ui-datebox-griddate {
+	margin:0;
+}
+
+.ui-datebox-gridrow {
+	margin-bottom: 0 ;
+}
+
+#consPropEditMode .blocks:first-of-type,
+#consPropViewMode .blocks:first-of-type {
+	border-top: 0;
+}
+
+span.ui-btn-inner{
+	padding: .4em 20px;
+	font-size: 14px;
+}
+
+#templateListContent .template-completed,
+#templateListContent .template-not-completed {
+	padding-left: 25px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-weight: bold;
+}
+
+#templateListContent .template-completed.sprite {
+	background-position: 0px -331px; width: 14px; height: 13px;
+}
+
+#templateListContent .template-not-completed {
+	background-position: 0px -354px; width: 14px; height: 13px;
+}
+
+div.ui-content > div.ui-select{
+	width: 60%;
+	margin: 0 auto;
+}
+
+hr.templateSelectHr{
+	width: 100%;
+	margin-top: 20px;
+	height: 3px;
+	background-color: #888888;
+	border: 0;
+}
+
+#templateSelect, #addTemplateSelect{
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	background-image: linear-gradient(bottom, #004a75 26%, #0079c1 63%);
+	background-image: -o-linear-gradient(bottom, #004a75 26%, #0079c1 63%);
+	background-image: -moz-linear-gradient(bottom, #004a75 26%, #0079c1 63%);
+	background-image: -webkit-linear-gradient(bottom, #004a75 26%, #0079c1 63%);
+	background-image: -ms-linear-gradient(bottom, #004a75 26%, #0079c1 63%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.26, #004a75),
+		color-stop(0.63, #0079c1)
+	);
+	border-top: 1px solid rgba(70, 70, 70, 0.4);
+	border-left: 1px solid rgba(70, 70, 70, 0.4);
+	border-right: 1px solid rgba(70, 70, 70, 0.4);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	border-radius: 0.4em;
+
+	display: inline-block;
+	padding: 5px 8px 5px 8px;
+	text-shadow: 1px -1px 1px #666666;
+	filter: dropshadow(color=#666666, offx=1, offy=-1);
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+
+	margin-top: -2pt;
+	top: 7px;
+	text-decoration: none;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#templateAddedInfo{
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+	color: #63AC63;
+	opacity: 0.9;
+}
+
+.templateName{
+	font-weight: 900;
+	font-size: 16px;
+	text-align: left;
+	padding-left: 2px;
+}
+
+/* header for list of templates */
+#templateListContent .header .e-blocks .grid-2.e-block-a {
+	width:100%;
+	position: relative;
+}
+#templateListContent .header.no-data .e-blocks .grid-2.e-block-b {
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	border-radius: 0px 5px 5px 0px;
+	white-space: nowrap;
+}
+
+#templateListContent .header.grid .e-blocks .grid-2.e-block-b {
+	-webkit-border-radius: 0px 5px 0px 0px;
+	-moz-border-radius: 0px 5px 0px 0px;
+	border-radius: 0px 5px 0px 0px;
+	white-space: nowrap;
+}
+
+#templateListRttPanel #change-care-episode-wrapper select {
+	min-height: 32px;
+	width: 100%;
+}
+
+#templateListRttPanel .change-rtt-status {
+	margin: 0;
+	padding: 0;
+	width: 110px;
+}
+
+#templateListRttPanel #change-RTT-status-wrapper {
+	padding: 7px 0;
+	top: 0;
+	position: relative;
+	float: right;
+}
+
+#templateListRttPanel #change-RTT-status-wrapper div {
+	text-align: center;
+}
+
+#templateListRttPanel #change-RTT-status-wrapper select {
+	background-image: none;
+	width: 100%;
+	margin: 0;
+	opacity: 0.0001;
+	padding: 0;
+	color: transparent;
+	line-height: 1;
+	white-space: nowrap;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+}
+
+#templateListRttPanel .current-rtt-wrapper {
+	position: relative;
+}
+
+#templateListRttPanel .current-rtt-wrapper .clock-state {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	left: 5px;
+	top: -1px;
+}
+#templateListRttPanel .current-rtt-wrapper .clock-state.play {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 8px 0 8px 13.9px;
+	border-color: transparent transparent transparent #009e10;
+}
+#templateListRttPanel .current-rtt-wrapper .clock-state.stop {
+	width: 16px;
+	height: 16px;
+	background-color: #cf2a27;
+}
+#templateListRttPanel .current-rtt-wrapper .clock-state.none {
+	display: none;
+}
+
+#templateListRttPanel .current-rtt-wrapper .grid-3.e-block-c {
+	padding: 0;
+}
+
+#templateListRttPanel .tab-switch .e-blocks {
+	min-height: 0;
+}
+
+#templateListRttPanel .tab-switch .e-input {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+#templateListRttPanel .tab-switch .e-input div:nth-child(1) {
+	border-right: none;
+}
+
+#templateListRttPanel .tab-switch .e-input > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#templateListRttPanel .e-input {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+#templateListRttPanel .e-input div:nth-child(1) {
+	border-right: none;
+}
+
+#templateListRttPanel .e-input > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+}
+
+#templateListRttPanel .contact-wrapper > div {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#templateListRttPanel .subject-wrapper > div {
+	padding-left: 19px;
+	padding-right: 19px;
+}
+
+#templateListRttPanel .selected-care-episode-wrapper .contentPanel {
+	background-color: rgb(204, 229, 244);
+	margin: 10px 20px;
+	width: auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	border-top: none;
+	padding: 0;
+	display: block;
+}
+
+#addDrugBtn, #addContactButton,
+#cancelTemplate,
+#addDrug #listAllergies, #showSchedulesList,
+#MapBtn,
+#appointmentsBtn,
+#changeContact,
+#addContact
+{
+		position: absolute;
+		right: 15px;
+		top: 0.7em;
+		cursor: pointer;
+		/*height: 80%;*/
+}
+
+/************ Templates List ***************************************/
+/*******************************************************************/
+
+#addContact, #addContact2 {
+	padding: 0;
+}
+
+#addContact2 {
+	position: absolute;
+	height: 100%;
+	margin: 0;
+	top: 0;
+	right: 0;
+}
+
+#addContact select, #addContact2 select {
+	background-position: 5px center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	width: 110px;
+}
+
+.styled-select {
+	background: transparent;
+	font-size: 12px;
+	color: white;
+	border: 0px;
+	height: 100%;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+	outline: none;
+
+	background-image: url('images/white-plus.png');
+	background-repeat: no-repeat;
+	background-position: left -1px ;
+	width: 100px;
+	padding-left: 18px;
+}
+
+.styled-select::-ms-expand {
+	display: none;
+}
+
+.styled-select option {
+	color:black;
+}
+
+
+
+.templateChange {
+	cursor: pointer;
+}
+
+#changeContact .styled-select {
+	background-image: url('images/white-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	width: 110px;
+}
+
+#changeContact .styled-select option {
+	color:black;
+}
+
+#bookAppointmentsHeaderPart {
+	padding-left: 15px;
+	padding-top: 15px;
+	overflow: hidden;
+}
+
+#contactLabel, #tasksLabel {
+	font-size: 24px;
+	/* position: fixed; */
+}
+
+#quickNotesArea {
+	height: 100px;
+}
+
+#consPropConsultorWrapper div.ui-input-text {
+	width: 30%;
+}
+
+#consPropEditMode .e-blocks .grid-6 e-block-b,
+#consPropEditMode .e-blocks .grid-6 e-block-d{
+	margin-right: 50px;
+}
+
+#additionalInfoWrapper {
+	border: 1px solid black;
+	border-top: 0px;
+	padding: 10px;
+	padding-top: 0px;
+	margin: 10px;
+	margin-top: 0px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	max-height: 100px;
+}
+#additionalInfoLabelWrapper {
+	border: 1px solid black;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.gridLabel {
+	font-weight: bold;
+}
+
+/* on max 800px screens controls were misaligned - this query  */
+@media all and (max-width: 800px) {
+	/* due date split into 2 lines for Samsung Galaxy 7" "*/
+	.taskDateLabel {
+		white-space: nowrap;
+	}
+	.taskDateSpan {
+		white-space: nowrap;
+		display: inline-block;
+	}
+
+	/*buttons in task list aligned to left and changed their width */
+	#taskListContent .e-blocks .grid-4.e-block-d {
+		text-align: left;
+	}
+	#taskListContent .e-blocks .grid-4.e-block-d .task-edit.button {
+		margin-bottom: 5px;
+		width: 60%;
+	}
+	#taskListContent .e-blocks .grid-4.e-block-d .task-delete.button.red {
+		width: 60%;
+	}
+
+	#bookAppointments .button.criteria.day {
+		min-width: 40px;
+	}
+}
+
+/* smaller buttons to fit in one row */
+@media all and (max-width: 650px) {
+	#bookAppointments .button.criteria.day {
+		width: 35px;
+		font-size: 11px;
+	}
+
+	#bookAppointments a#bookAppDayThursday.button.criteria.day {
+		width: 40px;
+		font-size: 11px;
+	}
+
+	.patientSummaryInfo .patient-info {
+		font-size: 11pt;
+	}
+	#bookAppointments .e-blocks .grid-6.e-block-c {
+		width: 14%;
+	}
+	#bookAppointments .e-blocks .grid-6.e-block-d {
+		/*white-space: nowrap;*/
+		width: 21%;
+	}
+	#bookAppointments .e-blocks .grid-6.e-block-e {
+		width: 20%;
+	}
+	#bookAppointments .e-blocks .grid-6.e-block-e {
+		width: 15%;
+	}
+}
+
+#bookAppointments .e-blocks #searchCriteriaSessionCategories, #bookAppointments .e-blocks #searchCriteriaLocations {
+	width: 250px;
+}
+
+	#bookAppointments #searchResultsOverContent .content {
+		overflow-x: auto;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+/*************** Add drug *******************************
+**********************************************************/
+div.e-blocks div.grid-5.hidden {
+	display: none;
+}
+
+#drugListBtn {
+		float: right;
+		cursor: pointer;
+}
+
+#addDrugButton {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+}
+
+#addDrug .e-blocks .grid-3.e-block-a, #addDrug .e-blocks .grid-4.e-block-a {
+		width: 20%;
+}
+
+#addDrug .e-blocks .grid-3.e-block-b, #addDrug .e-blocks .grid-4.e-block-b {
+		width: 30%;
+}
+
+#addDrug .e-blocks .grid-3.e-block-c {
+		width: 35%;
+}
+
+#addDrug .e-blocks .grid-4.e-block-c {
+		width: 20%;
+}
+
+#addDrug .e-blocks .grid-4.e-block-d {
+		width: 20%;
+}
+
+#addDrug .e-blocks .grid-2.e-block-a {
+		width: 20%;
+}
+
+#addDrug .e-blocks .grid-2.e-block-b {
+		width: 79%;
+}
+
+#rxtype-wrapper, #rxType, #dosage-wrapper, #dosage-input, #issuing-wrapper, .full-width {
+		width: 100%;
+}
+
+#dosage-input, #selectDrugName {
+	margin: 0;
+}
+
+#dosage-input, #dosage-list > li {
+	font-size: 11pt;
+}
+
+#dosage-list {
+	width: 75%;
+}
+
+#authIssuesInput {
+		width: 100%;
+}
+
+#reviewDate-wrapper, #private-wrapper, #issueLater-wrapper {
+		width: 140px;
+}
+
+#reviewDate-wrapper {
+	margin-left: -10px;
+}
+
+.withoutBottomBorder {
+	border-bottom: none;
+}
+
+.withoutTopBorder {
+	border-top: none;
+}
+
+#addDrug .ui-input-datebox {
+		width: 90%;
+}
+
+#addDrug .e-blocks .grid-2.e-block-b.issuingBlock {
+	width: 30%;
+}
+
+#issuingMethodDisabled {
+	display: none;
+}
+
+
+
+.apptBtnIcon {
+	padding-right: 5px;
+}
+
+.standaloneButton .icon {
+	display:inline-block;
+	width:12px;
+	height:15px ;
+	padding-right: 5px;
+}
+
+.patientDetailsInfo {
+	line-height: 20px ;
+}
+
+.patientDetailsInfo .icon {
+	background-image: url(images/patientdetailsinfo2.png) ;
+	background-position: center center ;
+	background-repeat: no-repeat ;
+	width:20px;
+	height:20px ;
+	display: inline-block;
+	padding:0 ;
+}
+
+#addContactButton .icon {
+	background:url(images/Ico_contact_button.png) center no-repeat ;
+}
+
+#addDrug div#reviewDateBlock.e-blocks,#addDrug div#dateBlock.e-blocks {
+	background-color: rgb(204, 229, 244);
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+#addDrug div#issueDateContainer.e-input {
+	margin-left: -10px;
+}
+
+#addDrug #listAllergies select {
+	background: transparent;
+	font-size: 12px;
+	color: white;
+	border: 0px;
+	height: 100%;
+	width: 145px;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+	outline: none;
+}
+
+#addDrug #listAllergies select::-ms-expand {
+	display: none;
+}
+
+#addDrug #listAllergies select option {
+	color:black;
+}
+
+/*because jQuery makes textareas 50px high by default */
+#dosage-wrapper textarea#dosage-input, #drugOptionsContainer textarea#selectDrugName {
+	overflow: hidden;
+	font-size: 11pt;
+}
+
+.styled-select-add-drug {
+	background: transparent;
+	font-size: 12px;
+	color: white;
+	border: 0px;
+	height: 100%;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+	outline: none;
+
+	background-image: url('images/add_drug_icon.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 75px;
+	padding-left: 17px;
+}
+
+.styled-select-add-drug option {
+	color:black;
+}
+
+/*************** Drug List *******************************
+**********************************************************/
+
+#drug-list-content{
+	height: 300px;
+	overflow: auto;
+}
+
+.druglistdialog .ui-dialog-contain {
+	max-width: none;
+	width:80%;
+	max-height: 520px;
+}
+
+#drug-list-content .e-blocks:last-of-type{
+	border-bottom: 1px solid #D1D1D1;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-a {
+	width: 59%;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-b {
+	width: 27%;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-c {
+	width: 10%;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-a div{
+	font-weight: 900;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-b div{
+	text-align: right;
+	height: 100%;
+}
+
+#drug-list-content .e-blocks .grid-3.e-block-c.buttons{
+	text-align: right;
+	height: 100%;
+}
+
+.label-right {
+		float: right;
+}
+
+.hidden, .hiddenIssue {
+		display: none !important;
+}
+
+#selectDrugName {
+	width: 100%;
+	display: inline-block;
+}
+
+#infoIcon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#drug-list div.standaloneButton {
+	cursor: pointer;
+}
+
+/* IE10 additional 'x' mark fix */
+input::-ms-clear {
+	display: none;
+}
+
+#drugOptions {
+	position: absolute;
+	z-index: 100;
+	margin-top: 0px;
+	width: 75%;
+	max-height: 190px;
+	overflow-y: scroll;
+}
+
+#drug-list-content div.newDrug {
+	background-color: rgb(239, 248, 255);
+}
+
+/*************** View alerts *******************************
+**********************************************************/
+
+.ui-mobile .ui-header .alertsButtonContainer {
+	margin-top: -1px;
+}
+
+.alertsButtonContainer {
+	position: relative;
+	width: 38px;
+	height: 26px;
+	padding: 0px;
+	left: 80px;
+	top: 9px;
+	float: left;
+	cursor: pointer;
+}
+
+.alertsButtonContainer .alertButton {
+	width: 18px;
+	height: 18px;
+	background:url(images/exclamation.png) center no-repeat ;
+	position:relative;
+	top:-3px ;
+	padding:0 ;
+}
+
+.alertsBubble {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	padding: 2px 3px 2px 3px;
+	background-color: #082a3e;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px gray;
+	min-width: 12px;
+}
+
+.alertsContainer {
+	position: absolute;
+	top: 40px;
+	float: left;
+	left: 10px;
+	min-width: 300px;
+
+	background-image: linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 30%, rgb(127,127,127) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(0,0,0)),
+		color-stop(1, rgb(127,127,127))
+	);
+
+	border: 1px solid black;
+	box-shadow: gray 3px 3px 3px;
+	list-style-type: none;
+	display: none;
+}
+
+.alertsContainer .arrow-up {
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 82px;
+	top: -10px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 11px solid #7F7F7F;
+}
+
+.alertsContainer span.text {
+	color: white;
+	font-size: 8pt;
+	padding: 0 10px;
+}
+
+.dismissAlert {
+	/*padding: 2px;
+	margin-left: 5px;
+	color: white;*/
+	float: right;
+	/*background-image: linear-gradient(bottom, #ff0022, #ff0022);
+	background-image: -o-linear-gradient(bottom, #ff0022, #ff0022);
+	background-image: -moz-linear-gradient(bottom, #ff0022, #ff0022);
+	background-image: -webkit-linear-gradient(bottom, #ff0022, #ff0022);
+	background-image: -ms-linear-gradient(bottom, #ff0022, #ff0022);
+	background-image: -webkit-gradient( linear, left bottom, left top, #ff0022, #ff0022);
+	*/
+	/*border-radius: 5px;
+	box-shadow: gray 1px 1px 10px;*/
+}
+
+.alertsContainer .alertMessage {
+	border-bottom: 1px solid black;
+	display: list-item;
+	padding: 5px 0;
+	text-align: left;
+}
+
+
+/*************** Documents viewer ************************
+**********************************************************/
+
+/*Nexus 7 */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (-webkit-max-device-pixel-ratio: 1.4) {
+	#patientdocuments .e-blocks .grid-5.e-block-a {
+		width: 15% !important;
+	}
+	#patientdocuments .e-blocks .grid-5.e-block-b {
+		width: 17% !important;
+	}
+	#patientdocuments .e-blocks .grid-5.e-block-c {
+		width: 17% !important;
+	}
+	#patientdocuments .e-blocks .grid-5.e-block-d {
+		width: 13% !important;
+	}
+	#patientdocuments .e-blocks .grid-5.e-block-e {
+		width: 38% !important;
+	}
+}
+
+#patientdocuments .e-blocks .grid-5.e-block-a {
+	width: 15%;
+}
+
+#patientdocuments .e-blocks .grid-5.e-block-b {
+	width: 20%;
+}
+
+#patientdocuments .e-blocks .grid-5.e-block-c {
+	width: 20%;
+}
+
+#patientdocuments .e-blocks .grid-5.e-block-d {
+	width: 15%;
+}
+
+#patientdocuments .e-blocks .grid-5.e-block-e {
+	width: 30%;
+}
+
+#patientdocuments .button.red {
+	float: left;
+	width: 30%;
+}
+
+#patientdocuments .button.green, #patientdocuments .downloadDoc, #patientdocuments .unavailable {
+	float: right;
+	width: 30%;
+}
+
+#patientdocuments .unavailable {
+	display: inline-block;
+	padding: 7px 10px 7px 10px;
+	text-align: center;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+#patientdocuments .headerBorder {
+	background-image: linear-gradient(bottom, rgb(164,164,164), rgb(141,141,141));
+	background-image: -o-linear-gradient(bottom, rgb(164,164,164), rgb(141,141,141));
+	background-image: -moz-linear-gradient(bottom, rgb(164,164,164), rgb(141,141,141));
+	background-image: -webkit-linear-gradient(bottom, rgb(164,164,164), rgb(141,141,141));
+	background-image: -ms-linear-gradient(bottom, rgb(164,164,164), rgb(141,141,141));
+	background-image: -webkit-gradient( linear, left bottom, left top, rgb(164,164,164), rgb(141,141,141));
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: 1px solid white;
+	padding: 10px;
+	padding-top: 0px;
+	margin-top: 0px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	min-height: 40px;
+	max-height: 100px;
+	color: white;
+	line-height: 40px;
+	padding: 0px 0px 0px 10px;
+	font-weight: bold;
+}
+
+#patientdocuments .headerBorder.bottom-radius {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#patientdocuments div.documentsHeader {
+	color: black;
+	background-color: rgb(215, 215, 215);
+	border-bottom: 1px solid #7f7f7f;
+	font-weight: bold;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 5px 5px 0px 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+#patientdocuments div.documentsHeader.no-data {
+	display: none;
+}
+
+#patientdocuments #loadingSpinner{
+	display:none;/* disable by default */
+	position: relative;
+	top: -150px;
+}
+
+#patientdocuments #loadingSpinner > div {
+	text-align: center;
+	padding: 0px;
+}
+
+.hidden{
+	display:none;
+}
+
+.bodyClass #patientdocuments #loadingSpinner .ui-content{
+	border-bottom: 1px solid #091f2d;
+	border-radius:5px;
+	/**/
+	background-color: #cfe5f3;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cce6f7), to(#cfe5f3));
+	background: -webkit-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -moz-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -ms-linear-gradient(top, #cce6f7, #cfe5f3);
+	background: -o-linear-gradient(top, #cce6f7, #cfe5f3);
+	/**/
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			-ms-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			-o-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+					box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.bodyClass #patientdocuments #loadingSpinner .ui-content > h2, .bodyClass #isTrustedLoading .ui-content > h2{
+	font-size: 1.17em;
+}
+.bodyClass #patientdocuments #loadingSpinner #progressInfo, .bodyClass #isTrustedLoading #progressInfo{
+	color:#6A6F72;
+}
+
+
+div.docDetailsDialog > div {
+	margin: 0px;
+	width: 100%;
+	max-width: 100%;
+}
+
+#documentDetails .ui-dialog-contain {
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#documentDetailsHeader {
+	margin: 0px;
+	border-radius: 0;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-image: linear-gradient(bottom, rgb(41, 41, 41), rgb(58, 58, 58));
+	background-image: -o-linear-gradient(bottom, rgb(41, 41, 41), rgb(58, 58, 58));
+	background-image: -moz-linear-gradient(bottom, rgb(41, 41, 41), rgb(58, 58, 58));
+	background-image: -webkit-linear-gradient(bottom, rgb(41, 41, 41), rgb(58, 58, 58));
+	background-image: -ms-linear-gradient(bottom, rgb(41, 41, 41), rgb(58, 58, 58));
+	background-image: -webkit-gradient(linear, left bottom, left top, rgb(41, 41, 41), rgb(58, 58, 58));
+}
+
+#documentViewerWrapper {
+	padding: 0px;
+	border-radius: 0;
+	background-color: rgb(163, 163, 163);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.portrait #documentViewerWrapper {
+	text-align: center;
+}
+
+#documentDetailsWrapper {
+	position: fixed;
+		top: 0px;
+		left: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 50px 320px 20px 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+/*overflow: auto;*/ /*it looks that commenting this didn't break anything on any device and scrollbars are not visible so often*/
+}
+
+#documentViewerWrapper.portrait #documentDetailsWrapper.open {
+	padding: 250px 20px 20px 20px;
+}
+
+#documentViewerWrapper.portrait #documentDetailsWrapper.close {
+	padding: 100px 20px 20px 20px;
+}
+
+#documentViewerWrapper.landscape #documentDetailsWrapper.close {
+	padding: 50px 60px 20px 20px;
+}
+
+#documentDetailsContent {
+	overflow:auto;
+	background-color: white;
+	display: inline-block;
+	width: 100%;
+	height:	100%;
+	overflow:auto;
+	box-shadow: 0px 0px 10px 3px rgb(17, 17, 17);
+	padding: 0px;
+	margin: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+
+	/* without this zooming on big zoom causese strange image smudges */
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	/* *** */
+}
+
+#documentPanelInfo {
+	background-color: rgb(206, 229, 242);
+	display: inline-block;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+		top: 0px;
+		right: 0px;
+}
+
+#documentViewerWrapper.landscape #documentPanelInfo.close {
+	width: 50px;
+}
+
+#documentViewerWrapper.portrait #documentPanelInfo.close {
+	height: 60px;
+}
+
+#documentViewerWrapper.landscape #documentPanelInfo.close #panelInfoBar,
+#documentViewerWrapper.landscape #documentPanelInfo.close #panelInfoContent,
+#documentViewerWrapper.portrait #documentPanelInfo.close #panelInfoContent{
+	display: none;
+}
+
+#documentViewerWrapper #documentPanelInfo #panelInfoButton img {
+	display: none;
+}
+
+#documentViewerWrapper.landscape #documentPanelInfo.open #panelInfoButton img.right,
+#documentViewerWrapper.landscape #documentPanelInfo.close #panelInfoButton img.left,
+#documentViewerWrapper.portrait #documentPanelInfo.open #panelInfoButton img.up,
+#documentViewerWrapper.portrait #documentPanelInfo.close #panelInfoButton img.down {
+	display: inline;
+}
+
+
+.portrait #documentPanelInfo {
+	width: 100%;
+	height: 240px;
+}
+
+#panelInfoBar {
+	/*height: 40px;
+	padding-top: 50px;*/
+	padding: 50px 5px 8px 5px;
+	border-bottom: 1px solid grey;
+	text-align: center;
+	text-align: center;
+	font-weight: bold;
+	word-wrap: break-word;
+	background-image: linear-gradient(top, rgb(150, 195, 223) 20%, rgb(206, 229, 242) 100%);
+	background-image: -o-linear-gradient(top, rgb(150, 195, 223) 20%, rgb(206, 229, 242) 100%);
+	background-image: -moz-linear-gradient(top, rgb(150, 195, 223) 20%, rgb(206, 229, 242) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(150, 195, 223) 20%, rgb(206, 229, 242) 100%);
+	background-image: -ms-linear-gradient(top, rgb(150, 195, 223) 20%, rgb(206, 229, 242) 100%);
+}
+
+#documentViewerWrapper #documentPanelInfo #panelInfoButton {
+	position: absolute;
+	bottom: 10px;
+	top: auto;
+}
+
+#documentViewerWrapper.landscape #documentPanelInfo #panelInfoButton {
+	left: 10px;
+}
+
+#documentViewerWrapper.portrait #documentPanelInfo #panelInfoButton {
+	right: 10px;
+}
+
+#documentViewerWrapper.portrait #documentPanelInfo.close #panelInfoButton {
+	bottom: -15px;
+}
+
+.portrait #panelInfoBar {
+	text-align: left;
+}
+
+#panelInfoContent .e-blocks .grid-2.e-block-a {
+	width: 30%;
+}
+
+.portrait #panelInfoContent .e-blocks .grid-2.e-block-a {
+	width: 15%;
+}
+
+#panelInfoContent .e-blocks .grid-2.e-block-b {
+	width: 70%;
+}
+
+.portrait #panelInfoContent .e-blocks .grid-2.e-block-b {
+	width: 85%;
+}
+
+#panelInfoContent .e-blocks {
+	border: 0px;
+}
+
+#block-div {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(1, 1, 1, 0.7) url(./images/loader.gif) no-repeat center center;
+	z-index: 10000;
+	visibility: hidden;
+}
+
+tr.patient-loader td {
+	padding: 0;
+}
+
+div.patient-loader {
+	background: rgba(0, 0, 0, 0) url(./images/loader.gif) no-repeat center center;
+	height: 50px;
+}
+
+#patientdocuments .e-blocks {
+	word-wrap: break-word;
+}
+
+/*************** Patient Warnings ************************
+**********************************************************/
+
+#warningsContainer > ul {
+	left: 10%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	padding-right: 50px;
+	list-style-position: inside;
+}
+
+#warningsContainer {
+	padding-top: 15px;
+	padding-left: 0px;
+	text-align: left;
+	line-height: 20px;
+}
+
+#drugWarning {
+	background-color: rgb(204, 229, 244);
+	color: rgb(0,62,97);
+	text-align: center;
+	font-weight: bold;
+	box-shadow: 0 4px 2px -2px gray;
+}
+
+#drugWarning #xMark {
+	float: right;
+	margin-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: pointer;
+}
+
+
+div.heading-wrapper {
+	width: 55%;
+	margin-left: 25%;
+	min-height: 40px;
+	max-height: 40px;
+	line-height: normal;
+	word-wrap: break-word;
+	word-break: break-all;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: -webkit-box;
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	display:box;
+	box-pack:center;
+	box-align:center;
+	padding-right: 3px;
+}
+
+div.heading-wrapper > h3#patientHeaderTitle , div.heading-wrapper > h3#bookAppointmentsHeaderTitle {
+	display: table-cell;
+	vertical-align: middle;
+	height: 40px;
+	max-height: 40px;
+	line-height: normal;
+	font-size: 10pt;
+}
+
+#searchFromContainer .ui-input-text,
+#searchToContainer .ui-input-text {
+	padding-top: 1px ;
+	padding-bottom: 1px ;
+}
+
+.ui-input-datebox .ui-icon-grid:after {
+	background-image:none ;
+}
+
+#syncAccessToken h3 {
+	margin-top: 0;
+}
+
+#showSchedulesList .icon {
+	width:12px ;
+	display:inline-block ;
+	background:url(images/Ico_Schedules.png) center no-repeat ;
+	vertical-align:text-bottom;
+	margin-left: -2px;
+	margin-right: 2px;
+}
+
+#addScheduleBtn .icon {
+	background:url(images/white-plus.png) center no-repeat ;
+}
+
+#listAllergies .icon {
+	background:url(images/allergies.png) center no-repeat ;
+}
+
+.own-header .standaloneButton img {
+	vertical-align: text-bottom;
+	height:15px ;
+	padding-right: 4px;
+}
+
+#addScheduleBtn img {
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+/* schedule list */
+
+#schedulesList div.ui-dialog-contain {
+	max-width: none;
+	width: 80%;
+	margin: 2% auto 0 auto;
+	height: 80%;
+	position: relative;
+}
+
+#schedulesListContent .grid-5.e-block-a {
+	width: 30%;
+}
+#schedulesListContent .grid-5.e-block-b {
+	width: 16%;
+}
+#schedulesListContent .grid-5.e-block-c {
+	width: 16%;
+}
+#schedulesListContent .grid-5.e-block-d {
+	width: 18%;
+}
+#schedulesListContent .grid-5.e-block-e {
+	width: 20%;
+	text-align: right;
+}
+
+body.portrait #schedulesListContent .grid-5.e-block-a {
+	width: 26%;
+}
+body.portrait #schedulesListContent .grid-5.e-block-b {
+	width: 13%;
+}
+body.portrait #schedulesListContent .grid-5.e-block-c {
+	width: 19%;
+}
+body.portrait #schedulesListContent .grid-5.e-block-d {
+	width: 19%;
+}
+body.portrait #schedulesListContent .grid-5.e-block-e {
+	width: 23%;
+	text-align: right;
+}
+
+#schedulesListContent .content.grid {
+	border-top: none;
+	overflow: auto;
+}
+
+#schedulesListContent .header.inner-header {
+	min-height: inherit;
+	font-weight: normal;
+	color: black;
+	background-color: rgb(215, 215, 215);
+	font-weight: bold;
+	border-radius: 5px 5px 0px 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	background-image: none;
+	border-bottom: none;
+	border-top:none;
+}
+
+#schedulesListContent .header.inner-header .grid-5.e-block-a {
+	width: 100%;
+}
+
+#schedulesListContent .grid-5.e-block-e a.edit-schedule {
+	margin-right: 10px;
+}
+
+#schedulesList #addScheduleBtn {
+	display: block;
+	margin-top: 15px;
+}
+
+/* edit schedule */
+
+#editSchedule .ui-dialog-contain {
+	max-width: 700px;
+	margin: 2% auto 0 auto;
+}
+
+#editSchedule .patient-area {
+	line-height: 40px;
+	color: #002F51;
+	background-color: #cee5f3;
+	vertical-align: middle;
+	width: 100%;
+	border: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+#editSchedule .patient-area > div {
+	padding: 0;
+}
+
+#editSchedule .patient-area div.e-block-a {
+	width: 32%;
+	padding-left: 20px;
+}
+
+#editSchedule .patient-area div.e-block-b {
+	width: 68%;
+	font-weight: bold;
+}
+
+#editScheduleContent .contentPanel div.content {
+	border-radius: 5px;
+}
+
+#editScheduleContent .contentPanel:nth-child(1) {
+	padding-bottom: 10px;
+}
+
+#editScheduleContent .contentPanel:nth-child(2) {
+	padding-bottom: 15px;
+}
+
+#editScheduleContent .e-blocks {
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+#editScheduleContent select {
+	min-height: 32px;
+}
+
+#editScheduleContent .e-blocks .grid-2.e-block-a,
+#editScheduleContent .e-blocks .grid-3.e-block-a,
+#editScheduleContent .e-blocks .grid-4.e-block-a {
+	font-weight: bold;
+	width:30%;
+}
+#editScheduleContent .e-blocks .grid-2.e-block-b {
+	width:70%;
+}
+
+#editScheduleContent .e-blocks .grid-3.e-block-b {
+	width:30%;
+}
+#editScheduleContent .e-blocks .grid-3.e-block-c {
+	width:40%;
+}
+
+#editScheduleContent .e-blocks .grid-4.e-block-b {
+	width:30%;
+}
+#editScheduleContent .e-blocks .grid-4.e-block-c {
+	width:10%;
+}
+#editScheduleContent .e-blocks .grid-4.e-block-d {
+	width:30%;
+}
+
+#editScheduleContent .ui-small-time-block {
+	width: 60px;
+	display: inline-block;
+	margin-right:8px;
+}
+
+#edit-schedule-dependency-wrapper {
+	width: 200px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+#edit-schedule-dependency-wrapper > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	text-overflow: clip;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#edit-schedule-dependency-wrapper [data-dependency="Low"] {
+	border-right: none;
+	width: 30%;
+}
+
+#edit-schedule-dependency-wrapper [data-dependency="Medium"] {
+	width: 40%;
+}
+
+#edit-schedule-dependency-wrapper [data-dependency="High"] {
+	border-left: none;
+	width: 30%;
+}
+
+#edit-schedule-select-template-wrapper {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 80%;
+	vertical-align: middle;
+}
+
+#editScheduleContent .template-wrapper {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 20%;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+#editScheduleContent .template-wrapper > a {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#editScheduleContent textarea {
+	height: 49px;
+}
+
+#editScheduleContent #edit-schedule-save {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+/* edit schedule template */
+
+#editScheduleTemplate .ui-dialog-contain {
+	max-width: 750px;
+}
+
+#editScheduleTemplateContent .contentPanel:nth-child(1) {
+	padding-bottom: 10px;
+}
+
+#editScheduleTemplateContent .contentPanel:nth-child(2) {
+	padding-bottom: 15px;
+}
+
+#editScheduleTemplateContent #edit-schedule-template-submit {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#editScheduleTemplateContent select {
+	min-height: 32px;
+}
+
+#editScheduleTemplateContent .e-input {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+#editScheduleTemplateContent .e-input > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	text-overflow: clip;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#editScheduleTemplateContent .e-blocks.no-recurrence .e-block-a {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#editScheduleTemplateContent .e-blocks.no-bottom-border {
+	border-bottom: none;
+}
+
+#editScheduleTemplateContent .recurrence {
+	background-color: rgb(204, 229, 244);
+	margin: 10px 20px;
+	width: auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	border-top: none;
+}
+
+#editScheduleTemplateContent .recurrence div.ui-input-text,
+#editScheduleTemplateContent .recurrence select {
+	margin: 0 8px;
+}
+
+#editScheduleTemplateContent .recurrence select#edit-schedule-template-monthly-day-type,
+#editScheduleTemplateContent .recurrence select#edit-schedule-template-quarterly-day-type {
+	margin-left: 0;
+}
+
+#edit-schedule-template-weekly-day {
+	margin-top: 10px;
+}
+
+/*#edit-schedule-template-weekly-day > a.button.criteria.day.activated {
+	padding-left: 9px;
+	padding-right: 9px;
+}*/
+
+#edit-schedule-template-monthly-switch {
+	margin-bottom: 10px;
+}
+
+#editScheduleTemplateContent div.ui-input-text {
+	display: inline-block;
+}
+
+#editScheduleTemplateContent span {
+	font-weight: bold;
+}
+
+#editScheduleTemplateContent input[type="number"] {
+	width: 50px;
+}
+
+#editScheduleTemplateContent .e-blocks .grid-2.e-block-a,
+#editScheduleTemplateContent .e-blocks .grid-2.e-block-b {
+	width: 50%;
+}
+
+#edit-schedule-template-recurrence {
+	margin-left: 100px;
+	width: 150px;
+}
+
+#edit-schedule-template-daily-switch {
+	padding-left: 10px;
+}
+
+#edit-schedule-template-end-date-switch {
+	padding-left: 30px;
+}
+
+#edit-schedule-template-appointments-number-wrapper .ui-input-text {
+	margin-left: 10px;
+}
+
+/* cancel schedule */
+
+#cancelSchedule .ui-dialog-contain {
+	max-width: 700px;
+}
+
+#cancelScheduleContent .contentPanel div.content {
+	border-radius: 5px;
+}
+
+#cancelScheduleContent .contentPanel:nth-child(1) {
+	padding-bottom: 10px;
+}
+
+#cancelScheduleContent .contentPanel:nth-child(2) {
+	padding-bottom: 15px;
+}
+
+#cancelScheduleContent .e-blocks {
+	padding-bottom: 0px;
+	padding-top: 0px;
+	border-bottom: none;
+}
+
+#cancelScheduleContent .e-blocks .grid-2.e-block-a {
+	width:35%;
+	font-weight: bold;
+}
+#cancelScheduleContent .e-blocks .grid-2.e-block-b {
+	width:65%;
+}
+
+#cancelScheduleContent .e-blocks .grid-4.e-block-a {
+	width:25%;
+	font-weight: bold;
+}
+#cancelScheduleContent .e-blocks .grid-4.e-block-b {
+	width:15%;
+}
+#cancelScheduleContent .e-blocks .grid-4.e-block-c {
+	width:30%;
+}
+#cancelScheduleContent .e-blocks .grid-4.e-block-d {
+	width:30%;
+}
+
+#cancel-schedule-linked-appointments-wrapper .top-header-text {
+	color: black;
+}
+
+#cancel-schedule-linked-appointments-wrapper div.content.scroll {
+	max-height: 100px;
+	overflow-y: scroll;
+}
+
+#cancel-schedule-linked-appointments-wrapper .e-blocks {
+	min-height: 0;
+}
+
+#cancel-schedule-linked-switch-wrapper .e-input {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+#cancel-schedule-linked-switch-wrapper .e-input div:nth-child(1) {
+	border-right: none;
+}
+
+#cancel-schedule-linked-switch-wrapper .e-input > div {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#cancelScheduleContent #cancel-schedule-submit {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* *** */
+
+.half-width {
+	width:50%;
+}
+
+#sharingViewPermissionContent .e-blocks .grid-2.e-block-a {
+	width: 27%;
+}
+
+#sharingViewPermissionContent .e-blocks .grid-2.e-block-b {
+	width: 72%;
+}
+
+#sharingViewPermissionContent .e-blocks .grid-2.e-block-a a {
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+#sharingViewPermissionContent .e-blocks .grid-2.e-block-b a {
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	margin-left: -3px;
+	width: 95%;
+}
+
+#sharingViewPermissionContent .e-blocks {
+	padding: 0;
+}
+
+#sharingViewPermissionContent #ConsentAgreeBtn {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.full-width {
+	width: 100%;
+}
+
+#sharingViewPermissionContent select {
+	min-height: 32px;
+}
+
+#sharingViewPermissionContent .contentPanel:nth-child(1) {
+	padding-bottom: 15px;
+}
+
+#sharingViewPermissionContent .content {
+	border-radius: 5px;
+}
+
+#sharingViewPermissionContent .content .question {
+	line-height: 53px;
+	padding: 0 0 0 10px;
+}
+
+#sharingViewPermission .ui-dialog-contain {
+	max-width: 600px;
+}
+
+.ui-controlgroup-horizontal .ui-radio input {
+	visibility: hidden ;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn,
+.ui-controlgroup-label {
+	display: block ;
+}
+
+#schedulesListCancelReasonPopup .ui-controlgroup-controls {
+	width:100%;
+}
+/*
+#schedulesListCancelReasonPopup .ui-controlgroup-controls a:nth-child(1){
+	width: 73%;
+	background-color: #0079c1;
+	text-shadow: 0px -1px 1px #004a75;
+	font-color: white;
+	color: white;
+}
+*/
+
+.cancel-popup .button-area {
+	width: 100%;
+}
+
+.cancel-popup .button-area a:nth-child(1) {
+	width:83%;
+}
+
+.cancel-popup .button-area {
+	padding-left: 0px;
+	padding-right:0px;
+	margin-top: 5px;
+}
+
+.cancel-popup .ui-input-text {
+	padding: 0px;
+}
+
+.cancel-popup .button-area a:hover {
+	cursor: pointer;
+	color: #fff
+}
+
+#dynamic-popup-screen {
+	z-index: 10003;
+	position: fixed;
+	background-color: black;
+	padding: 10px; /* fixes 1px (or sth like that) white pixel */
+}
+
+#dynamic-popup-popup {
+	z-index: 10004;
+	min-width: 350px !important;
+	max-width: 500px !important;
+}
+
+#dynamic-popup {
+	width: inherit;
+	color: rgb(55,111,139);
+}
+
+#dynamic-popup .ui-title {
+	padding: 10px 0;
+	margin: 0 10px;
+}
+
+#dynamic-popup div[data-role="content"] {
+	text-align: center;
+}
+
+#dynamic-popup .contentPanel {
+	padding: 10px;
+	padding-top: 0;
+}
+
+#dynamic-popup div.e-blocks,
+#dynamic-popup div[data-role="header"] {
+	border: none;
+}
+
+#dynamic-popup div[data-role="fieldcontain"] {
+	margin: 0;
+}
+
+#dynamic-popup div.contentPanel div.e-blocks div.grid-2{
+	width: 50%;
+}
+
+#dynamic-popup div.e-blocks a.button {
+	width: 80%;
+	float: none;
+}
+
+#dynamic-popup div.e-blocks a.button.small {
+	width: auto;
+	min-width: 20%;
+}
+
+#travelDetails .e-blocks .e-block-a {
+	width:20% ;
+}
+
+
+#travelDetailsSave {
+	width:100% ;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin-top: 1rem;
+}
+
+/*
+#patientsummary .content .element:first-child > .content-separator {
+	display: none;
+}
+*/
+
+i.shared-orgs {
+	background: transparent url(images/shared-org-info.png) center left no-repeat;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: -5px;
+	cursor: pointer;
+	position: relative;
+}
+
+#sharedOrgsPopup {
+	position: absolute;
+	background-color: #016bab;
+	border: none;
+	color: #fff;
+	text-shadow: none;
+	width: 180px;
+	margin-left: -82px;
+	bottom: 0px;
+	margin-bottom: 30px;
+}
+
+#sharedOrgsPopup .ui-popup-arrow-container {
+	left: 82px !important;
+	bottom: -5px !important;
+	background-color: #016bab !important;
+	clip: rect(5px, 20px, 20px, 5px);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.first-visible #sharedOrgsPopup {
+	margin-left: 30px;
+	margin-bottom: -10px;
+}
+
+.first-visible #sharedOrgsPopup .ui-popup-arrow-container {
+	left: -9px !important;
+	bottom: 13px !important;
+	clip: rect(5px, 20px, 20px, 5px);
+}
+
+#sharedOrgsPopup.right-side {
+	right: 0px;
+	margin-right: -5px;
+}
+
+#sharedOrgsPopup.left-side {
+	left: 77px;
+}
+
+#sharedOrgsPopup.right-side .ui-popup-arrow-container {
+	left: 156px !important;
+}
+
+#sharedOrgsPopup.left-side .ui-popup-arrow-container {
+	left: 6px !important;
+}
+
+.first-visible #sharedOrgsPopup.right-side {
+	right: 35px;
+}
+
+.first-visible #sharedOrgsPopup.right-side .ui-popup-arrow-container {
+	left: 169px !important;
+}
+
+.first-visible #sharedOrgsPopup.left-side {
+	left: 0px !important;
+}
+
+.first-visible #sharedOrgsPopup.left-side .ui-popup-arrow-container {
+	left: -9px !important;
+}
+
+#sharedOrgsPopup .ui-popup-arrow-container * {
+	display: none;
+}
+
+#sharedOrgsPopup .ui-popup-arrow-background {
+	display: none;
+}
+
+#sharedOrgsPopup-popup {
+	z-index: 1;
+}
+
+#sharedOrgsPopup-screen {
+	z-index: -1;
+}
+
+#sharedOrgsPopup > p {
+	padding: 5px;
+	word-wrap: break-word;
+	text-align: center;
+}

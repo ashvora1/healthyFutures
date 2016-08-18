@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+	<body>
+		<div id="documentDetails" data-url="documentDetails" data-role="dialog" class="docDetailsDialog" data-theme="emis" data-close-btn="none">
+			<div id="documentDetailsHeader" data-role="header" role="banner" data-theme="emis">
+				<h1 data-container="header-title">
+					Documents Viewer
+				</h1>
+				<a class="standaloneButton ui-btn ui-btn-right" id="documentDetailsCloseBtn" href="#">
+					Close
+				</a>
+			</div>
+			<div data-role="content" id="documentViewerWrapper">
+				<!--
+				<div id="documentDetailsContent">
+				</div>
+				-->
+				<div id="documentDetailsWrapper">
+					<iframe id="documentDetailsContent">
+					</iframe>
+
+				<!-- <div id="documentDetailsContent">
+				<div id="docContainer"></div>
+				</div> -->
+				</div>
+				<div id="documentPanelInfo">
+					<div id="panelInfoBar">
+					</div>
+					<div id="panelInfoContent">
+					</div>
+					<div id="panelInfoButton" class="standaloneButton">
+						<img class="left" src="../images/Ico_arrow_left_button.png" alt="left"/>
+						<img class="right" src="../images/Ico_arrow_right_button.png" alt="right"/>
+						<img class="down" src="../images/Ico_arrow_down_button.png" alt="down"/>
+						<img class="up" src="../images/Ico_arrow_up_button.png" alt="up"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

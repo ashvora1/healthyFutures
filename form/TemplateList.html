@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title></title>
+	</head>
+	<body>
+		<div data-role="page" id="templateList" data-theme="emis">
+			<div class="patientSummaryInfo"></div>
+			<div class="contentWrapper">
+				<div data-role="content" style="padding: 15px">
+					<div data-role="none">
+						<label class="page-label" data-role="none">Contact</label>
+						<div class="standaloneButton templateChange" id="changeTemplate">
+
+						</div>
+						<div class="commonComponents" id="changeTemplateDiv">
+
+						</div>
+					</div>
+					<div class="contentPanel feature" id="templateListContactPanel">
+						<div class="header">
+							Contact details
+						</div>
+
+						<div class="content grid">
+
+							<div id="consPropEditMode">
+								<div class="e-blocks">
+									<!-- Date  -->
+									<div class="grid-6 e-block-a e-label">
+										Date
+									</div><div class="grid-6 e-block-b">
+										<input id="consPropDate" type="text" data-theme="emis"
+											data-role="datebox"	data-options='{"mode": "calbox", "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false,  "useClearButton": false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y", "beforeToday":true}' />
+									</div><!-- Time --><div class="grid-6 e-block-c e-label">
+										Time
+									</div><div class="grid-6 e-block-d consPropInputTime">
+										<input id="consPropTime" type="text" data-theme="emis"
+											data-role="datebox" data-options='{"mode": "timebox", "centerHoriz": true, "centerVert": true, "repButton":false, "useAnimation":false, "useFocus": true, "overrideTimeFormat":24, "overrideTimeOutput": "%H:%M"}'>
+									</div><div class="grid-6 e-block-e e-label">
+										Duration
+									</div><div class="grid-6 e-block-f">
+										<input id="consPropDuration" placeholder="" type="number" pattern="[0-9]*">
+									</div><div id="consPropMinsEdit">
+										mins
+									</div>
+								</div>
+								<div class="e-blocks">
+									<!-- Date  -->
+									<div class="grid-2 e-block-a e-label"> <!--  firstCol"> -->
+										Consulter(s)
+									</div><div class="grid-2 e-block-b">
+										<input name="consPropConsultor" id="consPropConsultor" type="text" disabled="disabled">
+									</div>
+								</div>
+								<div class="e-blocks">
+									<div class="grid-2 e-block-a e-label">
+										Consultation Type
+									</div><div class="grid-2 e-block-b e-input">
+										<select name="consPropConsultationType" id="consPropConsultationType" data-role="none"></select>
+									</div>
+								</div>
+								<div class="e-blocks last-block">
+									<div class="grid-2 e-block-a e-label">
+										Quick Notes
+									</div><div class="grid-2 e-block-b">
+										<textarea id="quickNotesArea" data-role="none" placeholder="" class="ui-corner-all ui-shadow-inset ui-input-text ui-body-c"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contentPanel" id="templateListRttPanel">
+						<div class="header">
+							Episode management
+						</div>
+						<div class="content grid">
+							<div id="careEpisodeArea">
+								<div class="e-blocks">
+									<div class="grid-2 e-block-a e-label">
+										Care episode
+									</div><!-- inline block, don't remove this comment
+									--><div id="change-care-episode-wrapper" class="grid-2 e-block-b">
+										<select data-role="none"></select>
+									</div>
+								</div>
+								<div class="e-blocks selected-care-episode-wrapper no-top-border">
+									<div class="contentPanel feature">
+										<div class="e-blocks">
+											<div class="grid-2 e-block-a e-label">
+												Elapsed time
+											</div><!-- inline block, don't remove this comment
+											--><div class="grid-2 e-block-b">
+												<label class="elapsed-time">
+													6 weeks 6 days
+												</label>
+											</div>
+										</div>
+										<div class="e-blocks previous-rtt-wrapper">
+											<div class="grid-2 e-block-a e-label">
+												Previous RTT
+											</div><!-- inline block, don't remove this comment
+											--><div class="grid-2 e-block-b">
+												<label>
+													21 - Transfer to another HC Provider - 09-Feb-2013
+												</label>
+												<div class="clock-state none">&nbsp;</div>
+											</div>
+										</div>
+										<div class="e-blocks current-rtt-wrapper">
+											<div class="grid-3 e-block-a e-label">
+												RTT Status
+											</div><!-- inline block, don't remove this comment
+											--><div class="grid-3 e-block-b">
+												<label>
+													98 - activity not applicable to RTTP
+												</label>
+												<div class="clock-state none">&nbsp;</div>
+											</div><!-- inline block, don't remove this comment
+											--><div class="grid-3 e-block-c">
+												<div id="change-RTT-status-wrapper" class="standaloneButton change-rtt-status">
+													<div class="change-rtt-status">
+														Change status
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="e-blocks">
+									<div class="grid-2 e-block-a e-label">
+										Contact
+									</div><!-- inline block, don't remove this comment
+									--><div class="contact-wrapper grid-2 e-block-b e-input">
+										<div data-contact="Initial" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active">Initial</div><!-- inline block, don't remove this comment
+										--><div data-contact="FollowUp" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Follow Up</div>
+									</div>
+								</div>
+								<div class="e-blocks">
+									<div class="grid-2 e-block-a e-label">
+										Subject
+									</div><!-- inline block, don't remove this comment
+									--><div class="subject-wrapper grid-2 e-block-b e-input">
+										<div data-subject="Patient" class="ui-btn ui-mini ui-corner-left ui-radio-off">Patient</div><!-- inline block, don't remove this comment
+										--><div data-subject="Proxy" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Proxy</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div id="templateAddedInfo">
+						Template completed successfully
+					</div>
+					<!-- Templates list -->
+					<div id="templateListContent">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

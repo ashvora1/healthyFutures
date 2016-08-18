@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Edit task</title>
+	</head>
+	<body>
+		<div data-role="dialog" id="editTask" class="edittaskdialog" data-overlay-theme="emis" data-theme="emis" data-close-btn="none">
+
+			<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+				<h1 data-container="header-title">Edit task</h1>
+				<a class="standaloneButton ui-btn ui-btn-right" id="editTaskcloseBtn" href="#">
+					Close
+				</a>
+			</div>
+
+			<div id="edittaskview" data-role="content">
+				<!-- Add task -->
+				<div id="edit-task" class="contentPanel">
+					<div id="edit-task-content"  class="content grid">
+						<div class="e-blocks">
+							<div class="grid-3 e-block-a">
+								<div class="e-label">Task Type</div>
+								<div class="e-input" id="task-type-wrapper2">
+								</div>
+							</div>
+							<div class="grid-3 e-block-b">
+								<div class="e-label">Date</div>
+								<div class="e-input" id="edit-task-due-date-wrapper">
+									<input id="edit-task-due-date" type="text" data-theme="emis" data-role="datebox"
+									data-options='{"mode": "calbox",  "useModal":true, "afterToday": true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useClearButton": false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' />
+								</div>
+							</div>
+							<div class="grid-3 e-block-c">
+								<div class="e-label">Urgency</div>
+								<div class="e-input" id="edittask-urgency-wrapper">
+									<div id="task-edit-urgent" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active">On</div>
+									<div id="task-edit-not-urgent" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Off</div>
+								</div>
+							</div>
+														<div class="grid-3 e-block-d">
+								<div class="e-label">Assign to</div>
+								<div class="e-input" id="task-assign-to-wrapper2">
+								</div>
+														</div>
+						</div>
+						<div class="e-blocks before-last-block">
+							<div class="grid-2 e-block-a e-label">
+								Details
+							</div><div class="grid-2 e-block-b">
+								<textarea id="editTaskDescription" data-role="none" class="ui-corner-all ui-shadow-inset ui-input-text ui-body-c" placeholder="" ></textarea>
+							</div>
+						</div>
+						<div class="e-blocks last-block">
+							<div class="grid-2 e-block-a">&nbsp;</div><div class="grid-2 e-block-b">
+								<a id="update-task-button" class="button green" data-role="none" href="">Update task</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

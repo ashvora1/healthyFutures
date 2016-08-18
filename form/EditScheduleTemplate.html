@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Schedules</title>
+</head>
+
+<body>
+	<div data-role="dialog" data-dialog-role="top-dialog" id="editScheduleTemplate" data-overlay-theme="emis" data-theme="emis" data-close-btn="none">
+		<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+			<h1 data-container="header-title">
+				title
+			</h1>
+			<a class="standaloneButton ui-btn ui-btn-right" id="edit-schedule-template-close" href="#">
+				Cancel
+			</a>
+		</div>
+		<div data-role="content">
+			<div id="editScheduleTemplateContent">
+				<div class="contentPanel">
+					<div class="header grid">
+						<div class="e-blocks">
+							<div class="grid-1 e-block-a">
+								<span>Recurrence pattern</span>
+							</div>
+						</div>
+					</div>
+					<div class="content grid">
+						<div class="e-blocks no-bottom-border">
+							<div class="grid-1 e-block-a">
+								<span>How often?</span>
+								<select data-role="none" id="edit-schedule-template-recurrence">
+									<option value="None">None</option>
+									<option value="Daily">Daily</option>
+									<option value="Weekly">Weekly</option>
+									<option value="Monthly">Monthly</option>
+									<option value="Quarterly">Quarterly</option>
+									<option value="Yearly">Yearly</option>
+								</select>
+							</div>
+						</div>
+						<div data-recurrence="daily" class="e-blocks recurrence">
+							<div class="grid-2 e-block-a">
+								<span>Every weekday</span>
+								<div id="edit-schedule-template-daily-switch" class="e-input">
+									<div data-type="on" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active">On</div><!-- inline block, don't remove this comment
+									--><div data-type="off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Off</div>
+								</div>
+							</div><!-- inline block, don't remove this comment
+						--><div class="grid-2 e-block-b" id="edit-schedule-template-daily-day-wrapper">
+								<span>Every</span>
+								<input type="number" min="1" max="9999" pattern="^[0-9]{0,4}$">
+								<span>days</span>
+							</div>
+						</div>
+						<div data-recurrence="weekly" class="e-blocks recurrence">
+							<div class="grid-1 e-block-a">
+								<span>Recurs every</span>
+								<input id="edit-schedule-template-weekly-week" type="number" min="1" max="9999" pattern="^[0-9]{0,4}$">
+								<span>weeks on</span>
+								<div id="edit-schedule-template-weekly-day">
+									<a href="" data-day="monday" data-role="none" class="button criteria day activated">Monday</a>
+									<a href="" data-day="tuesday" data-role="none" class="button criteria day activated">Tuesday</a>
+									<a href="" data-day="wednesday" data-role="none" class="button criteria day">Wednesday</a>
+									<a href="" data-day="thursday" data-role="none" class="button criteria day">Thursday</a>
+									<a href="" data-day="friday" data-role="none" class="button criteria day">Friday</a>
+									<a href="" data-day="saturday" data-role="none" class="button criteria day">Saturday</a>
+									<a href="" data-day="sunday" data-role="none" class="button criteria day">Sunday</a>
+								</div>
+							</div>
+						</div>
+						<div data-recurrence="monthly" class="e-blocks recurrence">
+							<div class="grid-1 e-block-a">
+								<div id="edit-schedule-template-monthly-switch" class="e-input">
+									<div data-type="day" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active">Day</div><!-- inline block, don't remove this comment
+									--><div data-type="date" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Date</div>
+								</div>
+								<div data-monthly-type="day">
+									<span>The</span>
+									<select data-role="none" id="edit-schedule-template-monthly-day-pattern">
+										<option value="First">first</option>
+										<option value="Second">second</option>
+										<option value="Third">third</option>
+										<option value="Fourth">fourth</option>
+										<option value="Last">last</option>
+									</select>
+									<select data-role="none" id="edit-schedule-template-monthly-day-type">
+										<option value="Day">day</option>
+										<option value="Weekday">weekday</option>
+										<option value="WeekendDay">weekend day</option>
+										<option value="Monday">Monday</option>
+										<option value="Tuesday">Tuesday</option>
+										<option value="Wednesday">Wednesday</option>
+										<option value="Thursday">Thursday</option>
+										<option value="Friday">Friday</option>
+										<option value="Saturday">Saturday</option>
+										<option value="Sunday">Sunday</option>
+									</select>
+									<span>of every</span>
+									<input id="edit-schedule-template-monthly-day-month" type="number" min="1" max="100" pattern="^[0-9]{0,3}$">
+									<span>month</span>
+								</div>
+								<div data-monthly-type="date">
+									<span>Day</span>
+									<input id="edit-schedule-template-monthly-date-day" type="number" min="1" max="31" pattern="^[0-9]{0,2}$">
+									<span>of every</span>
+									<input id="edit-schedule-template-monthly-date-month" type="number" min="1" max="999" pattern="^[0-9]{0,3}$">
+									<span>month</span>
+								</div>
+							</div>
+						</div>
+						<div data-recurrence="quarterly" class="e-blocks recurrence">
+							<div class="grid-1 e-block-a">
+								<span>The</span>
+								<select data-role="none" id="edit-schedule-template-quarterly-day-pattern">
+									<option value="First">first</option>
+									<option value="Second">second</option>
+									<option value="Third">third</option>
+									<option value="Fourth">fourth</option>
+									<option value="Last">last</option>
+								</select>
+								<select data-role="none" id="edit-schedule-template-quarterly-day-type">
+									<option value="Monday">Monday</option>
+									<option value="Tuesday">Tuesday</option>
+									<option value="Wednesday">Wednesday</option>
+									<option value="Thursday">Thursday</option>
+									<option value="Friday">Friday</option>
+									<option value="Saturday">Saturday</option>
+									<option value="Sunday">Sunday</option>
+								</select>
+								<span>of the</span>
+								<select data-role="none" id="edit-schedule-template-quarterly-month-type">
+									<option value="First">first</option>
+									<option value="Second">second</option>
+									<option value="Third">third</option>
+								</select>
+								<span>month</span>
+							</div>
+						</div>
+						<div data-recurrence="yearly" class="e-blocks recurrence">
+							<div class="grid-1 e-block-a">
+								<span>The</span>
+								<input id="edit-schedule-template-yearly-day-type" type="number" min="1" max="31" pattern="^[0-9]{0,2}$">
+								<span>of</span>
+								<select data-role="none" id="edit-schedule-template-yearly-month-type">
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December">December</option>
+								</select>
+								<span>every year</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentPanel">
+					<div class="header grid">
+						<div class="e-blocks">
+							<div class="grid-1 e-block-a">
+								<span>Frequency and range</span>
+							</div>
+						</div>
+					</div>
+					<div id="edit-schedule-template-frequency-and-range-block" class="content grid">
+						<div class="e-blocks no-recurrence">
+							<div id="edit-schedule-template-appointments-number-wrapper" class="grid-1 e-block-a">
+								<span>Appointments per day</span>
+								<input type="number" min="1" max="99" pattern="^[0-9]{0,2}$">
+							</div>
+						</div>
+						<div class="e-blocks no-recurrence">
+							<div class="grid-2 e-block-a">
+								<span>No end date</span>
+								<div id="edit-schedule-template-end-date-switch" class="e-input">
+									<div data-type="on" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active">On</div><!-- inline block, don't remove this comment
+									--><div data-type="off" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last ui-radio-off">Off</div>
+								</div>
+							</div><!-- inline block, don't remove this comment
+						--><div id="edit-schedule-template-total-occurrences-wrapper" class="grid-2 e-block-b">
+								<span>Total occurrences</span>
+								<input type="number" min="1" max="9999" pattern="^[0-9]{0,3}$">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentPanel">
+					<div class="content grid">
+						<div>
+							<a href="" id="edit-schedule-template-submit" data-role="none" class="button green">text</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

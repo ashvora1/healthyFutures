@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Add Contact</title>
+	</head>
+	<body>
+		<div data-url="templateParser" data-role="page" id="templateParser" class="page" data-theme="emis">
+			<div class="patientSummaryInfo">
+			</div>
+			<div class="contentWrapper">
+				<div data-theme="emis" data-role="none" class="ui-header ui-header-fixed own-header pageHeader" id="headerTemplate">
+					<div data-role="none">
+						<div class="standaloneButton alertsButtonContainer">
+							<span class="alertButton icon" alt="alerts">&nbsp;</span>
+							<div class="alertsBubble">0</div>
+						</div>
+						<div class="alertsContainer">
+						</div>
+					</div>
+					<h3 role="heading" style="color:white; text-shadow:none;" data-inline="true" id="tpHeaderTitle">Contact - Add template</h1>
+					<a id="templateParserMenu" class="drawer-menu-button standaloneButton" href="#" data-role="none">
+						<div class="drawer-menu-button-lines">
+							<div class="drawer-menu-one-line">&ndash;</div>
+							<div class="drawer-menu-one-line">&ndash;</div>
+							<div class="drawer-menu-one-line">&ndash;</div>
+						</div>
+						Menu
+					</a>
+
+					<a data-role="none" data-inline="true" class="ui-btn-right standaloneButton" id="cancelTemplate" href="#">Cancel</a>
+
+				</div>
+				<div id="outerTemplate">
+					<div role="main" class="ui-content">
+						<!-- <div id="allTemplatesSelect">
+							<a href="#listViewCodes" data-section-idx="sectionIdx" data-rel="dialog" data-role="button"
+								id="selectTemplateList" name="selectTemplateList" data-shadow="true" data-iconpos="right"
+								class="templateBtnSelect ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-c">
+
+								<div id="selectTemplateButton" class="selectInTemplate">
+									<label>Choose templatte</label>
+								</div>
+							</a>
+
+							<hr class="templateSelectHr"/>
+						</div> -->
+						<div role="main" data-role="content" id="contentTemplate">
+							<!-- Content here -->
+						</div>
+						<div id="contentTemplateShadow"></div>
+					</div>
+				</div>
+
+				<div id="completeButtonTemplateDiv">
+					<a data-role="none" data-inline="true" class="button green" id="completeButtonTemplate" href="" data-submit="true">Add template</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title></title>
+	</head>
+	<body>
+		<div data-role="page" id="taskList" data-theme="emis">
+			<div class="patientSummaryInfo">
+			</div>
+			<div class="contentWrapper">
+
+				<div id="taskListListview" data-role="content">
+									<label id="tasksLabel" data-role="none">Tasks</label>
+					<!-- Add task -->
+					<div id="add-task" class="contentPanel feature">
+						<div class="header" id="add-edit-header">
+							Add task
+						</div>
+						<div id="add-task-content"  class="content grid">
+							<div class="e-blocks">
+								<div class="grid-3 e-block-a">
+									<div class="e-label">Task Type</div>
+									<div class="e-input" id="task-type-wrapper">
+									</div>
+								</div>
+								<div class="grid-3 e-block-b">
+									<div class="e-label">Date</div>
+									<div class="e-input" id="add-task-due-date-wrapper">
+										<input id="add-task-due-date" type="text" data-theme="emis" data-role="datebox"
+										data-options='{"mode": "calbox",  "useModal":true, "afterToday": true, "centerHoriz": true, "centerVert": true, "useAnimation":false, "calHighToday":false, "useFocus": true, "useTodayButton": true, "overrideDateFormat":"%d-%b-%Y"}' />
+									</div>
+								</div>
+								<div class="grid-3 e-block-c">
+									<div class="e-label">Urgency</div>
+									<div class="e-input" id="task-urgency-wrapper">
+										<div id="task-add-urgent" class="ui-btn ui-mini ui-corner-left ui-radio-on ui-btn-active u">On</div>
+										<div id="task-add-not-urgent" class="ui-btn ui-mini ui-corner-right ui-controlgroup-last  ui-radio-off">Off</div>
+									</div>
+								</div>
+								<div class="grid-3 e-block-d">
+									<div class="e-label">Assign to</div>
+									<div class="e-input" id="task-assign-to-wrapper">
+									</div>
+								</div>
+							</div>
+							<div class="e-blocks before-last-block">
+								<div class="grid-2 e-block-a e-label">
+									Details
+								</div><div class="grid-2 e-block-b">
+									<textarea id="taskDescription" data-role="none" class="ui-corner-all ui-shadow-inset ui-input-text ui-body-c" placeholder="" ></textarea>
+								</div>
+							</div>
+							<div class="e-blocks last-block">
+								<div class="grid-2 e-block-a edit-task-buttons edit-task-cancel-wrapper">
+									<a href="#" id="edit-task-cancel-button" data-role="none" class="button red">Cancel</a>
+								</div><div class="grid-2 e-block-b edit-task-buttons">
+									<a href="#" id="edit-task-save-button" data-role="none" class="button green">Update</a>
+								</div>
+								<div class="grid-2 e-block-a">&nbsp;</div><div class="grid-2 e-block-b">
+									<a id="add-task-button" class="button green" data-role="none" href="">Add task</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="taskListContent">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

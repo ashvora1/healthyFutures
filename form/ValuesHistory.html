@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+	<body>
+		<div id="patientvalueshistory" data-url="patientvalueshistory" data-role="dialog" class="valuesdialog" data-theme="emis" data-close-btn="none">
+			<div id="valuesHistoryHeader" data-role="header" role="banner" data-theme="emis">
+				<h1 data-container="header-title">
+					Values History
+				</h1>
+				<a class="standaloneButton ui-btn ui-btn-right" id="valuesHistoryCloseBtn" href="#">
+					Close
+				</a>
+			</div>
+			<div id="valuesHistoryMain" role="main" class="ui-content" data-role="content" data-theme="emis">
+				<div id="valuesHistoryInner" class="ui-grid-a" style="white-space:normal; overflow-y:auto;">
+					<div id="valuesHistoryGraphBox" class="ui-block-a graph-fix">
+						<div id="placeholder" style="width:100px;height:100px;margin-left:8px;padding-right:10px;">
+						</div>
+					</div>
+					<div class="ui-block-b" style="width:100%;float:none; display:block;padding-left:15px;padding-right:15px">
+						<div id="values_history_terms">
+							<ul id="list_values_history" data-role="listview" data-divider-theme="emis" data-inset="true">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

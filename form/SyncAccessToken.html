@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Synchronisation Access Token</title>
+	</head>
+	<body>
+		
+		<div data-role="dialog" id="syncAccessToken" data-theme="emis" class="sync-dialog">
+
+			<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+				<h1 data-container="header-title">Access Token Required</h1>
+			</div>
+			<div data-role="content" id="syncAccessTokenContent" class="contentPanel">
+				<div class="e-blocks ui-field-contain">
+					<input id="textinputAccessToken" placeholder="Enter Access Token" value="" type="password">
+					<span id="quickAccessToken">&nbsp;</span>
+				</div>
+				<div class="e-blocks">
+					<div class="grid-2 e-block-a">
+						<a data-role="none" id="confirmAccessToken" href="#" class="button green"> <span class="ui-icon ui-icon-check ui-icon-shadow"></span> OK </a>
+					</div>
+					<div class="grid-2 e-block-b">
+						<a data-role="none" id="cancelAccessToken" href="#" class="button red"> <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>Cancel </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

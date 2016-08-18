@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Synchronisation Loading</title>
+	</head>
+	<body>
+		<div data-role="dialog" id="syncLoading" data-theme="emis" class="sync-dialog">
+			<div class="single-sync">
+				<div data-role="content" class="contentPanel">
+					<h2 class="top-text">
+						Synchronising
+					</h2>
+					<div class="middle-error-text upload">
+						<div>An error occurred during synchronisation.</div>
+						<div>Please review the failed sync list.</div>
+					</div>
+					<div class="middle-error-text download">
+						<div>The patient’s data was successfully synced, but the patient’s record was unavailable to redownload. Check the patient’s status in EMIS Web.</div>
+					</div>
+					<img class="progress" src="../images/loader.gif" alt="loading...">
+					<div class="close-wrapper">
+						<a class="standaloneButton ui-btn close" href="#">Close</a>
+					</div>
+				</div>
+			</div>
+			<div class="multi-sync">
+				<div data-role="header" data-theme="emis" class="ui-corner-top ui-header ui-bar-emis" role="banner">
+					<h1 data-container="header-title">Synchronising data</h1>
+					<a class="standaloneButton ui-btn ui-btn-right close" href="#">Close</a>
+				</div>
+				<div data-role="content" class="contentPanel">
+					<div id="progressInfo" class="content grid">
+					</div>
+					<a data-role="none" href="#" class="button green startSync">Sync all data</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
